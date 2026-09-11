@@ -4,7 +4,7 @@
  *   - 静态资源(CSS/JS/图标) → cache-first：秒开，靠 CACHE 版本号控制更新
  * 注意：每次改动站点文件后必须递增 CACHE_VERSION，否则老用户会一直看到旧缓存。
  */
-const CACHE_VERSION = 'v1';
+const CACHE_VERSION = 'v2';
 const CACHE = 'nbt11773-' + CACHE_VERSION;
 
 const ASSETS = [
