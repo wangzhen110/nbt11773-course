@@ -110,6 +110,14 @@
     if (cm) return cm[1];
     return null;
   }
+  /* 知识库文本排版：转义 → 按行 → 行首序号/条款号加粗 → <br> 连接 */
+  function fmtKbText(txt) {
+    return escHtml(txt).split('\n').map(function (line) {
+      return line
+        .replace(/^(\s*\d+(?:\.\d+)*[\.、]?\s)/, '<b class="kb-no">$1</b>')
+        .replace(/^(\s*(?:第[一二三四五六七八九十百]+[章节]|[一二三四五六七八九十]+、|表\s*\d+|图\s*\d+)\s)/, '<b class="kb-no">$1</b>');
+    }).join('<br>');
+  }
   function openKb(src, label) {
     if (!window.KB) { alert('知识库未加载'); return; }
     var parts = src.split(/[；;，,、+~～]/).map(function (s) { return s.trim(); }).filter(Boolean);
@@ -119,7 +127,7 @@
       var entry = key && (KB.items[key] || KB.special[key] || KB.standards[key]);
       if (entry) {
         var head = '<div class="kb-key">' + escHtml(key) + (entry.t ? ' ' + escHtml(entry.t) : '') + '</div>';
-        var text = '<div class="kb-text">' + escHtml(entry.c) + '</div>';
+        var text = '<div class="kb-text">' + fmtKbText(entry.c) + '</div>';
         html += '<div class="kb-item">' + head + text + '</div>';
       } else {
         html += '<div class="kb-item"><div class="kb-key">' + escHtml(p) + '</div><div class="kb-text">（该出处暂无知识库条目）</div></div>';
