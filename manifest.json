@@ -1,0 +1,26 @@
+{
+  "name": "NB/T 11773—2025 内附件技术规范 · 互动学习课程",
+  "short_name": "内附件技术规范",
+  "description": "风力发电机组内附件技术规范 — 216 道权威题库互动学习，可离线使用",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "theme_color": "#1a56db",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

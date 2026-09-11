@@ -1,0 +1,2048 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="mQo1R8AySi9ulNGFFgEggQ">
+<head data-page-node-id="TAb0LaGGeSWBuW7K2f3jig">
+<meta charset="UTF-8" data-page-node-id="KatGmBRJy7zHox4V0ZiAu6">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" data-page-node-id="2ah8SXbojGjMOA6FTHvcJJ">
+<meta name="theme-color" content="#1a56db">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="内附件技术规范">
+<meta name="description" content="NB/T 11773—2025 风力发电机组内附件技术规范 · 216 道权威题库互动学习">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+<title>NB/T 11773—2025 风力发电机组内附件技术规范 · 互动学习课程</title>
+<style>
+:root{
+  --bg:#f5f6f8;
+  --panel:#ffffff;
+  --line:#e3e6ec;
+  --line-soft:#eef0f4;
+  --ink:#1c2128;
+  --ink-2:#4a5361;
+  --ink-3:#7b8493;
+  --accent:#0f5fd8;
+  --accent-soft:#e8f0fd;
+  --ok:#128a52;
+  --ok-soft:#e6f6ee;
+  --bad:#d0342c;
+  --bad-soft:#fdeceb;
+  --warn:#b7791f;
+  --warn-soft:#fdf5e6;
+  --radius:12px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:"Microsoft YaHei","PingFang SC","Segoe UI",system-ui,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.7;font-size:15px;
+}
+button{font-family:inherit;cursor:pointer}
+.hidden{display:none !important}
+
+/* ---------- 顶栏 ---------- */
+.topbar{
+  background:var(--panel);border-bottom:1px solid var(--line);
+  padding:14px 26px;display:flex;justify-content:space-between;align-items:center;
+  position:sticky;top:0;z-index:20;
+}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{
+  width:44px;height:44px;border-radius:10px;background:var(--accent);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;letter-spacing:.5px;
+}
+.brand-text h1{font-size:18px;font-weight:700;letter-spacing:.2px}
+.brand-text p{font-size:12.5px;color:var(--ink-3)}
+.topstats{display:flex;gap:26px}
+.stat{text-align:center;min-width:56px}
+.stat-num{display:block;font-size:19px;font-weight:700;color:var(--accent)}
+.stat-lbl{font-size:11.5px;color:var(--ink-3)}
+
+/* ---------- 布局 ---------- */
+.layout{display:flex;min-height:calc(100vh - 73px)}
+.sidebar{
+  width:250px;background:var(--panel);border-right:1px solid var(--line);
+  padding:16px 12px;position:sticky;top:73px;height:calc(100vh - 73px);overflow-y:auto;flex-shrink:0;
+}
+.modes{display:flex;gap:6px;margin-bottom:16px}
+.mode-btn{
+  flex:1;padding:8px 0;border:1px solid var(--line);background:#fff;border-radius:8px;
+  font-size:13px;color:var(--ink-2);transition:.15s;
+}
+.mode-btn:hover{border-color:var(--accent);color:var(--accent)}
+.mode-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.chap-title{font-size:11.5px;color:var(--ink-3);letter-spacing:1px;margin:6px 6px 8px;font-weight:600}
+.chap-nav{display:flex;flex-direction:column;gap:2px}
+.chap-item{
+  padding:9px 10px;border-radius:8px;font-size:13.5px;color:var(--ink-2);cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;gap:8px;border:1px solid transparent;
+}
+.chap-item:hover{background:var(--line-soft)}
+.chap-item.active{background:var(--accent-soft);color:var(--accent);border-color:#cfe0fa;font-weight:600}
+.chap-item .cnum{font-size:11px;color:var(--ink-3);font-weight:400}
+.chap-item.active .cnum{color:var(--accent)}
+.side-foot{margin-top:18px;padding-top:14px;border-top:1px solid var(--line-soft)}
+.mini-btn{
+  width:100%;padding:8px;border:1px solid var(--line);background:#fff;border-radius:8px;
+  font-size:12.5px;color:var(--ink-2);
+}
+.mini-btn:hover{border-color:var(--bad);color:var(--bad)}
+.tip{font-size:11px;color:var(--ink-3);margin-top:8px;line-height:1.5}
+
+.content{flex:1;padding:24px 28px 60px;min-width:0}
+
+/* ---------- 讲解播放器 ---------- */
+.lec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:14px;gap:16px;flex-wrap:wrap}
+.lec-chap{font-size:12px;color:var(--accent);font-weight:600;letter-spacing:1px}
+.lec-head h2{font-size:21px;font-weight:700}
+.lec-ctrl{display:flex;gap:8px}
+.ctrl-btn{
+  padding:8px 16px;border:1px solid var(--line);background:#fff;border-radius:8px;
+  font-size:13.5px;color:var(--ink-2);transition:.15s;
+}
+.ctrl-btn:hover{border-color:var(--accent);color:var(--accent)}
+.ctrl-btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.ctrl-btn.primary:hover{background:#0d4fb5;color:#fff}
+.ctrl-btn.ghost{background:transparent}
+.ctrl-btn.big{padding:11px 22px;font-size:14.5px}
+.ctrl-btn:disabled{opacity:.4;cursor:not-allowed}
+.player{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.progress{height:3px;background:var(--line-soft)}
+.progress-bar{height:100%;background:var(--accent);width:0;transition:width .35s ease}
+.slide{padding:34px 40px;min-height:330px}
+.slide h3{font-size:18px;margin-bottom:14px;color:var(--accent);font-weight:700}
+.slide p{font-size:15px;color:var(--ink-2);margin-bottom:12px}
+.slide ul,.slide ol{margin:0 0 12px 22px;color:var(--ink-2)}
+.slide li{margin-bottom:7px;font-size:14.5px}
+.slide .kv{
+  background:var(--accent-soft);border-left:3px solid var(--accent);padding:12px 16px;
+  border-radius:0 8px 8px 0;margin:14px 0;font-size:14px;color:var(--ink);
+}
+.slide .nums{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+.slide .num{
+  background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px 14px;min-width:118px;
+}
+.slide .num b{display:block;font-size:17px;color:var(--accent)}
+.slide .num span{font-size:12px;color:var(--ink-3)}
+.slide table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0}
+.slide th,.slide td{border:1px solid var(--line);padding:7px 10px;text-align:left}
+.slide th{background:var(--line-soft);font-weight:600}
+.slide .src{margin-top:16px;font-size:12px;color:var(--ink-3);border-top:1px dashed var(--line);padding-top:10px}
+
+/* 宽表格：横向滚动容器 + 滑动提示 + 右侧渐隐 */
+.tbl-wrap{position:relative}
+.tbl-tip{
+  font-size:11.5px;line-height:1.5;color:var(--warn);background:var(--warn-soft);
+  border-radius:6px;padding:5px 10px;margin:6px 0 4px;text-align:center;
+}
+.tbl-wrap.scrollable::after{
+  content:'';position:absolute;top:0;right:0;bottom:0;width:26px;
+  background:linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,.92));
+  pointer-events:none;opacity:0;transition:opacity .2s;
+}
+.tbl-wrap.scrollable:not(.at-end)::after{opacity:1}
+/* 已向左滑动时，左侧显示渐隐，提示还能往回滑 */
+.tbl-wrap.scrollable::before{
+  content:'';position:absolute;top:0;left:0;bottom:0;width:26px;
+  background:linear-gradient(to left,rgba(255,255,255,0),rgba(255,255,255,.92));
+  pointer-events:none;opacity:0;transition:opacity .2s;z-index:1;
+}
+.tbl-wrap.scrollable:not(.at-start)::before{opacity:1}
+.slide-nav{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:12px 40px;border-top:1px solid var(--line-soft);background:#fafbfc;
+}
+.slide-nav span{font-size:12.5px;color:var(--ink-3)}
+.dots{display:flex;gap:5px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--line);cursor:pointer}
+.dot.on{background:var(--accent);width:18px;border-radius:4px}
+.lec-after{margin-top:16px;text-align:right}
+
+/* ---------- 答题 ---------- */
+.quiz-bar{
+  display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:16px;
+  background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px 14px;
+}
+.quiz-bar select{
+  padding:7px 10px;border:1px solid var(--line);border-radius:7px;background:#fff;
+  font-size:13.5px;color:var(--ink);font-family:inherit;
+}
+.shuffle{font-size:13px;color:var(--ink-2);display:flex;align-items:center;gap:5px;cursor:pointer}
+.quiz-range{margin-left:auto;font-size:12.5px;color:var(--ink-3)}
+.qcard{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:24px 28px}
+.qmeta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tag{
+  font-size:11.5px;padding:3px 9px;border-radius:20px;background:var(--line-soft);color:var(--ink-2);
+}
+.tag.type{background:var(--accent-soft);color:var(--accent)}
+.tag.src{background:var(--warn-soft);color:var(--warn)}
+.qtext{font-size:17px;font-weight:600;line-height:1.7;margin-bottom:18px}
+.options{display:flex;flex-direction:column;gap:9px}
+.opt{
+  display:flex;gap:12px;align-items:flex-start;padding:13px 16px;border:1px solid var(--line);
+  border-radius:10px;background:#fff;cursor:pointer;transition:.15s;font-size:14.5px;color:var(--ink);
+}
+.opt:hover{border-color:var(--accent);background:#fafcff}
+.opt .letter{
+  width:24px;height:24px;border-radius:50%;border:1px solid var(--line);flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-size:12.5px;color:var(--ink-3);margin-top:1px;
+}
+.opt.sel{border-color:var(--accent);background:var(--accent-soft)}
+.opt.sel .letter{background:var(--accent);color:#fff;border-color:var(--accent)}
+.opt.right{border-color:var(--ok);background:var(--ok-soft)}
+.opt.right .letter{background:var(--ok);color:#fff;border-color:var(--ok)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.opt.wrong .letter{background:var(--bad);color:#fff;border-color:var(--bad)}
+.opt.locked{cursor:default}
+.opt-multi .letter{border-radius:6px}
+
+/* ---------- 填空题（巩固模式） ---------- */
+.fill-stats{
+  display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;
+  padding:9px 14px;margin-bottom:14px;border:1px dashed var(--line);border-radius:10px;
+  background:var(--accent-soft);color:var(--accent);font-size:13.5px;font-weight:600;
+}
+.fill-opts{display:block}
+.fill-row{display:flex;align-items:center;gap:10px;margin:9px 0}
+.fill-no{flex-shrink:0;font-size:13px;color:var(--ink-3);font-weight:600;min-width:52px}
+.fill-input{
+  flex:1;padding:11px 14px;font-size:16px;border:2px solid var(--line);border-radius:10px;
+  outline:none;transition:.15s;color:var(--ink);background:#fff;min-width:0;
+}
+.fill-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.fill-input.right{border-color:var(--ok);background:var(--ok-soft)}
+.fill-input.wrong{border-color:var(--bad);background:var(--bad-soft);color:var(--bad)}
+.fill-input.show-ans{font-weight:700}
+.fill-input:disabled{cursor:default;opacity:1}
+
+/* 引用规范链接（跳转国家标准全文公开系统） */
+.std-link{color:var(--accent);text-decoration:underline;text-underline-offset:2px;cursor:pointer;font-weight:600}
+.std-link:hover{color:#1a5fb4;text-decoration:underline}
+.std-link:visited{color:#5b6b8c}
+/* 出处标签（点击打开课程内知识库） */
+.src-link{display:inline-flex;align-items:center;gap:6px;border:0;background:var(--warn-soft);color:var(--warn);font-size:13.5px;font-weight:700;padding:9px 12px;border-radius:7px;cursor:pointer;text-align:left}
+.src-link:hover{background:var(--warn-soft);filter:brightness(.96)}
+.src-link .src-arrow{font-size:12px;transition:transform .15s}
+.src-link:hover .src-arrow{transform:translateX(3px)}
+/* 知识库弹窗 */
+.kb-box{max-width:min(680px,94vw);max-height:82vh;display:flex;flex-direction:column}
+.kb-body{overflow-y:auto;display:flex;flex-direction:column;gap:12px}
+.kb-item{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--panel)}
+.kb-key{font-size:14.5px;font-weight:700;color:var(--accent);margin-bottom:7px}
+.kb-text{font-size:14px;line-height:1.85;color:var(--ink-2);white-space:pre-wrap;word-break:break-word}
+
+.feedback{margin-top:18px;border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+.fb-head{padding:11px 18px;font-weight:700;font-size:15px}
+.fb-head.ok{background:var(--ok-soft);color:var(--ok)}
+.fb-head.bad{background:var(--bad-soft);color:var(--bad)}
+.fb-body{padding:16px 18px;display:flex;flex-direction:column;gap:14px}
+.fb-label{font-size:11.5px;color:var(--ink-3);letter-spacing:1px;margin-bottom:5px;font-weight:600}
+.fb-answer{font-size:14.5px;font-weight:600;color:var(--ok)}
+.fb-explain{font-size:14.5px;color:var(--ink-2);line-height:1.8}
+.fb-source{font-size:13.5px;color:var(--warn);background:var(--warn-soft);padding:9px 12px;border-radius:7px}
+.qactions{display:flex;gap:10px;margin-top:20px;justify-content:flex-end}
+.jump{margin-top:22px}
+.jump-label{font-size:12px;color:var(--ink-3);margin-bottom:9px}
+.jump-grid{display:flex;flex-wrap:wrap;gap:6px}
+.jump-btn{
+  width:38px;height:34px;border:1px solid var(--line);background:#fff;border-radius:7px;
+  font-size:12.5px;color:var(--ink-2);
+}
+.jump-btn:hover{border-color:var(--accent);color:var(--accent)}
+.jump-btn.done{background:var(--line-soft)}
+.jump-btn.right{background:var(--ok-soft);border-color:#bfe5d2;color:var(--ok)}
+.jump-btn.wrong{background:var(--bad-soft);border-color:#f5c6c3;color:var(--bad)}
+.jump-btn.cur{border-color:var(--accent);border-width:2px;color:var(--accent);font-weight:700}
+
+/* ---------- 统计 ---------- */
+.sec-title{font-size:16px;font-weight:700;margin:8px 0 14px}
+.stat-cards{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.scard{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 22px;min-width:130px}
+.scard b{display:block;font-size:24px;color:var(--accent)}
+.scard span{font-size:12.5px;color:var(--ink-3)}
+.chap-stats{display:flex;flex-direction:column;gap:9px;margin-bottom:26px}
+.cs-row{display:flex;align-items:center;gap:12px;font-size:13.5px}
+.cs-name{width:210px;flex-shrink:0;color:var(--ink-2)}
+.cs-bar{flex:1;height:9px;background:var(--line-soft);border-radius:5px;overflow:hidden}
+.cs-bar i{display:block;height:100%;background:var(--accent)}
+.cs-val{width:80px;text-align:right;color:var(--ink-3);font-size:12.5px}
+.wrong-list{display:flex;flex-direction:column;gap:8px}
+.wrong-item{
+  background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:12px 16px;
+  font-size:13.5px;color:var(--ink-2);cursor:pointer;
+}
+.wrong-item:hover{border-color:var(--accent)}
+.wrong-item b{color:var(--ink);font-weight:600}
+.empty{color:var(--ink-3);font-size:13.5px;padding:20px 0}
+
+/* ===== 移动端导航 ===== */
+.mnav{display:none;position:sticky;top:0;z-index:60;background:var(--panel);
+  border-bottom:1px solid var(--line);padding:8px 12px;gap:8px;flex-direction:column}
+.mnav-row{display:flex;gap:8px}
+.mnav-btn{
+  flex:1;min-height:44px;border:1px solid var(--line);background:var(--panel-2,var(--panel));
+  color:var(--ink-2);border-radius:9px;font-size:14px;font-weight:600;cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+}
+.mnav-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.mnav-btn.ghost{flex:0 0 auto;padding:0 16px;font-weight:500}
+.mnav-sel{flex:1;min-height:44px;border:1px solid var(--line);border-radius:9px;
+  background:var(--panel);color:var(--ink);font-size:14px;padding:0 12px;
+  appearance:none;-webkit-appearance:none}
+
+/* ===== 弹窗 ===== */
+.modal{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:20px}
+.modal-mask{position:absolute;inset:0;background:rgba(15,23,42,.45)}
+.modal-box{
+  position:relative;background:var(--panel);border-radius:14px;width:100%;max-width:460px;
+  box-shadow:0 20px 50px rgba(15,23,42,.22);overflow:hidden;
+}
+.modal-head{display:flex;align-items:center;justify-content:space-between;
+  padding:16px 20px;border-bottom:1px solid var(--line)}
+.modal-head h3{font-size:16px;color:var(--ink);margin:0}
+.modal-x{border:0;background:transparent;font-size:26px;line-height:1;color:var(--ink-3);
+  cursor:pointer;padding:0 4px}
+.modal-body{padding:18px 20px 22px}
+.modal-tip{font-size:13.5px;line-height:1.75;color:var(--ink-2);margin:0 0 16px}
+.modal-tip b{color:var(--ink)}
+.modal-acts{display:flex;flex-direction:column;gap:10px}
+.modal-acts .ctrl-btn{width:100%;min-height:44px}
+.modal-status{margin-top:14px;font-size:13.5px;color:var(--ink-2);min-height:20px}
+.modal-status.ok{color:#15803d}
+.modal-status.err{color:#b91c1c}
+.modal-sum{margin-top:8px;font-size:12.5px;color:var(--ink-3);line-height:1.7}
+
+/* ===== 装到桌面提示 ===== */
+.install-tip{
+  position:fixed;left:12px;right:12px;bottom:12px;z-index:150;
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  padding:12px 14px;display:flex;align-items:center;gap:12px;
+  box-shadow:0 10px 30px rgba(15,23,42,.16);
+}
+.it-text{flex:1;display:flex;flex-direction:column;gap:2px;min-width:0}
+.it-text b{font-size:14px;color:var(--ink)}
+.it-text span{font-size:12px;color:var(--ink-3)}
+.it-btns{display:flex;gap:8px;flex:0 0 auto}
+.it-btn{min-height:38px;padding:0 16px;border-radius:9px;border:1px solid var(--accent);
+  background:var(--accent);color:#fff;font-size:13.5px;font-weight:600;cursor:pointer}
+.it-btn.ghost{background:transparent;color:var(--ink-3);border-color:var(--line)}
+
+@media(max-width:1000px){
+  .sidebar{display:none}
+  .content{padding:18px}
+  .slide{padding:24px}
+  .slide-nav{padding:12px 24px}
+  .mnav{display:flex}
+  /* 顶栏改非粘性：避免与 mnav 争抢 top:0 造成互相覆盖 */
+  .topbar{position:static;padding:12px 14px;flex-wrap:wrap;gap:0}
+  .topstats{gap:10px}
+  .stat-num{font-size:17px}
+}
+
+@media(max-width:640px){
+  /* ---- 顶栏重排：品牌独占一行，统计独占一行 ---- */
+  .topbar{padding:10px 12px}
+  .brand{flex:1 1 100%;gap:10px;min-width:0;align-items:flex-start}
+  .brand .logo{width:38px;height:38px;font-size:13px;border-radius:9px;flex-shrink:0}
+  .brand-text{min-width:0;flex:1}
+  .brand-text h1{
+    font-size:13.5px;line-height:1.45;font-weight:700;
+    /* 最多两行，超出省略，防止长标题把顶栏撑高 */
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+    overflow:hidden;word-break:break-word;
+  }
+  .brand-text p{
+    font-size:11px;line-height:1.5;margin-top:2px;
+    display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;
+  }
+  .topstats{
+    flex:1 1 100%;width:100%;gap:0;justify-content:space-around;
+    margin-top:9px;padding-top:9px;border-top:1px solid var(--line-soft);
+  }
+  .stat{min-width:0;flex:1}
+  .stat-num{font-size:16px}
+  .stat-lbl{font-size:10.5px}
+
+  /* ---- 移动端导航：修复 select 撑宽导致的横向溢出 ---- */
+  .mnav{padding:8px 12px}
+  .mnav-row{min-width:0}
+  .mnav-btn{min-width:0;padding:0 8px;font-size:13.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .mnav-btn.ghost{flex:0 0 auto;padding:0 12px;font-size:13px}
+  /* 关键：select 在 flex 中必须 min-width:0 才能收缩，否则被最长 option 撑宽 */
+  .mnav-sel{min-width:0;width:100%;font-size:13.5px;padding:0 10px;
+    text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+
+  .content{padding:12px;padding-bottom:96px}  /* 预留底部悬浮提示的空间 */
+  .qcard{padding:16px}
+  .qtext{font-size:16px;line-height:1.65}
+  /* 选项加大触控区，避免误点 */
+  .opt{min-height:48px;padding:12px 14px;font-size:15px}
+  .slide{padding:16px}
+  .slide h3{font-size:16px}
+  .slide p,.slide li{font-size:14px}
+  .slide .num{min-width:104px;padding:9px 12px}
+  /* 宽表格改为可横向滑动查看，避免被 .player 的 overflow:hidden 裁掉 */
+  .slide table{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:12.5px}
+  .slide th,.slide td{white-space:nowrap;padding:6px 9px}
+  .slide .nums{gap:8px}
+  .slide-nav{padding:10px 16px;flex-wrap:wrap;gap:8px}
+  .qactions{flex-wrap:wrap;gap:8px}
+  .qactions .ctrl-btn{flex:1;min-width:88px;min-height:46px}
+  .quiz-bar{flex-wrap:wrap;padding:10px 12px;gap:8px}
+  /* 16px 可避免 iOS 聚焦时自动放大页面 */
+  .quiz-bar select{flex:1 1 45%;min-height:44px;font-size:16px;min-width:0}
+  .shuffle{min-height:42px;display:flex;align-items:center}
+  .jump-grid{gap:5px}
+  .jump-btn{min-height:36px;font-size:12px;width:auto;min-width:38px;flex:0 0 auto}
+  .lec-ctrl{flex-wrap:wrap;gap:6px}
+  .lec-ctrl .ctrl-btn{flex:1;min-width:72px;min-height:44px;padding:9px 8px;font-size:13.5px}
+  .modal{padding:14px;align-items:flex-start;padding-top:max(14px,6vh)}
+  .modal-box{max-width:100%;max-height:86vh;display:flex;flex-direction:column}
+  .modal-body{overflow-y:auto}
+  .install-tip{flex-wrap:wrap}
+  .fb-body{padding:14px}
+  .fb-explain,.fb-answer{font-size:14px}
+}
+
+/* 安全区适配（iPhone 刘海 / 底部横条） */
+@supports(padding-bottom:env(safe-area-inset-bottom)){
+  .install-tip{bottom:calc(12px + env(safe-area-inset-bottom))}
+  .mnav{padding-top:calc(8px + env(safe-area-inset-top))}
+  @media(max-width:640px){
+    .content{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+  }
+}
+
+</style>
+</head>
+<body data-page-node-id="bDvq0lUARfJh0JZDNRk1cO">
+
+<header class="topbar" data-page-node-id="ENsotrkGFCC69eRLceDYLo">
+  <div class="brand" data-page-node-id="F3RCfbejKLFStZMfDvzIV9">
+    <div class="logo" data-page-node-id="Fa6Ur6jxRM1ITuPgTZjjvu">NB</div>
+    <div class="brand-text" data-page-node-id="qbOHX3YFs0WF0oyif7Ytv5">
+      <h1 data-page-node-id="lHQTfkMbKHDOEEPYbKH5HC">风力发电机组内附件技术规范</h1>
+      <p data-page-node-id="QAYQ2LKgcLcDNoEkHhytTW">NB/T 11773—2025 · 互动学习课程 · <span id="totalCount" data-page-node-id="YDGB1LUocgZShixCfhn77v">0</span> 道权威题库</p>
+    </div>
+  </div>
+  <div class="topstats" data-page-node-id="HanIlumFnC3PDmNcccvTwm">
+    <div class="stat" data-page-node-id="vlYKHBChnb1N0w8EAv7WrQ"><span class="stat-num" id="sDone" data-page-node-id="okST6Ym4B7ENDdySFHZk0G">0</span><span class="stat-lbl" data-page-node-id="o135BIHWbyCbIjhHr15XWH">已答</span></div>
+    <div class="stat" data-page-node-id="ZpSRfxOeqrzZhnJJnXH9rW"><span class="stat-num" id="sRight" data-page-node-id="b23f5TgX7yImwHEo6GCNC2">0</span><span class="stat-lbl" data-page-node-id="UREu22Cq1mQcYHEKtdu7bu">答对</span></div>
+    <div class="stat" data-page-node-id="Egxel3fMb6BVSd8cDANgGv"><span class="stat-num" id="sRate" data-page-node-id="GE1GKDdcze1HkF9i5VsreC">—</span><span class="stat-lbl" data-page-node-id="loonbfXeChBpJuQfI5LwWX">正确率</span></div>
+    <div class="stat" data-page-node-id="C4SbjACXFmUE1oqKoHxL4K"><span class="stat-num" id="sWrong" data-page-node-id="iIvsfjFWjmRxh4IbpuWFAy">0</span><span class="stat-lbl" data-page-node-id="6GehsE3yKFvt5SqZMk9FBH">错题</span></div>
+  </div>
+</header>
+
+<!-- 移动端导航（窄屏显示，宽屏隐藏） -->
+<div class="mnav" id="mNav">
+  <div class="mnav-row">
+    <button class="mnav-btn active" data-view="lecture">讲解</button>
+    <button class="mnav-btn" data-view="quiz">答题</button>
+    <button class="mnav-btn" data-view="fill">填空</button>
+    <button class="mnav-btn" data-view="stats">统计</button>
+  </div>
+  <div class="mnav-row">
+    <select id="mChapter" class="mnav-sel"></select>
+    <button class="mnav-btn ghost" id="mSync">进度同步</button>
+  </div>
+</div>
+
+<div class="layout" data-page-node-id="Sv2j0swqd5zIzjAduNBVDY">
+  <aside class="sidebar" data-page-node-id="uVwNJRDygAOXmF6Xfdtngm">
+    <div class="modes" data-page-node-id="w2Y9AiSaQCDQcofcfK2WYH">
+      <button class="mode-btn active" data-view="lecture" data-page-node-id="vT5eYsqDYYDouJ5YwDCKdF">讲解</button>
+      <button class="mode-btn" data-view="quiz" data-page-node-id="hnIJFOmjjZzQ1Qm4WbHAPd">答题</button>
+      <button class="mode-btn" data-view="fill">填空</button>
+      <button class="mode-btn" data-view="stats" data-page-node-id="UrGAMDkPQZjWsrbLzvoBL4">统计</button>
+    </div>
+    <div class="chap-title" data-page-node-id="GrRc2D6kDjhtg6lw3TodhF">章节目录</div>
+    <nav id="chapNav" class="chap-nav" data-page-node-id="cpU0LS0S8AxdF51bFvHPR4"></nav>
+    <div class="side-foot" data-page-node-id="ei0qGwlNNXCzkBx2gliHzd">
+      <button class="mini-btn" id="btnSync2">导出 / 导入进度</button>
+      <button class="mini-btn" id="btnReset" data-page-node-id="CZZAXiOBi6pZQSFAmewwzA">清空学习记录</button>
+      <div class="tip" data-page-node-id="51Sps3rceQvSy15WLoJRsa">记录保存在本机浏览器。换设备学习请先导出，再到新设备导入。</div>
+    </div>
+  </aside>
+
+  <main class="content" data-page-node-id="aKIpwlhSejuqzuSuEpGrBW">
+
+    <!-- ============ 讲解视图 ============ -->
+    <section id="view-lecture" class="view" data-page-node-id="Mae5m9otMqvOOHkzhDpHe4">
+      <div class="lec-head" data-page-node-id="LHE7e2dqEiTTJgpyM7R7zJ">
+        <div data-page-node-id="eFRy4YWi2zKUn1whvtzL82">
+          <div class="lec-chap" id="lecChap" data-page-node-id="Cq4thN256K4niNoRUhq0yk">第 1 章</div>
+          <h2 id="lecTitle" data-page-node-id="tSXZsuTAmvvdth12vtfCpe">章节标题</h2>
+        </div>
+        <div class="lec-ctrl" data-page-node-id="DpUjemfMNPS14A1Zc9PBfQ">
+          <button class="ctrl-btn" id="lecPrev" data-page-node-id="SzHLOckD8C7vkHrSBqelpB">上一屏</button>
+          <button class="ctrl-btn" id="lecSpeak" data-page-node-id="h2H5QoPuCCcC7g9TdJGAMk">语音讲解</button>
+          <button class="ctrl-btn primary" id="lecPlay" data-page-node-id="ZCjxjSyqyJALun6BObv6eh">自动播放</button>
+          <button class="ctrl-btn" id="lecNext" data-page-node-id="ViMT2QNFbIYe3s0f5WvqSX">下一屏</button>
+        </div>
+      </div>
+      <div class="player" data-page-node-id="eAmXgYA673dPtRAU0bv7wT">
+        <div class="progress" data-page-node-id="kR1k0UMqQgdIHDClOtSSEA"><div class="progress-bar" id="lecBar" data-page-node-id="6W1Ve0VpgcN0T1JktqBcTT"></div></div>
+        <div class="slide" id="lecSlide" data-page-node-id="fMmHFeD3I3qPaxwUEhGHE5"></div>
+        <div class="slide-nav" data-page-node-id="KMcGeVo9XudXyhRIEcU5sR">
+          <span id="lecIdx" data-page-node-id="2mHRyAT146RHR9eCPovE9x">1 / 1</span>
+          <div class="dots" id="lecDots" data-page-node-id="FelqBzy2fEgyCazLosVswq"></div>
+        </div>
+      </div>
+      <div class="lec-after" data-page-node-id="rP0w9ZS23QL5yR378ARx3J">
+        <button class="ctrl-btn big" id="lecToQuiz" data-page-node-id="3P2kePxYjNeZz0L6LhX7Cb">学完了，去做本章题目 →</button>
+      </div>
+    </section>
+
+    <!-- ============ 答题视图 ============ -->
+    <section id="view-quiz" class="view hidden" data-page-node-id="YWkDdlfkJzC7oqPUUs4h4L">
+      <div class="quiz-bar" data-page-node-id="6GAJ4fJn5tKS7ZOycfuXXD">
+        <select id="fChapter" data-page-node-id="JcrFV73GHuuIwAZSPjXGqD"><option value="all" data-page-node-id="ELTL90QmmceUHCQX146rY2">全部章节</option></select>
+        <select id="fType" data-page-node-id="Fw1lUMXhvLc4qAACnrS22r">
+          <option value="all" data-page-node-id="pHprqyAlfOuCSeCfe8lq5R">全部题型</option>
+          <option value="single" data-page-node-id="efp17B4DNOljGWQjsWp20K">单选题</option>
+          <option value="multi" data-page-node-id="gtA5ZKbz67X8ddJNDamNZG">多选题</option>
+          <option value="judge" data-page-node-id="xKMOsQCX1nUWOz7MTRIoBP">判断题</option>
+        </select>
+        <select id="fScope" data-page-node-id="BGFaMcwwT85bY6xm2mC3aT">
+          <option value="all" data-page-node-id="r1kr6gvfibUooZlHR6ES8z">全部题目</option>
+          <option value="undo" data-page-node-id="Cj5XWCji1nzlaEJ5ZF3NXd">未作答</option>
+          <option value="wrong" data-page-node-id="BiSWDRisINUEBrQqz2W8g7">我的错题</option>
+          <option value="right" data-page-node-id="eCbz4RunCOREA13HlOUvIH">已答对</option>
+        </select>
+        <label class="shuffle" data-page-node-id="hmJA6uB59RUrqrJMlF9yIn"><input type="checkbox" id="fShuffle" data-page-node-id="5xjSleJqELisnIPP8gFy0x"> 随机打乱</label>
+        <span class="quiz-range" id="quizRange" data-page-node-id="PDBH4WGvHPVPGNsIWHaUD6">—</span>
+      </div>
+
+      <div class="qcard" data-page-node-id="D6btKsFw3mbjj0mCSR3Nud">
+        <div class="qmeta" data-page-node-id="x0KTBa4XRpbYNcAQt9TH5X">
+          <span class="tag" id="qChapter" data-page-node-id="obEn0B6kGghfHHZ0Uf6l3F">章节</span>
+          <span class="tag type" id="qType" data-page-node-id="NiTaL6Wd9SF1yPSJK53Vth">题型</span>
+          <span class="tag idx" id="qIdx" data-page-node-id="y3zvRtbFPkNRTTF26WtWji">1 / 1</span>
+          <span class="tag src" id="qSourceTag" data-page-node-id="TLgc6nnEydl7LKcd3LQwkR">出处</span>
+        </div>
+        <h3 class="qtext" id="qText" data-page-node-id="w8ohyqw0R3y1nsEduNkKc9"></h3>
+        <div class="options" id="qOptions" data-page-node-id="cRhA7MExXNrtepoVkJTgI9"></div>
+
+        <div class="feedback hidden" id="qFeedback" data-page-node-id="nWHEf7kv3FDPKHGdE1V67P">
+          <div class="fb-head" id="fbHead" data-page-node-id="Hm5x0hUoUDu0EPK9I5DXCP"></div>
+          <div class="fb-body" data-page-node-id="YizRIyutvAGmvPpHBTCtlA">
+            <div class="fb-block" data-page-node-id="OU1ySLrfInszAWxFsQD5mn">
+              <div class="fb-label" data-page-node-id="wYHUBIa0HxLoGoWFN47Aqw">正确答案</div>
+              <div class="fb-answer" id="fbAnswer" data-page-node-id="1QrMy0SnJrleqNk7eLBGVA"></div>
+            </div>
+            <div class="fb-block" data-page-node-id="cdrmSfe3EI8jECPZ8VDE3t">
+              <div class="fb-label" data-page-node-id="SvbnVJS66a4EwZuHX0BBcK">为什么</div>
+              <div class="fb-explain" id="fbExplain" data-page-node-id="GmVPR49EEXTEHZ4HtNab9p"></div>
+            </div>
+            <div class="fb-block" data-page-node-id="Cs47vVpkShfTdf4suoZa1V">
+              <div class="fb-label" data-page-node-id="uDEdeYYUzSGmToefBR8Ypx">出处</div>
+              <div class="fb-source" id="fbSource" data-page-node-id="uYe6JsRgU7FvCX8JljoNIT"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qactions" data-page-node-id="NsuUkVtPrMmFwvH3t5DOHo">
+          <button class="ctrl-btn" id="qPrev" data-page-node-id="UGqWaEA5WYkUSsBrICGz6W">上一题</button>
+          <button class="ctrl-btn ghost" id="qMark" data-page-node-id="AIexMOCOpGh0UPXcVOxdhk">标记错题</button>
+          <button class="ctrl-btn primary" id="qNext" data-page-node-id="rqzTzGZZLOBNOo6APK0ZST">下一题 →</button>
+        </div>
+      </div>
+
+      <div class="jump" data-page-node-id="Di6K1Y4mSwGZ94afKLr4Zm">
+        <div class="jump-label" data-page-node-id="5FcrlAXTpIkNZJ9FEN2j2A">快速跳题</div>
+        <div class="jump-grid" id="jumpGrid" data-page-node-id="OqZ9eV5bS1XH0CwLQkYVaJ"></div>
+      </div>
+    </section>
+
+    <!-- ============ 填空题视图（巩固模式） ============ -->
+    <section id="view-fill" class="view hidden">
+      <div class="quiz-bar">
+        <select id="ffChapter"><option value="all">全部章节</option></select>
+        <select id="ffScope">
+          <option value="all">全部题目</option>
+          <option value="undo">未作答</option>
+          <option value="wrong">我的错题</option>
+          <option value="right">已答对</option>
+        </select>
+        <label class="shuffle"><input type="checkbox" id="ffShuffle"> 随机打乱</label>
+        <span class="quiz-range" id="ffRange">—</span>
+      </div>
+      <div class="fill-stats" id="ffStats"></div>
+
+      <div class="qcard">
+        <div class="qmeta">
+          <span class="tag" id="fqChapter">章节</span>
+          <span class="tag type" id="fqType">填空题</span>
+          <span class="tag idx" id="fqIdx">1 / 1</span>
+          <span class="tag src" id="fqSourceTag">出处</span>
+        </div>
+        <h3 class="qtext" id="fqText"></h3>
+        <div class="options" id="fqOptions"></div>
+
+        <div class="feedback hidden" id="fqFeedback">
+          <div class="fb-head" id="ffbHead"></div>
+          <div class="fb-body">
+            <div class="fb-block">
+              <div class="fb-label">正确答案</div>
+              <div class="fb-answer" id="ffbAnswer"></div>
+            </div>
+            <div class="fb-block">
+              <div class="fb-label">为什么</div>
+              <div class="fb-explain" id="ffbExplain"></div>
+            </div>
+            <div class="fb-block">
+              <div class="fb-label">出处</div>
+              <div class="fb-source" id="ffbSource"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qactions">
+          <button class="ctrl-btn" id="fqPrev">上一题</button>
+          <button class="ctrl-btn ghost" id="fqMark">标记错题</button>
+          <button class="ctrl-btn primary" id="fqNext">提交答案</button>
+        </div>
+      </div>
+
+      <div class="jump">
+        <div class="jump-label">快速跳题</div>
+        <div class="jump-grid" id="fjumpGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ 统计视图 ============ -->
+    <section id="view-stats" class="view hidden" data-page-node-id="GYa8fN7luwQYHF5KLp4s4r">
+      <h2 class="sec-title" data-page-node-id="kWdgmSGsVbArYwYUoKQYSC">学习统计</h2>
+      <div class="stat-cards" id="statCards" data-page-node-id="XQUYrsCYJnwyGDPbWpHncK"></div>
+      <h2 class="sec-title" data-page-node-id="afpPiP2RDzF0rMIqsDskck">各章掌握情况</h2>
+      <div class="chap-stats" id="chapStats" data-page-node-id="CVwwt9AeAEYNsifHH8hbpq"></div>
+      <h2 class="sec-title" data-page-node-id="ZonDIJp510YqFQIpKfqoWj">错题清单</h2>
+      <div class="wrong-list" id="wrongList" data-page-node-id="krCQD9dm16kF6w1IRvkqdA"></div>
+    </section>
+
+  </main>
+</div>
+
+<!-- 进度同步弹窗 -->
+<div class="modal hidden" id="syncModal">
+  <div class="modal-mask" id="syncMask"></div>
+  <div class="modal-box">
+    <div class="modal-head">
+      <h3>学习进度同步</h3>
+      <button class="modal-x" id="syncClose">×</button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-tip">
+        进度保存在<b>当前设备的浏览器</b>里，不会自动跨设备同步。换电脑或换手机时，
+        在旧设备点「导出进度」存下文件，到新设备点「导入进度」选该文件即可无缝继续。
+      </p>
+      <div class="modal-acts">
+        <button class="ctrl-btn primary" id="btnExport">导出进度（下载文件）</button>
+        <button class="ctrl-btn" id="btnImport">导入进度（选择文件）</button>
+        <input type="file" id="fileInput" accept=".json,application/json" hidden>
+      </div>
+      <div class="modal-status" id="syncStatus"></div>
+      <div class="modal-sum" id="syncSum"></div>
+    </div>
+  </div>
+</div>
+
+<!-- 知识库弹窗（出处/引用规范点击后在课程内查看知识点，不跳外部网页） -->
+<div class="modal hidden" id="kbModal">
+  <div class="modal-mask" id="kbMask"></div>
+  <div class="modal-box kb-box">
+    <div class="modal-head">
+      <h3 id="kbTitle">知识点</h3>
+      <button class="modal-x" id="kbClose">×</button>
+    </div>
+    <div class="modal-body kb-body" id="kbBody"></div>
+  </div>
+</div>
+
+<!-- 添加到主屏幕提示 -->
+<div class="install-tip hidden" id="installTip">
+  <div class="it-text">
+    <b>装到手机桌面</b>
+    <span id="installGuide">添加后断网也能学</span>
+  </div>
+  <div class="it-btns">
+    <button class="it-btn" id="installDo">添加</button>
+    <button class="it-btn ghost" id="installNo">不用</button>
+  </div>
+</div>
+
+<script>
+window.CH01 = {
+  id: 1,
+  title: '范围与规范性引用文件',
+  slides: [
+    { h: '本文件的定位', body: '<p>NB/T 11773—2025《风力发电机组内附件技术规范》于 <b>2025-06-30 发布、2025-12-30 实施</b>，由国家能源局提出，由能源行业风电标准化技术委员会风电场机械设备分技术委员会（<b>NEA/TC1/SC5</b>）归口，属于<b>能源行业标准（NB 系列）</b>。</p><div class="kv">本文件规定了风力发电机组内附件的<b>技术要求、装配、检验、包装、储存和运输</b>；适用于风力发电机组内附件的<b>制造、装配和检验</b>。</div><p>内附件是风力发电制造业中的约定俗成分类称呼（又称附件、内件或内饰件），<b>区别于塔架、轮毂、传动系等主要大部件</b>。</p>', src: '封面、前言、第1章' },
+    { h: '内附件是什么', body: '<p>内附件泛指风力发电机组中<b>除了主要大部件（塔架、轮毂、传动系等）之外的结构件或功能件</b>，主要用于连接、固定、支撑以及提供维护和安全功能等。</p><div class="nums"><div class="num"><b>护栏</b><span>防坠落安全设施</span></div><div class="num"><b>爬梯</b><span>塔筒内攀爬通道</span></div><div class="num"><b>维护平台</b><span>作业停留/检修支撑</span></div></div><p>常见的内附件包括护栏、爬梯、维护平台等——它们是保障风电机组日常巡检与维护作业安全的基础设施。</p>', src: '第3章 术语和定义' },
+    { h: '引用规范速查（上）材料与紧固件', body: '<p>引用文件通过规范性引用构成本文件必不可少的条款。<b>注日期的引用文件仅该日期对应的版本适用；不注日期的引用文件其最新版本（含所有修改单）适用</b>。下表为速查知识库：每个规范的"具体内容"即其规定什么。</p><table><tr><th>规范号</th><th>具体内容（规定什么）</th><th>在本文件中的用途</th></tr><tr><td>GB/T 700</td><td>《碳素结构钢》：碳素结构钢牌号、化学成分与力学性能</td><td>4.1.2.1 结构钢质量（Q235 等）</td></tr><tr><td>GB/T 1591—2018</td><td>《低合金高强度结构钢》：低合金高强钢牌号与质量等级（B 级及以上）</td><td>4.1.2.1 焊接用结构钢 B 级及以上；表5 材质检验</td></tr><tr><td>GB/T 5313</td><td>《厚度方向性能钢板》：Z 向钢抗层状撕裂性能</td><td>4.1.2.1 d) 防层状撕裂 Z 向钢</td></tr><tr><td>GB/T 709—2019</td><td>《热轧钢板和钢带的尺寸、外形、重量及允许偏差》：钢板厚度偏差等级（A/B 级）</td><td>4.1.2.2 静力 A 级、疲劳 B 级</td></tr><tr><td>GB/T 14977—2008</td><td>《热轧钢板表面质量的一般要求》：钢板表面质量等级（B1/B3 级）</td><td>4.1.2.3 静力 B1 级、疲劳 B3 级</td></tr><tr><td>YB/T 4427—2014</td><td>《热轧型钢表面质量一般要求》：型钢表面质量等级（B1/B3 级）</td><td>4.1.2.3 型钢表面质量</td></tr><tr><td>GB/T 3880（所有部分）</td><td>《一般工业用铝及铝合金板、带材》：铝板带材技术要求</td><td>4.1.3.1 铝合金板材</td></tr><tr><td>GB/T 3190</td><td>《变形铝及铝合金化学成分》：变形铝化学成分</td><td>4.1.3.1 花纹板化学成分</td></tr><tr><td>GB/T 4237</td><td>《不锈钢热轧钢板和钢带》：不锈钢热轧板带</td><td>4.1.4.1 不锈钢钢板</td></tr><tr><td>GB/T 3280</td><td>《不锈钢冷轧钢板和钢带》：不锈钢冷轧板带</td><td>4.1.4.1 不锈钢钢板</td></tr><tr><td>GB/T 3098.1</td><td>《紧固件机械性能 螺栓、螺钉和螺柱》：碳钢/合金钢紧固件机械性能等级</td><td>4.1.6 碳钢或合金钢紧固件 6.8 级及以上；表5 高强螺栓检验</td></tr><tr><td>GB/T 3098.6</td><td>《紧固件机械性能 不锈钢螺栓、螺钉和螺柱》：不锈钢紧固件性能</td><td>4.1.6 c) 不锈钢紧固件</td></tr><tr><td>GB/T 3098.15</td><td>《紧固件机械性能 不锈钢螺母》：不锈钢螺母性能</td><td>4.1.6 c) 不锈钢螺母</td></tr><tr><td>GB/T 3098.10</td><td>《紧固件机械性能 有色金属制造的螺栓、螺钉、螺柱和螺母》：铝合金等紧固件性能</td><td>4.1.6 b) 铝合金紧固件</td></tr><tr><td>GB/T 197—2018</td><td>《普通螺纹 公差》：普通螺纹公差带（6H/6g）</td><td>4.2.5.14 螺纹精度等级</td></tr><tr><td>GB/T 3</td><td>《普通螺纹收尾、肩距、退刀槽和倒角》：螺纹收尾与倒角尺寸</td><td>4.2.5.14 螺纹收尾/退刀槽</td></tr></table>', src: '第2章 规范性引用文件' },
+    { h: '引用规范速查（下）焊接与防腐', body: '<table><tr><th>规范号</th><th>具体内容（规定什么）</th><th>在本文件中的用途</th></tr><tr><td>GB/T 5117</td><td>《非合金钢及细晶粒钢焊条》：碳钢焊条技术要求</td><td>4.1.5 结构钢焊条；表5 焊接材料检验</td></tr><tr><td>GB/T 5293</td><td>《埋弧焊用非合金钢及细晶粒钢实心焊丝、药芯焊丝和焊丝-焊剂组合分类要求》：埋弧焊焊材分类</td><td>4.1.5 结构钢焊剂/焊丝</td></tr><tr><td>GB/T 8110</td><td>《熔化极气体保护电弧焊用非合金钢及细晶粒钢实心焊丝》：气保焊实心焊丝</td><td>4.1.5 结构钢焊丝</td></tr><tr><td>GB/T 10858</td><td>《铝及铝合金焊丝》：铝焊丝（SAL 5356、SAL 4043）</td><td>4.1.5 铝合金焊丝选用</td></tr><tr><td>GB/T 983</td><td>《不锈钢焊条》：不锈钢焊条技术要求</td><td>4.1.5 不锈钢焊条</td></tr><tr><td>GB/T 985.1</td><td>《气焊、焊条电弧焊、气体保护焊和高能束焊的推荐坡口》：常用焊接坡口</td><td>4.2.4.1 焊缝坡口形式</td></tr><tr><td>GB/T 985.2</td><td>《埋弧焊的推荐坡口》：埋弧焊坡口</td><td>4.2.4.1 埋弧焊坡口</td></tr><tr><td>NB/T 47014</td><td>《承压设备焊接工艺评定》：焊接工艺评定规则</td><td>4.2.4.2 焊前工艺评定；表5 工艺评定检验</td></tr><tr><td>NB/T 47016</td><td>《承压设备产品焊接试件的力学性能检验》：焊接试板力学性能检验</td><td>表5 产品焊接试板检验</td></tr><tr><td>NB/T 47013.3—2023</td><td>《承压设备无损检测 第3部分：超声检测》：超声检测（Ⅱ级质量等级）</td><td>4.1.2.1 疲劳件超声探伤；表5 焊缝无损检测</td></tr><tr><td>GB 50661</td><td>《钢结构焊接规范》：焊接工艺与焊后处理</td><td>4.2.4.3.1 消氢消应力处理</td></tr><tr><td>GB/T 19804—2005</td><td>《焊接结构的一般尺寸公差和形位公差》：焊接件未注公差等级（B/F 级）</td><td>4.2.4.4.1 未注尺寸/形位公差</td></tr><tr><td>ISO 5817—2023</td><td>《焊接钢、镍、钛及其合金的熔焊接头缺陷质量等级》：焊缝缺陷质量等级（B/C 级）</td><td>4.2.4.4.2/.3 焊缝质量等级</td></tr><tr><td>GB 50576—2010</td><td>《铝合金结构工程施工质量验收规范》：铝合金结构验收（附录A 焊缝外观）</td><td>4.2.4.4.4 铝合金焊缝外观</td></tr><tr><td>GB/T 33628</td><td>《风力发电机组 高强螺纹连接副安装技术要求》：高强螺纹副安装</td><td>5.3.1 高强紧固件安装；表5 紧固扭矩检验</td></tr><tr><td>GB/T 19568</td><td>《风力发电机组 装配和安装规范》：风电机组装配安装</td><td>5.3.2 未规定扭矩时；5.5 现场安装</td></tr><tr><td>ISO 12944（所有部分）</td><td>《涂料和清漆 保护漆系统对钢结构的腐蚀防护》：防腐体系设计（-5/-7 部分）</td><td>4.3.1.2、4.3.3.2、4.3.4.1 防腐体系</td></tr><tr><td>GB/T 8923.1—2011</td><td>《涂覆涂料前钢材表面处理 表面清洁度的目视评定 第1部分》：喷射清理等级 Sa2.5</td><td>4.3.2.2 喷射清理等级</td></tr><tr><td>GB/T 18570.3—2005</td><td>《涂覆涂料前钢材表面处理 表面清洁度的评定试验 第3部分》：灰尘评定（2 级）</td><td>4.3.2.3 表面清洁度</td></tr><tr><td>ISO 1461</td><td>《钢铁制件热浸镀锌层 规范和试验方法》：镀锌层厚度检验</td><td>4.3.5 镀锌干膜厚度；表5</td></tr><tr><td>ISO 2063-2</td><td>《热喷涂 锌、铝及其合金 第2部分 防腐系统的实行》：热喷锌层检验</td><td>4.3.5 热喷锌厚度；表5</td></tr><tr><td>ISO 19840</td><td>《色漆和清漆 防护漆系对钢结构的防腐蚀 粗糙表面干膜厚度的测量与验收准则》：油漆干膜厚度测量</td><td>4.3.5 油漆干膜厚度；表5</td></tr><tr><td>ISO 16276-1</td><td>《防护漆系统涂层粘附力评估与验收准则 第1部分：脱落测试》：拉开法附着力（≥5 MPa）</td><td>4.3.5 附着力检验；表5</td></tr><tr><td>ISO 16276-2</td><td>《防护漆系统涂层粘附力评估与验收准则 第2部分：横切/纵切测试》：划格法附着力（1 级或 0 级）</td><td>4.3.5 拉开法不适用时</td></tr><tr><td>GB/T 9445</td><td>《无损检测 人员资格鉴定与认证》：无损检测人员资格</td><td>6.1.2 无损检测人员持证</td></tr><tr><td>ISO 9712</td><td>《无损检测人员的资格鉴定与认证》：NDT 人员国际认证</td><td>6.1.2 无损检测人员持证</td></tr><tr><td>GB/T 1958</td><td>《产品几何技术规范（GPS）几何公差 检测与验证》：几何公差检测方法</td><td>表5 孔的位置度检验</td></tr><tr><td>GB/T 17888（所有部分）</td><td>《机械安全 接近机械的固定设施》：楼梯、护栏、直梯等固定设施安全要求</td><td>5.2.2 接近机械的固定设施；表5</td></tr><tr><td>GB/T 90.2</td><td>《紧固件 标志与包装》：紧固件包装标志</td><td>7.2.2 紧固件包装</td></tr><tr><td>GB 9448</td><td>《焊接与切割安全》：焊接作业安全</td><td>4.2.4.2 o) 焊接作业安全</td></tr></table>', src: '第2章 规范性引用文件' }
+  ],
+  questions: [
+    { t: 'judge', q: 'NB/T 11773—2025 规定了风力发电机组内附件的设计计算方法。', a: [1], e: '错误。第1章首句明确：本文件规定了风力发电机组内附件技术要求、装配、检验、包装、储存和运输。设计计算方法不在规定范围内，这是把"技术要求"与"设计计算"混为一谈的典型陷阱。', s: '第1章 范围' },
+    { t: 'single', q: 'NB/T 11773—2025 的发布与实施日期分别是：', o: ['2025-06-30 发布，2025-12-30 实施', '2025-06-30 发布，2026-01-01 实施', '2025-12-30 发布，2026-06-30 实施', '2025-01-01 发布，2025-06-30 实施'], a: [0], e: '封面载明：2025-06-30 发布，2025-12-30 实施。发布与实施之间留有约半年过渡期，供制造单位完成设计与文件转换。', s: '封面' },
+    { t: 'single', q: '本文件由哪个机构提出？', o: ['国家市场监督管理总局', '国家能源局', '全国风力机械标准化技术委员会', '能源行业风电标准化技术委员会'], a: [1], e: '前言载明：本文件由国家能源局提出，由能源行业风电标准化技术委员会风电场机械设备分技术委员会（NEA/TC1/SC5）归口。注意区分"提出"（国家能源局）与"归口"（NEA/TC1/SC5）。', s: '前言' },
+    { t: 'single', q: '本文件适用于风力发电机组内附件的：', o: ['设计、制造和试验', '制造、装配和检验', '安装、调试和验收', '采购、储存和运输'], a: [1], e: '第1章明确：本文件适用于风力发电机组内附件的制造、装配和检验。这是适用范围条款，与规定内容（技术要求、装配、检验、包装、储存和运输）要区分记忆。', s: '第1章 范围' },
+    { t: 'judge', q: '本文件适用于风力发电机组中塔架、轮毂、传动系等主要大部件。', a: [1], e: '错误。第3章定义中明确，内附件泛指除了主要大部件（塔架、轮毂、传动系等）之外的结构件或功能件。主要大部件不属于内附件范畴，因此不在本文件适用范围内。', s: '第3章 术语和定义' },
+    { t: 'multi', q: '下列哪些属于常见的风力发电机组内附件？（多选）', o: ['护栏', '爬梯', '维护平台', '主轴承'], a: [0, 1, 2], e: '第3章术语注：常见的内附件包括护栏、爬梯、维护平台等。主轴承属于传动系主要大部件，不属于内附件。', s: '第3章 术语和定义' },
+    { t: 'multi', q: '内附件主要用于以下哪些功能？（多选）', o: ['连接', '固定', '支撑', '发电'], a: [0, 1, 2], e: '第3章定义：内附件主要用于连接、固定、支撑以及提供维护和安全功能等。发电是风电机组整机（含主要大部件）的功能，不是内附件的功能定位。', s: '第3章 术语和定义' },
+    { t: 'judge', q: '内附件是风力发电制造业中一个约定俗成的分类称呼，又称附件、内件或内饰件。', a: [0], e: '正确。第3章术语注中明确说明，这是风力发电制造业中约定俗成的分类称呼，又称附件、内件或内饰件。', s: '第3章 术语和定义' },
+    { t: 'single', q: '关于规范性引用文件的版本适用，下列说法正确的是：', o: ['注日期的引用文件，其最新版本适用于本文件', '不注日期的引用文件，仅该日期对应的版本适用于本文件', '注日期的引用文件，仅该日期对应的版本适用于本文件', '所有引用文件均强制采用最新版本'], a: [2], e: '第2章：注日期的引用文件，仅该日期对应的版本适用于本文件；不注日期的引用文件，其最新版本（包括所有的修改单）适用于本文件。两者方向相反，是必考的易错点。', s: '第2章 规范性引用文件' },
+    { t: 'single', q: '焊接内附件的结构钢应使用 GB/T 1591—2018 中规定的哪个质量等级及以上？', o: ['A 级', 'B 级', 'C 级', 'D 级'], a: [1], e: '4.1.2.1 b)：对于需要焊接的内附件，应使用 GB/T 1591—2018 中规定的 B 级及以上的质量等级，例如 Q235B、Q355B。注意与表面质量等级 B1/B3、厚度偏差 A/B 级区分。', s: '4.1.2.1' },
+    { t: 'single', q: '承受疲劳载荷的内附件，其超声波探伤质量等级不宜低于：', o: ['NB/T 47013.3—2023 规定的Ⅰ级', 'NB/T 47013.3—2023 规定的Ⅱ级', 'NB/T 47013.3—2023 规定的Ⅲ级', 'GB/T 1591—2018 规定的 B 级'], a: [1], e: '4.1.2.1 c)：承受疲劳载荷的内附件内部不应有超出设计要求的夹杂、裂纹、气孔和分层等，此时超声波探伤质量等级不宜低于 NB/T 47013.3—2023 规定的Ⅱ级。', s: '4.1.2.1' },
+    { t: 'single', q: '焊接结构为防止钢材的层状撕裂而采用 Z 向钢时，其质量应符合：', o: ['GB/T 700', 'GB/T 5313', 'GB/T 1591—2018', 'GB/T 14977—2008'], a: [1], e: '4.1.2.1 d)：焊接结构为防止钢材的层状撕裂而采用 Z 向钢时，其质量应符合 GB/T 5313（厚度方向性能钢板）的规定。', s: '4.1.2.1' },
+    { t: 'single', q: '承受静力载荷的内附件，热轧钢板厚度偏差应不低于 GB/T 709—2019 规定的：', o: ['A 级', 'B 级', 'C 级', 'D 级'], a: [0], e: '4.1.2.2 a)：承受静力载荷的内附件，热轧钢板厚度偏差不低于 GB/T 709—2019 规定的 A 级；承受疲劳载荷的内附件不宜低于 B 级。静力 A、疲劳 B 是对照记忆点。', s: '4.1.2.2' },
+    { t: 'single', q: '承受疲劳载荷的内附件，热轧钢板表面质量宜符合 GB/T 14977—2008 规定的：', o: ['A1 级别', 'B1 级别', 'B3 级别', 'C 级'], a: [2], e: '4.1.2.3：静力载荷热轧钢板表面质量符合 B1 级，疲劳载荷宜符合 B3 级（级别数字越大要求越高）。型钢表面质量同理：静力 B1、疲劳 B3（YB/T 4427—2014）。', s: '4.1.2.3' },
+    { t: 'single', q: '承受疲劳载荷的内附件，型钢表面质量宜符合 YB/T 4427—2014 规定的：', o: ['B1 级别', 'B3 级别', 'C1 级别', 'A 级'], a: [1], e: '4.1.2.3 c)/d)：承受静力载荷的型钢表面质量符合 YB/T 4427—2014 规定的 B1 级别；承受疲劳载荷的宜符合 B3 级别。', s: '4.1.2.3' },
+    { t: 'single', q: '铝合金内附件宜采用哪些系列的铝合金？', o: ['1XXX 和 3XXX 系列', '2XXX 和 7XXX 系列', '5XXX 和 6XXX 系列', '4XXX 和 8XXX 系列'], a: [2], e: '4.1.3.1 a)：铝合金内附件宜采用 5XXX 系列和 6XXX 系列铝合金，内部不应有裂纹、分层等。5XXX 为铝镁系（耐蚀好）、6XXX 为铝镁硅系（可挤压成形），适合内附件结构件。', s: '4.1.3.1' },
+    { t: 'single', q: '不锈钢内附件宜选用的牌号系列是：', o: ['S20100、S30400', 'S30408、S31608', 'S32168、S34778', 'S41008、S42000'], a: [1], e: '4.1.4.1 a)：不锈钢内附件宜选用 S30408、S31608 等系列不锈钢，当有可靠依据时也可采用其他牌号。S30408 即 304 不锈钢、S31608 即 316 不锈钢。', s: '4.1.4.1' },
+    { t: 'judge', q: '经酸洗后的不锈钢材料表面不应有氧化皮及过酸洗，允许有个别深度小于厚度公差之半的轻微麻点等不影响使用的缺陷。', a: [0], e: '正确。4.1.4.3：不锈钢材料不应存在影响使用的缺陷。经酸洗后不应有氧化皮及过酸洗；允许个别深度小于厚度公差之半的轻微麻点、擦划伤、压痕、凹坑、辊印和色差等不影响使用的缺陷。', s: '4.1.4.3' },
+    { t: 'single', q: '对直接承受动力载荷或需要验算疲劳的内附件，以及低温环境下工作的厚板内附件，宜采用：', o: ['酸性焊条', '低氢型焊接材料', '高硅型焊丝', '碱性药芯焊丝'], a: [1], e: '4.1.5：对直接承受动力载荷或需要验算疲劳的内附件，以及低温环境下工作的厚板内附件，宜采用低氢型焊接材料。低氢型焊材抗冷裂纹能力强。', s: '4.1.5' },
+    { t: 'single', q: '铝合金内附件焊接用焊丝宜选用：', o: ['SAL 5356 及 SAL 4043', 'SAL 2319 及 SAL 5087', 'H08Mn2Si 及 H10Mn2', 'ER4047 及 ER5356'], a: [0], e: '4.1.5：铝合金内附件焊接用焊丝应符合 GB/T 10858 的规定，宜选用 SAL 5356 及 SAL 4043。焊接工艺可采用熔化极惰性气体保护电弧焊（MIG 焊）和钨极惰性气体保护电弧焊（TIG 焊）。', s: '4.1.5' },
+    { t: 'single', q: '如未规定时，碳钢或合金钢紧固件应选用什么等级及以上？', o: ['4.8 级', '5.6 级', '6.8 级', '8.8 级'], a: [2], e: '4.1.6 a)：碳钢或合金钢紧固件应符合 GB/T 3098.1 的规定，并选用 6.8 级及以上等级。注意区分：4.2.3.5 中"不低于 8.8 级高强螺栓的连接节点"是开孔冲孔的禁止条件，两者场景不同。', s: '4.1.6' },
+    { t: 'judge', q: '铝合金内附件的螺栓连接宜采用有预拉力的高强度螺栓。', a: [1], e: '错误。4.1.6 b)：铝合金紧固件应符合 GB/T 3098.10 的规定，铝合金内附件的螺栓连接不宜采用有预拉力的高强度螺栓——因铝合金基体强度低，预拉力易导致压溃或松弛。', s: '4.1.6' },
+    { t: 'single', q: '电缆夹具材料一般采用：', o: ['尼龙 6', '尼龙 66', '聚碳酸酯', '聚四氟乙烯'], a: [1], e: '4.1.7：电缆夹具材料一般采用尼龙 66，表面不应有龟裂、银纹、斑点、孔眼、缺口、凹陷、尖角、毛刺和油污等缺陷。', s: '4.1.7' },
+    { t: 'single', q: '电缆夹具的跌落试验要求是：', o: ['1 m 高空掉落木地板，不开裂不破损', '2 m 高空掉落水泥地面，不开裂不破损', '3 m 高空掉落钢板，不变形', '0.5 m 高空掉落水泥地面，不开裂'], a: [1], e: '4.1.7：跌落试验要求 2 m 高空掉落水泥地面，夹具应不开裂、不破损。这是检验尼龙 66 夹具韧性的关键试验。', s: '4.1.7' },
+    { t: 'multi', q: '如未规定时，尼龙 66 电缆夹具的主要性能要求包括：（多选）', o: ['工作温度 -40 ℃~110 ℃', '熔点 247 ℃~250 ℃', '防火等级 UL94 V-0', '拉伸强度大于 300 MPa'], a: [0, 1, 2], e: '4.1.7：尼龙 66 夹具主要性能：工作温度 -40~110 ℃、熔点 247~250 ℃、弯曲强度 180 MPa、拉伸强度大于 115 MPa、缺口悬梁冲击强度大于 5.5 kJ/㎡、无缺口悬臂梁冲击强度大于 30 kJ/㎡、热变形温度（1.8 MPa）220 ℃、防火等级 UL94 V-0。拉伸强度是大于 115 MPa 而非 300 MPa。', s: '4.1.7' },
+    { t: 'single', q: '尼龙 66 电缆夹具的防火等级为：', o: ['UL94 HB', 'UL94 V-0', 'UL94 V-2', 'UL94 5VA'], a: [1], e: '4.1.7 h)：防火等级 UL94 V-0——这是 UL94 阻燃等级中垂直燃烧试验的最高常规等级（V-0 > V-1 > V-2）。', s: '4.1.7' },
+    { t: 'single', q: '下列哪项是尼龙 66 电缆夹具的热变形温度（1.8 MPa 载荷下）？', o: ['180 ℃', '200 ℃', '220 ℃', '250 ℃'], a: [2], e: '4.1.7 g)：热变形温度（1.8 MPa）：220 ℃。注意与熔点 247~250 ℃、工作温度上限 110 ℃ 区分——工作温度远低于热变形温度，留有余量。', s: '4.1.7' },
+    { t: 'single', q: '常用型钢的尺寸、外形、重量及允许偏差应符合哪个表的规定？', o: ['表1', '表2', '表3', '表5'], a: [0], e: '4.1.2.2 c)：常用型钢的尺寸、外形、重量及允许偏差应符合表1（型钢的相关标准）的规定。表2 是折弯半径、表3 是倒角尺寸、表5 是检验项目和方法。', s: '4.1.2.2；表1' },
+    { t: 'single', q: '热轧 H 型钢和剖分 T 型钢应符合的标准是：', o: ['GB/T 706', 'GB/T 11263', 'GB/T 6728', 'GB/T 33974'], a: [1], e: '表1：热轧 H 型钢/T 型钢 → GB/T 11263；热轧角钢、工字钢、槽钢 → GB/T 706；结构用冷弯空心型钢 → GB/T 6728；花纹钢板 → GB/T 33974。', s: '表1' },
+    { t: 'judge', q: '材料选择时应优先选用非标型材以满足特殊设计需求。', a: [1], e: '错误。4.1.1 b)：材料规格应符合相关标准，避免使用非标型材。材料的选用应遵循技术可靠、经济合理的原则。', s: '4.1.1' },
+    { t: 'single', q: '内附件材料应具有的产品出厂证明是：', o: ['合格证复印件即可，无需盖章', '质量证明书原件或加盖供材单位检验公章的有效复印件', '供应商口头承诺', '检测报告电子版'], a: [1], e: '4.1.1：材料应满足设计要求、适用于所处的工作环境，且应有完整合格的产品出厂证明：质量证明书原件或加盖供材单位检验公章的有效复印件。', s: '4.1.1' }
+  ]
+};
+
+</script>
+<script>
+window.CH02 = {
+  id: 2,
+  title: '术语和定义',
+  slides: [
+    { h: '内附件（internals）的定义', body: '<div class="kv">内附件 internals——泛指风力发电机组中<b>除了主要大部件（塔架、轮毂、传动系等）之外的结构件或功能件</b>，主要用于<b>连接、固定、支撑</b>以及提供<b>维护和安全功能</b>等。</div><ul><li>它是风力发电制造业中一个<b>约定俗成的分类称呼</b>，又称附件、内件或内饰件；</li><li>常见的内附件包括<b>护栏、爬梯、维护平台</b>等。</li></ul><p>理解要点：内附件是"支撑系统与服务设施"，而非承载发电主功能的大部件——这决定了本文件的技术要求聚焦于结构安全、焊接质量、防腐与装配精度。</p>', src: '3.1' },
+    { h: '内附件 vs 主要大部件', body: '<p>本文件通过"排除法"界定内附件范围，考试常以边界判断出题：</p><table><tr><th>类别</th><th>示例</th><th>是否内附件</th></tr><tr><td>主要大部件</td><td>塔架、轮毂、传动系、主轴承、叶片、机舱</td><td>否（本文件不适用）</td></tr><tr><td>内附件</td><td>护栏、爬梯、维护平台、塔架门、电缆夹具</td><td>是（本文件适用）</td></tr></table><div class="kv">记忆口诀：内附件是"<b>小件、连接件、服务件</b>"——负责把人安全地送上去、把设备可靠地连接固定，而不是发电与传动的核心。</div>', src: '3.1' }
+  ],
+  questions: [
+    { t: 'single', q: '根据第 3 章定义，"内附件"的英文术语是：', o: ['internals', 'attachments', 'accessories', 'components'], a: [0], e: '3.1 术语原文：内附件 internals。这是本文件唯一的正式术语，定义采用"排除主要大部件 + 功能定位"的方式。', s: '3.1' },
+    { t: 'judge', q: '塔架属于风力发电机组的内附件。', a: [1], e: '错误。3.1 定义明确：内附件泛指除了主要大部件（塔架、轮毂、传动系等）之外的结构件或功能件。塔架是主要大部件之一，不属于内附件。', s: '3.1' },
+    { t: 'multi', q: '下列哪些属于本文件界定的内附件？（多选）', o: ['护栏', '塔架门', '电缆夹具', '叶片'], a: [0, 1, 2], e: '内附件是除主要大部件（塔架、轮毂、传动系等）之外的结构件或功能件。护栏、塔架门、电缆夹具均属内附件；叶片属于主要大部件（与轮毂、传动系并列的发电核心部件），不在内附件范畴。', s: '3.1；5.2.1；4.1.7' },
+    { t: 'judge', q: '内附件又称附件、内件或内饰件。', a: [0], e: '正确。3.1 术语注：它是风力发电制造业中一个约定俗成的分类称呼，又称附件、内件或内饰件。', s: '3.1' },
+    { t: 'single', q: '内附件主要用于下列哪些功能？', o: ['仅用于装饰美化', '连接、固定、支撑以及提供维护和安全功能', '仅用于承载风载荷', '仅用于电气传动'], a: [1], e: '3.1 定义：主要用于连接、固定、支撑以及提供维护和安全功能等。装饰美化不是其功能定位。', s: '3.1' },
+    { t: 'judge', q: '主轴承属于内附件。', a: [1], e: '错误。主轴承属于传动系主要大部件。3.1 定义以"塔架、轮毂、传动系等"为例列举主要大部件，传动系内元件（含主轴承）均不属于内附件。', s: '3.1' },
+    { t: 'single', q: '下列哪一项最准确地概括了内附件的本质定位？', o: ['发电功率输出部件', '支撑系统与服务设施', '控制系统核心', '基础与地基'], a: [1], e: '内附件负责连接、固定、支撑及维护安全功能（护栏、爬梯、维护平台等），本质是支撑系统与服务设施，区别于发电、传动等核心功能部件。', s: '3.1' }
+  ]
+};
+
+</script>
+<script>
+window.CH03 = {
+  id: 3,
+  title: '技术要求·材料（4.1）',
+  slides: [
+    { h: '材料总则与结构钢', body: '<p><b>4.1.1 一般要求</b>：材料应满足设计要求、适用于所处的工作环境，且应有完整合格的产品出厂证明（质量证明书原件或加盖供材单位检验公章的有效复印件）。</p><div class="nums"><div class="num"><b>Q235/Q355</b><span>常用碳素/低合金结构钢</span></div><div class="num"><b>Q390/Q420</b><span>更高强度结构钢</span></div><div class="num"><b>B 级及以上</b><span>焊接内附件质量等级（GB/T 1591—2018）</span></div><div class="num"><b>Ⅱ级</b><span>疲劳件超声探伤（NB/T 47013.3）</span></div></div><ul><li>需要焊接的内附件使用 B 级及以上质量等级（如 Q235B、Q355B）；</li><li>承受疲劳载荷的内附件内部不应有超出设计要求的夹杂、裂纹、气孔和分层，超声探伤不宜低于<b>Ⅱ级</b>；</li><li>防层状撕裂采用 <b>Z 向钢</b>（GB/T 5313）。</li></ul>', src: '4.1.1；4.1.2.1' },
+    { h: '结构钢尺寸偏差与外观分级', body: '<p>结构钢的厚度偏差与表面质量按<b>载荷性质</b>分档，是高频考点：</p><table><tr><th>项目</th><th>静力载荷</th><th>疲劳载荷</th></tr><tr><td>热轧钢板厚度偏差（GB/T 709—2019）</td><td>不低于 A 级</td><td>不宜低于 B 级</td></tr><tr><td>热轧钢板表面质量（GB/T 14977—2008）</td><td>B1 级别</td><td>宜 B3 级别</td></tr><tr><td>型钢表面质量（YB/T 4427—2014）</td><td>B1 级别</td><td>宜 B3 级别</td></tr></table><div class="kv">记忆规律：<b>静力 A / 疲劳 B（厚度偏差）；表面质量疲劳要求更高（B3 &gt; B1）</b>。疲劳载荷对内附件表面缺陷更敏感，故等级从严。</div><p>常用型钢的尺寸、外形、重量及允许偏差应符合<b>表1</b>规定（角钢/工字钢/槽钢→GB/T 706，H 型钢/T 型钢→GB/T 11263，冷弯空心型钢→GB/T 6728，花纹钢板→GB/T 33974）。</p>', src: '4.1.2.2；4.1.2.3；表1' },
+    { h: '铝合金与不锈钢', body: '<p><b>铝合金（4.1.3）</b>：宜采用 <b>5XXX 和 6XXX 系列</b>，内部不应有裂纹、分层等；板材符合 GB/T 3880（所有部分），花纹板符合 GB/T 3190、GB/T 3618，型材及棒材符合 GB/T 3191、GB/T 4437（所有部分）、GB/T 5237（所有部分）、GB/T 6892、GB/T 6893。未注明偏差等级时至少符合相关标准规定的<b>普通精度</b>要求。未经表面处理的铝合金表面应清洁，不应有裂纹和腐蚀斑点。</p><p><b>不锈钢（4.1.4）</b>：宜选用 <b>S30408、S31608</b> 等系列，内部不应有裂纹、分层等；钢板符合 GB/T 4237、GB/T 3280，其他型材符合 GB/T 12770、GB/T 14975、GB/T 20878 等。经酸洗后的表面不应有氧化皮及过酸洗；允许个别深度小于厚度公差之半的轻微缺陷。</p><div class="kv">铝合金/不锈钢的共同底线：<b>内部无裂纹分层、外观无腐蚀性缺陷、偏差按普通精度</b>。</div>', src: '4.1.3；4.1.4' },
+    { h: '焊接材料', body: '<ul><li>焊接材料应与相应母材性能相适应，具有有效质量证明书或复验报告，熔敷金属力学性能应符合设计要求，保证焊接接头强度、塑性和冲击韧性不低于相应母材标准的规定；<b>最终选用应通过焊接工艺评定确定</b>。</li><li><b>结构钢</b>：焊条/焊丝/焊剂符合 GB/T 5117、GB/T 5293、GB/T 8110、GB/T 10045、GB/T 36034、GB/T 36037；直接承受动力载荷、需验算疲劳的内附件及低温厚板，<b>宜采用低氢型焊接材料</b>。</li><li><b>铝合金</b>：焊丝符合 GB/T 10858，宜选用 <b>SAL 5356 及 SAL 4043</b>；工艺可用 MIG 焊和 TIG 焊。</li><li><b>不锈钢</b>：焊接材料符合 GB/T 983、GB/T 17853、GB/T 17854、GB/T 29713；工艺可用 MIG 焊和 TIG 焊。</li></ul>', src: '4.1.5' },
+    { h: '紧固件', body: '<p>如未规定时，紧固件应符合：</p><table><tr><th>材料</th><th>依据标准</th><th>关键要求</th></tr><tr><td>碳钢/合金钢</td><td>GB/T 3098.1</td><td>选用 <b>6.8 级及以上</b>等级</td></tr><tr><td>铝合金</td><td>GB/T 3098.10</td><td><b>不宜采用有预拉力的高强度螺栓</b></td></tr><tr><td>不锈钢</td><td>GB/T 3098.6、GB/T 3098.15</td><td>螺栓/螺钉/螺柱 + 螺母配套</td></tr></table><div class="kv">易错点：铝合金内附件螺栓连接<b>不宜</b>采用有预拉力的高强度螺栓——预拉力会使软质铝合金基体压溃或导致连接松弛。</div>', src: '4.1.6' },
+    { h: '电缆夹具（尼龙 66）', body: '<p>电缆夹具材料一般采用<b>尼龙 66</b>，表面不应有龟裂、银纹、斑点、孔眼、缺口、凹陷、尖角、毛刺和油污等缺陷。跌落试验：<b>2 m 高空掉落水泥地面，夹具应不开裂、不破损</b>。</p><div class="nums"><div class="num"><b>-40~110 ℃</b><span>工作温度</span></div><div class="num"><b>247~250 ℃</b><span>熔点</span></div><div class="num"><b>180 MPa</b><span>弯曲强度</span></div><div class="num"><b>&gt;115 MPa</b><span>拉伸强度</span></div><div class="num"><b>&gt;5.5 kJ/㎡</b><span>缺口悬梁冲击</span></div><div class="num"><b>&gt;30 kJ/㎡</b><span>无缺口悬臂梁冲击</span></div><div class="num"><b>220 ℃</b><span>热变形温度（1.8 MPa）</span></div><div class="num"><b>UL94 V-0</b><span>防火等级</span></div></div>', src: '4.1.7' }
+  ],
+  questions: [
+    { t: 'judge', q: '内附件材料应具有完整合格的产品出厂证明：质量证明书原件或加盖供材单位检验公章的有效复印件。', a: [0], e: '正确。4.1.1 明确材料的出厂证明要求。注意"加盖供材单位检验公章的有效复印件"与"任意复印件"的区别。', s: '4.1.1' },
+    { t: 'single', q: '如未规定时，结构钢宜采用下列哪些钢号？', o: ['Q195、Q215', 'Q235、Q355、Q390 和 Q420', 'Q500、Q550', '45 钢、40Cr'], a: [1], e: '4.1.2.1 a)：结构钢宜采用 Q235、Q355、Q390 和 Q420 钢等，其质量至少应符合 GB/T 700 和 GB/T 1591 的规定。', s: '4.1.2.1' },
+    { t: 'single', q: '需要焊接的内附件，其结构钢质量等级应达到 GB/T 1591—2018 的：', o: ['A 级', 'B 级及以上', 'C 级及以上', 'D 级及以上'], a: [1], e: '4.1.2.1 b)：对于需要焊接的内附件，应使用 GB/T 1591—2018 中规定的 B 级及以上的质量等级，例如 Q235B、Q355B。', s: '4.1.2.1' },
+    { t: 'single', q: '承受疲劳载荷的内附件内部不应有超出设计要求的夹杂、裂纹、气孔和分层等，此时超声波探伤质量等级不宜低于：', o: ['Ⅰ级', 'Ⅱ级', 'Ⅲ级', 'Ⅳ级'], a: [1], e: '4.1.2.1 c)：超声波探伤质量等级不宜低于 NB/T 47013.3—2023 规定的Ⅱ级。', s: '4.1.2.1' },
+    { t: 'judge', q: '焊接结构为防止钢材层状撕裂而采用 Z 向钢时，其质量应符合 GB/T 5313 的规定。', a: [0], e: '正确。4.1.2.1 d)：采用 Z 向钢时质量应符合 GB/T 5313（厚度方向性能钢板）的规定。', s: '4.1.2.1' },
+    { t: 'single', q: '承受静力载荷的内附件，热轧钢板厚度偏差应不低于 GB/T 709—2019 规定的：', o: ['A 级', 'B 级', 'C 级', '普通级'], a: [0], e: '4.1.2.2 a)：静力载荷 A 级；4.1.2.2 b) 疲劳载荷不宜低于 B 级。静力 A、疲劳 B 是对照记忆点。', s: '4.1.2.2' },
+    { t: 'single', q: '承受疲劳载荷的内附件，热轧钢板厚度偏差不宜低于 GB/T 709—2019 规定的：', o: ['A 级', 'B 级', 'C 级', 'D 级'], a: [1], e: '4.1.2.2 b)：承受疲劳载荷的内附件，热轧钢板厚度偏差不宜低于 GB/T 709—2019 规定的 B 级。', s: '4.1.2.2' },
+    { t: 'single', q: '承受静力载荷的内附件，热轧钢板表面质量应符合 GB/T 14977—2008 规定的：', o: ['B1 级别', 'B3 级别', 'A 级', 'C 级'], a: [0], e: '4.1.2.3 a)：静力载荷热轧钢板表面质量 B1 级别；疲劳载荷（b)）宜 B3 级别。', s: '4.1.2.3' },
+    { t: 'judge', q: '承受疲劳载荷的内附件，热轧钢板表面质量宜符合 GB/T 14977—2008 规定的 B3 级别。', a: [0], e: '正确。4.1.2.3 b)：疲劳载荷热轧钢板表面质量宜符合 B3 级别——级别数字越大，对表面缺陷的要求越严。', s: '4.1.2.3' },
+    { t: 'single', q: '承受静力载荷的内附件，型钢表面质量应符合 YB/T 4427—2014 规定的：', o: ['B1 级别', 'B3 级别', 'C 级', 'A 级'], a: [0], e: '4.1.2.3 c)：静力载荷型钢表面质量 B1 级别；疲劳载荷（d)）宜 B3 级别。钢板与型钢的分级规律一致。', s: '4.1.2.3' },
+    { t: 'single', q: '常用型钢的尺寸、外形、重量及允许偏差应符合表1 的规定，其中热轧工字钢对应的标准是：', o: ['GB/T 702', 'GB/T 706', 'GB/T 6723', 'GB/T 11263'], a: [1], e: '表1：热轧扁钢→GB/T 702，热轧角钢/工字钢/槽钢→GB/T 706，H 型钢/T 型钢→GB/T 11263，焊接钢管→GB/T 21835，结构用冷弯空心型钢→GB/T 6728，通用冷弯开口型钢→GB/T 6723，花纹钢板→GB/T 33974。', s: '表1' },
+    { t: 'single', q: '花纹钢板应符合的标准是：', o: ['GB/T 702', 'GB/T 706', 'GB/T 33974', 'GB/T 6723'], a: [2], e: '表1：花纹钢板→GB/T 33974《热轧花纹钢板及钢带》。', s: '表1' },
+    { t: 'single', q: '铝合金内附件宜采用的系列是：', o: ['2XXX 和 7XXX 系列', '5XXX 和 6XXX 系列', '1XXX 和 8XXX 系列', '3XXX 和 4XXX 系列'], a: [1], e: '4.1.3.1 a)：铝合金内附件宜采用 5XXX 系列和 6XXX 系列铝合金，内部不应有裂纹、分层等。', s: '4.1.3.1' },
+    { t: 'single', q: '铝合金板材应符合哪个标准的规定？', o: ['GB/T 3880（所有部分）', 'GB/T 3191', 'GB/T 5237（所有部分）', 'GB/T 6892'], a: [0], e: '4.1.3.1 b)：铝合金板材应符合 GB/T 3880（所有部分）的规定；花纹板符合 GB/T 3190、GB/T 3618；型材及棒材符合 GB/T 3191、GB/T 4437（所有部分）、GB/T 5237（所有部分）、GB/T 6892、GB/T 6893。', s: '4.1.3.1' },
+    { t: 'judge', q: '未注明偏差等级时，铝合金材料的尺寸、外形、重量及允许偏差至少应符合相关标准规定的精密精度要求。', a: [1], e: '错误。4.1.3.2：未注明偏差等级时，至少应符合本文件 4.1.3.1 中相关标准规定的普通精度要求（而非精密精度）。', s: '4.1.3.2' },
+    { t: 'judge', q: '未经表面处理的铝合金材料表面应清洁，不应有裂纹和腐蚀斑点等存在。', a: [0], e: '正确。4.1.3.3：未经表面处理的铝合金材料表面应清洁，不应有裂纹和腐蚀斑点等存在。', s: '4.1.3.3' },
+    { t: 'single', q: '不锈钢内附件宜选用的牌号是：', o: ['S30408、S31608', 'S20100、S20200', 'S41008、S42020', 'S32168、S34778'], a: [0], e: '4.1.4.1 a)：不锈钢内附件宜选用 S30408、S31608 等系列不锈钢，当有可靠依据时也可采用其他牌号。', s: '4.1.4.1' },
+    { t: 'single', q: '不锈钢钢板应符合下列哪些标准？', o: ['GB/T 4237、GB/T 3280', 'GB/T 12770、GB/T 14975', 'GB/T 20878', 'GB/T 3191'], a: [0], e: '4.1.4.1 b)：不锈钢钢板应符合 GB/T 4237（热轧）、GB/T 3280（冷轧）的规定；其他型材符合 GB/T 12770、GB/T 14975、GB/T 20878 等。', s: '4.1.4.1' },
+    { t: 'judge', q: '经酸洗后的不锈钢材料表面不应有氧化皮及过酸洗。', a: [0], e: '正确。4.1.4.3：经酸洗后的不锈钢材料表面不应有氧化皮及过酸洗。允许个别深度小于厚度公差之半的轻微缺陷。', s: '4.1.4.3' },
+    { t: 'single', q: '对直接承受动力载荷或需要验算疲劳的内附件，以及低温环境下工作的厚板内附件，宜采用：', o: ['酸性焊条', '低氢型焊接材料', '铁粉型焊条', '重力焊条'], a: [1], e: '4.1.5：宜采用低氢型焊接材料——其扩散氢含量低，抗冷裂纹（氢致裂纹）能力强，适合动力载荷、疲劳及低温工况。', s: '4.1.5' },
+    { t: 'single', q: '铝合金内附件焊接用焊丝应符合 GB/T 10858 的规定，宜选用：', o: ['SAL 5356 及 SAL 4043', 'H08A 及 H10Mn2', 'ER50-6 及 ER55-G', 'SAL 5183 及 SAL 2319'], a: [0], e: '4.1.5：宜选用 SAL 5356 及 SAL 4043。焊接工艺可采用 MIG 焊和 TIG 焊。', s: '4.1.5' },
+    { t: 'single', q: '如未规定时，碳钢或合金钢紧固件应符合 GB/T 3098.1 的规定，并选用：', o: ['4.8 级及以上', '5.8 级及以上', '6.8 级及以上', '8.8 级及以上'], a: [2], e: '4.1.6 a)：碳钢或合金钢紧固件应选用 6.8 级及以上等级。', s: '4.1.6' },
+    { t: 'judge', q: '铝合金内附件的螺栓连接不宜采用有预拉力的高强度螺栓。', a: [0], e: '正确。4.1.6 b)：铝合金紧固件应符合 GB/T 3098.10 的规定；铝合金内附件的螺栓连接不宜采用有预拉力的高强度螺栓。', s: '4.1.6' },
+    { t: 'single', q: '不锈钢紧固件应符合的标准是：', o: ['GB/T 3098.1、GB/T 3098.2', 'GB/T 3098.6、GB/T 3098.15', 'GB/T 3098.10、GB/T 3098.11', 'GB/T 3098.13、GB/T 3098.14'], a: [1], e: '4.1.6 c)：不锈钢紧固件应符合 GB/T 3098.6（不锈钢螺栓、螺钉和螺柱）、GB/T 3098.15（不锈钢螺母）的规定。', s: '4.1.6' },
+    { t: 'single', q: '电缆夹具跌落试验的要求是：', o: ['1 m 高空掉落水泥地面不开裂', '2 m 高空掉落水泥地面不开裂不破损', '2 m 高空掉落木地板不开裂', '3 m 高空掉落钢板不变形'], a: [1], e: '4.1.7：跌落试验要求 2 m 高空掉落水泥地面，夹具应不开裂、不破损。', s: '4.1.7' },
+    { t: 'single', q: '如未规定时，尼龙 66 电缆夹具的工作温度范围是：', o: ['-25 ℃~55 ℃', '-40 ℃~110 ℃', '-20 ℃~80 ℃', '0 ℃~100 ℃'], a: [1], e: '4.1.7 a)：工作温度 -40 ℃~110 ℃。注意与 GB/T 46154 电梯标准的 -25~55 ℃ 区分，两者标准不同。', s: '4.1.7' },
+    { t: 'single', q: '尼龙 66 电缆夹具的弯曲强度要求是：', o: ['115 MPa', '180 MPa', '220 MPa', '247 MPa'], a: [1], e: '4.1.7 c)：弯曲强度 180 MPa；拉伸强度大于 115 MPa（d)）；热变形温度 220 ℃（g)）。三个数值要分清。', s: '4.1.7' },
+    { t: 'single', q: '尼龙 66 电缆夹具的无缺口悬臂梁冲击强度应：', o: ['大于 5.5 kJ/㎡', '大于 15 kJ/㎡', '大于 30 kJ/㎡', '大于 50 kJ/㎡'], a: [2], e: '4.1.7 f)：无缺口悬臂梁冲击强度大于 30 kJ/㎡。缺口悬梁冲击强度（e)）是大于 5.5 kJ/㎡，两者数值差异大，注意对照。', s: '4.1.7' },
+    { t: 'single', q: '尼龙 66 电缆夹具的防火等级是：', o: ['UL94 HB', 'UL94 V-2', 'UL94 V-0', 'UL94 5VB'], a: [2], e: '4.1.7 h)：防火等级 UL94 V-0——UL94 垂直燃烧试验的最高常规等级。', s: '4.1.7' },
+    { t: 'judge', q: '材料的选用应遵循技术可靠、经济合理的原则，并避免使用非标型材。', a: [0], e: '正确。4.1.1：材料选用应遵循技术可靠、经济合理的原则；材料规格应符合相关标准，避免使用非标型材。', s: '4.1.1' }
+  ]
+};
+
+</script>
+<script>
+window.CH04 = {
+  id: 4,
+  title: '技术要求·工艺（4.2）',
+  slides: [
+    { h: '工艺总则与下料', body: '<p><b>4.2.1 一般要求</b>：采取合适工艺措施防止材料性能恶化；每道工序检查验收合格后方可转入下道工序；加工后的零件不应有毛刺、尖角、锐边和<b>深度超过 0.2 mm 的划痕或凹痕</b>；严禁使用牌号不明及未经质量检验部门验收的材料。</p><p><b>4.2.2 下料</b>关键数值：</p><div class="nums"><div class="num"><b>≤1 mm</b><span>切割边棱割痕深度</span></div><div class="num"><b>Rz100</b><span>静力件热切割自由面粗糙度</span></div><div class="num"><b>Ra25</b><span>静力件机械切割自由面粗糙度</span></div><div class="num"><b>≥0.5 mm</b><span>剪切/冲压后机加或打磨厚度</span></div></div><p>切割质量（JB/T 10045—2017）：无特殊要求时切割垂直度和斜度公差等级 <b>3 级</b>、平均割纹深度 <b>3 级</b>、公称尺寸极限偏差 <b>2 级</b>；<b>关键件/重要件</b>分别提升为 <b>2 级、2 级、1 级</b>。疲劳载荷内附件切割自由面宜打磨，不可通过焊补进行表面处理。</p>', src: '4.2.1；4.2.2' },
+    { h: '成形（热加工温度控制）', body: '<p>成形加工的温度是核心考点：</p><table><tr><th>材料</th><th>要求</th></tr><tr><td>屈服强度低于 355 MPa 的结构钢</td><td>热加工温度<b>不应高于 580 ℃</b></td></tr><tr><td>屈服强度不低于 355 MPa 的结构钢</td><td>热成形在<b>红热状态（600 ℃～650 ℃）</b>进行</td></tr><tr><td>所有结构钢</td><td><b>不应在蓝脆温度区间（250 ℃～380 ℃）</b>弯曲或成形</td></tr><tr><td>铝合金、不锈钢</td><td><b>不宜采用热成形</b></td></tr></table><div class="kv">记忆：580 ℃（低强上限）/ 600~650 ℃（高强红热）/ 250~380 ℃（蓝脆禁区）。</div><p>成形后不应出现裂纹、层状撕裂、层叠等缺陷。卷圆成形应符合 JB/T 5000.3。</p>', src: '4.2.3.1；4.2.3.2' },
+    { h: '折弯成形', body: '<p><b>非合金结构钢（4.2.3.3.1）</b>：</p><ul><li>折弯半径应满足表2（按钢板牌号、折弯方向、板厚分档）；</li><li>常用折弯件内圆角半径优先系列：1.0、1.2、1.5、2.0、2.5、3、4、5、6、8、10、12、15、20、25、30、35、40、45、50、63、80、100 mm；</li><li>弯曲边附近有孔时，孔至弯曲边的距离应不小于孔边距 L，<b>压弯为直角时：L = R + 2t</b>（R 内圆角半径，t 钢板厚度）；</li><li>带斜边的折弯边应避开变形区（避开尺寸不小于折弯半径）；</li><li>局部压弯防止交接处撕裂，可设计<b>工艺孔</b>（图3）或<b>切槽</b>（图4）。</li></ul><p><b>常用铝及铝合金板、带材（4.2.3.3.2）</b>：如未规定时，最小弯曲半径推荐 <b>4 倍板厚</b>，且不小于 GB/T 3880.2 的规定；铝合金折弯易产生压痕，应采取工艺措施减轻或防止。</p>', src: '4.2.3.3' },
+    { h: '矫正与开孔', body: '<p><b>矫正（4.2.3.4）</b>：</p><div class="nums"><div class="num"><b>900 ℃</b><span>加热矫正温度上限</span></div><div class="num"><b>-16 ℃</b><span>碳素钢冷矫正/冷弯曲下限环境温度</span></div><div class="num"><b>-12 ℃</b><span>低合金钢冷矫正/冷弯曲下限</span></div></div><ul><li>火焰矫正不宜在同一部位重复加热；</li><li>低合金高强度钢重要件不应水冷急速冷却，不应在同一部位反复矫正；</li><li><b>不锈钢、铝合金不宜采用火焰矫正</b>。</li></ul><p><b>开孔（4.2.3.5）</b>：有配合要求的螺栓孔宜数控钻床或激光切割；冲孔后应对变形孔边缘处理（二次钻孔或铰孔），处理后光洁度<b>不小于 Ra12.5</b>；<b>未经处理的冲孔，不可用于靠摩擦连接的或使用不低于 8.8 级高强螺栓的连接节点</b>；孔的规格尺寸公差满足设计要求及 GB/T 5277。</p>', src: '4.2.3.4；4.2.3.5' },
+    { h: '焊前准备与焊接要求', body: '<p><b>焊前准备（4.2.4.1）</b>：全部零件检验合格方可组对；坡口符合 GB/T 985.1/985.2；清洁区域包括所有接头表面及接头边缘<b>不小于 25 mm</b> 的区域。</p><div class="nums"><div class="num"><b>4 倍厚度</b><span>板厚 ≤12 mm 时定位焊最小长度</span></div><div class="num"><b>≥50 mm</b><span>板厚 12~50 mm 时定位焊最小长度</span></div></div><p><b>焊接要求（4.2.4.2）</b>——环境限制（任一情况应防护，否则不施焊）：</p><table><tr><th>条件</th><th>限值</th></tr><tr><td>气体保护焊时风速</td><td>大于 <b>2 m/s</b></td></tr><tr><td>其他焊接方法风速</td><td>大于 <b>8 m/s</b></td></tr><tr><td>相对湿度</td><td>大于 <b>90%</b></td></tr><tr><td>环境</td><td>雨雪环境</td></tr><tr><td>焊接件温度</td><td>低于 <b>0 ℃</b></td></tr></table><ul><li>焊接前按 NB/T 47014 进行焊接工艺评定；</li><li>局部预热范围：焊缝两侧各<b>不小于焊接件厚度的 3 倍且不小于 100 mm</b>；不同材质之间预热温度按焊接性差的一种选定；</li><li>禁止在非焊接部位引弧；每条焊缝宜一次焊完；焊缝同一部位返修次数<b>不宜超过两次</b>；焊接作业符合 GB 9448。</li></ul>', src: '4.2.4.1；4.2.4.2' },
+    { h: '焊后处理与焊接质量控制', body: '<p><b>焊后消氢、消应力处理（4.2.4.3）</b>：未规定具体处理要求时按 <b>GB 50661</b> 执行；热处理温度以焊接件上直接测量为准并连续记录；所有温度均指金属温度，用热电偶自动测量；有密闭内腔的焊接件热处理前应加工透气孔，热处理后重新堵上；<b>奥氏体不锈钢一般不宜焊后热处理</b>。</p><p><b>焊接质量控制（4.2.4.4）</b>：</p><table><tr><th>项目</th><th>要求</th></tr><tr><td>焊接件未注尺寸公差</td><td>GB/T 19804—2005 规定的 <b>B 级</b></td></tr><tr><td>焊接件未注形位公差</td><td>GB/T 19804—2005 规定的 <b>F 级</b></td></tr><tr><td>疲劳载荷钢制件焊缝质量</td><td>ISO 5817—2023 规定的 <b>B 级</b></td></tr><tr><td>未规定时钢制件焊缝质量</td><td>ISO 5817—2023 规定的 <b>C 级</b></td></tr><tr><td>铝合金件焊缝外观质量</td><td>GB 50576—2010 附录A</td></tr></table><p>焊缝无损检测所采用的标准及级别应在图样中标明；有密封性要求的焊缝不应出现渗漏。</p>', src: '4.2.4.3；4.2.4.4' },
+    { h: '机加工与螺纹加工', body: '<p><b>机加工（4.2.5）</b>：铸件、锻件和焊接件宜在机械加工前进行<b>时效、退火或正火</b>处理；大而复杂的铸造毛坯件及刚度较差的精密零件应在粗加工前后安排时效处理；加工后零件应倒角、倒圆、去毛刺；精加工后的<b>配合面、摩擦面和定位面不可打印标记</b>；配对加工的零部件应有配对标记。</p><div class="nums"><div class="num"><b>m 级</b><span>机加工件未注线性/角度尺寸公差（GB/T 1804—2000）</span></div><div class="num"><b>K 级</b><span>机加工件未注形位公差（GB/T 1184—1996）</span></div><div class="num"><b>6H/6g</b><span>普通螺纹精度等级（GB/T 197—2018）</span></div></div><p><b>螺纹加工（4.2.5.14）</b>：内外螺纹旋入侧加工前宜倒角，<b>外螺纹 45°、内螺纹 60°</b>，倒角深度等于牙型高度；螺纹工作面未注明表面粗糙度时，<b>外螺纹 Ra6.3、内螺纹 Ra12.5</b>；螺纹长度未注偏差取 <b>＋2P～3P</b>（P 为螺距）。</p>', src: '4.2.5' }
+  ],
+  questions: [
+    { t: 'judge', q: '除产品图样有要求外，加工后的零件不应有毛刺、尖角、锐边和深度超过 0.2 mm 的划痕或凹痕。', a: [0], e: '正确。4.2.1 c)：除产品图样有要求外，加工后的零件不应有毛刺、尖角、锐边和深度超过 0.2 mm 的划痕或凹痕。', s: '4.2.1' },
+    { t: 'judge', q: '零件制造中，只要下道工序能够处理，上道工序的缺陷可以带病流转。', a: [1], e: '错误。4.2.1 b)：零件制造每道工序应检查、验收，在前道工序检查合格后方可转入下道工序。', s: '4.2.1' },
+    { t: 'single', q: '严禁使用的材料是：', o: ['未经复验的进口材料', '牌号不明及未经质量检验部门验收的各种材料', '库存超过两年的材料', '化学成分偏析的材料'], a: [1], e: '4.2.1 d)：严禁使用牌号不明及未经过质量检验部门验收的各种材料。', s: '4.2.1' },
+    { t: 'single', q: '承受静力载荷的内附件，热切割自由面粗糙度应不大于：', o: ['Ra25', 'Rz100', 'Ra6.3', 'Rz50'], a: [1], e: '4.2.2 d)：热切割自由面粗糙度不大于 Rz100；机械切割自由面粗糙度不大于 Ra25。注意热切割用 Rz、机械切割用 Ra 的区别。', s: '4.2.2' },
+    { t: 'single', q: '承受静力载荷的内附件，机械切割自由面粗糙度应不大于：', o: ['Rz100', 'Ra25', 'Ra12.5', 'Rz50'], a: [1], e: '4.2.2 d)：机械切割自由面粗糙度不大于 Ra25。', s: '4.2.2' },
+    { t: 'single', q: '零件切割的边棱，不应有深度大于多少的割痕？', o: ['0.2 mm', '0.5 mm', '1 mm', '2 mm'], a: [2], e: '4.2.2 c)：零件切割的边棱，不应有深度大于 1 mm 的割痕。', s: '4.2.2' },
+    { t: 'single', q: '无特殊要求时，内附件的切割垂直度和斜度公差等级为：', o: ['1 级', '2 级', '3 级', '4 级'], a: [2], e: '4.2.2 f)：无特殊要求时，切割垂直度和斜度公差等级为 3 级，平均割纹深度为 3 级，公称尺寸极限偏差为 2 级；关键件、重要件分别为 2 级、2 级、1 级。', s: '4.2.2' },
+    { t: 'single', q: '关键件、重要件的切割质量，其公称尺寸极限偏差等级为：', o: ['1 级', '2 级', '3 级', '4 级'], a: [0], e: '4.2.2 f)：关键件、重要件的切割质量，切割垂直度和斜度公差等级为 2 级，平均割纹深度为 2 级，公称尺寸极限偏差为 1 级。', s: '4.2.2' },
+    { t: 'single', q: '剪切或冲压后进行机加或打磨，打磨或机加厚度至少为：', o: ['0.2 mm', '0.5 mm', '1 mm', '2 mm'], a: [1], e: '4.2.2 h)：剪切或冲压后的边缘应保证平整无缺陷。如果剪切或冲压后进行机加或打磨，则打磨或机加厚度至少 0.5 mm。', s: '4.2.2' },
+    { t: 'single', q: '承受疲劳载荷的内附件，所有切割自由面宜打磨处理，表面不连续和修磨部分的厚度应：', o: ['不低于钢板允许的最小厚度，不可通过焊补处理', '不低于钢板允许的最小厚度，可通过焊补处理', '不低于设计厚度的 80%', '不作要求'], a: [0], e: '4.2.2 e)：对于承受疲劳载荷的内附件，所有切割自由面宜打磨处理，使表面不连续和修磨部分的厚度不低于钢板允许的最小厚度，不可通过焊补进行表面处理。', s: '4.2.2' },
+    { t: 'single', q: '屈服强度低于 355 MPa 的结构钢，热加工温度不应高于：', o: ['500 ℃', '580 ℃', '600 ℃', '650 ℃'], a: [1], e: '4.2.3.1 a)：屈服强度低于 355 MPa 的结构钢，热加工温度不应高于 580 ℃。', s: '4.2.3.1' },
+    { t: 'single', q: '屈服强度不低于 355 MPa 的结构钢，热成形应在哪个温度区间进行？', o: ['500 ℃～550 ℃', '550 ℃～600 ℃', '600 ℃～650 ℃', '650 ℃～700 ℃'], a: [2], e: '4.2.3.1 b)：屈服强度不低于 355 MPa 的结构钢，热成形应在红热状态（600 ℃～650 ℃）进行。', s: '4.2.3.1' },
+    { t: 'single', q: '结构钢不应在哪个温度区间进行弯曲或成形？', o: ['100 ℃～200 ℃', '250 ℃～380 ℃', '400 ℃～500 ℃', '600 ℃～650 ℃'], a: [1], e: '4.2.3.1 b)：不应在蓝脆温度区间（250 ℃～380 ℃）进行弯曲或成形——蓝脆区钢材塑性急剧下降，易产生裂纹。', s: '4.2.3.1' },
+    { t: 'judge', q: '铝合金和不锈钢内附件宜采用热成形。', a: [1], e: '错误。4.2.3.1 c)：对于铝合金和不锈钢，不宜采用热成形。', s: '4.2.3.1' },
+    { t: 'single', q: '如未规定时，常用铝合金板、带材的最小弯曲半径推荐为：', o: ['2 倍板厚', '3 倍板厚', '4 倍板厚', '5 倍板厚'], a: [2], e: '4.2.3.3.2 a)：如未规定时，常用铝合金板、带材最小弯曲半径推荐 4 倍板厚，且不小于 GB/T 3880.2 的规定。', s: '4.2.3.3.2' },
+    { t: 'single', q: '压弯为直角时，最小孔边距 L 的计算公式为（R 为内圆角半径，t 为钢板厚度）：', o: ['L = R + t', 'L = R + 2t', 'L = 2R + t', 'L = R × t'], a: [1], e: '4.2.3.3.1 c) 式（1）：L = R + 2t。这是防止弯曲边附近孔变形的最小孔边距计算式。', s: '4.2.3.3.1' },
+    { t: 'judge', q: '带斜边的折弯边应避开变形区，避开尺寸不小于折弯半径。', a: [0], e: '正确。4.2.3.3.1 d)：带斜边的折弯边应避开变形区（避开尺寸不小于折弯半径）。', s: '4.2.3.3.1' },
+    { t: 'single', q: '在局部压弯时，为防止交接处产生撕裂，可设计：', o: ['工艺孔或切槽', '加强肋', '倒圆角', '焊补'], a: [0], e: '4.2.3.3.1 e)：在局部压弯时，为了防止在交接处产生撕裂，可设计工艺孔（图3）或切槽（图4）。', s: '4.2.3.3.1' },
+    { t: 'single', q: '普通碳素结构钢和低合金结构钢加热矫正时，加热温度不应超过：', o: ['800 ℃', '900 ℃', '950 ℃', '1000 ℃'], a: [1], e: '4.2.3.4 a)：加热矫正时加热温度不应超过 900 ℃。', s: '4.2.3.4' },
+    { t: 'single', q: '环境温度低于多少时，碳素结构钢不应进行冷矫正和冷弯曲？', o: ['-20 ℃', '-16 ℃', '-12 ℃', '-5 ℃'], a: [1], e: '4.2.3.4 a)：碳素结构钢在环境温度低于 -16 ℃、低合金结构钢在环境温度低于 -12 ℃ 时，不应进行冷矫正和冷弯曲。', s: '4.2.3.4' },
+    { t: 'judge', q: '不锈钢、铝合金内附件不宜采用火焰矫正。', a: [0], e: '正确。4.2.3.4 e)：不锈钢、铝合金内附件不宜采用火焰矫正——火焰会使耐蚀合金组织恶化。', s: '4.2.3.4' },
+    { t: 'single', q: '冲孔完成后经二次钻孔或铰孔处理，孔的光洁度应不小于：', o: ['Ra6.3', 'Ra12.5', 'Ra25', 'Rz100'], a: [1], e: '4.2.3.5 b)：处理后的孔的光洁度不小于 Ra12.5。', s: '4.2.3.5' },
+    { t: 'judge', q: '未经处理的冲孔，可用于使用不低于 8.8 级高强螺栓的连接节点。', a: [1], e: '错误。4.2.3.5 b)：未经处理的冲孔，不可用于靠摩擦连接的或者使用不低于 8.8 级高强螺栓的连接节点——冲孔边缘加工硬化与微裂纹会削弱高强度连接。', s: '4.2.3.5' },
+    { t: 'single', q: '材料厚度不大于 12 mm 时，定位焊焊缝最小长度为材料厚度的：', o: ['2 倍', '3 倍', '4 倍', '6 倍'], a: [2], e: '4.2.4.1 e)：材料厚度不大于 12 mm 时，定位焊焊缝最小长度为材料厚度的四倍；材料厚度大于 12 mm 且不大于 50 mm 时，最小长度不小于 50 mm。', s: '4.2.4.1' },
+    { t: 'single', q: '材料厚度大于 12 mm 且不大于 50 mm 时，定位焊焊缝最小长度不小于：', o: ['30 mm', '40 mm', '50 mm', '100 mm'], a: [2], e: '4.2.4.1 e)：材料厚度大于 12 mm，且不大于 50 mm 时，定位焊焊缝最小长度不小于 50 mm；大于 50 mm 应增加定位焊焊缝长度。', s: '4.2.4.1' },
+    { t: 'single', q: '焊接开始前，清洁区域应包括所有接头表面以及接头边缘不小于多少的区域？', o: ['10 mm', '20 mm', '25 mm', '50 mm'], a: [2], e: '4.2.4.1 d)：清洁区域应包括所有接头表面以及接头边缘不小于 25 mm 的区域。', s: '4.2.4.1' },
+    { t: 'single', q: '气体保护焊时风速大于多少，应采用有效防护措施否则不应施焊？', o: ['2 m/s', '5 m/s', '8 m/s', '10 m/s'], a: [0], e: '4.2.4.2 e)：气体保护焊时风速大于 2 m/s（其他焊接方法大于 8 m/s）、相对湿度大于 90%、雨雪环境、焊接件温度低于 0 ℃ 时，应采用有效防护措施，否则不应施焊。', s: '4.2.4.2' },
+    { t: 'single', q: '其他焊接方法（非气体保护焊）时风速大于多少，应采用有效防护措施否则不应施焊？', o: ['2 m/s', '5 m/s', '8 m/s', '12 m/s'], a: [2], e: '4.2.4.2 e)：其他焊接方法时风速大于 8 m/s 应防护。气体保护焊对气流更敏感（2 m/s），其他方法 8 m/s。', s: '4.2.4.2' },
+    { t: 'single', q: '相对湿度大于多少时，应采用有效防护措施否则不应施焊？', o: ['80%', '85%', '90%', '95%'], a: [2], e: '4.2.4.2 e)：相对湿度大于 90% 时应采取防护，否则不应施焊。', s: '4.2.4.2' },
+    { t: 'judge', q: '焊接件温度低于 0 ℃ 时应采用有效防护措施，否则不应施焊。', a: [0], e: '正确。4.2.4.2 e) 5)：焊接件温度低于 0 ℃ 时应用有效防护，否则不应施焊。', s: '4.2.4.2' },
+    { t: 'single', q: '局部预热时，预热的范围为焊缝两侧各不小于焊接件厚度的 3 倍，且不小于：', o: ['50 mm', '80 mm', '100 mm', '150 mm'], a: [2], e: '4.2.4.2 h)：局部预热时，预热的范围为焊缝两侧各不小于焊接件厚度的 3 倍，且不小于 100 mm。', s: '4.2.4.2' },
+    { t: 'judge', q: '不同材质之间焊接预热温度按焊接性差的一种选定。', a: [0], e: '正确。4.2.4.2 j)：不同材质之间焊接预热温度按焊接性差的一种选定。', s: '4.2.4.2' },
+    { t: 'judge', q: '施焊时可以在非焊接部位引弧。', a: [1], e: '错误。4.2.4.2 k) 3)：应在引弧板或坡口内引弧，禁止在非焊接部位引弧。', s: '4.2.4.2' },
+    { t: 'single', q: '焊缝同一部位返修次数不宜超过：', o: ['1 次', '2 次', '3 次', '5 次'], a: [1], e: '4.2.4.2 n)：焊缝同一部位返修次数不宜超过两次。', s: '4.2.4.2' },
+    { t: 'judge', q: '焊接作业应符合 GB 9448《焊接与切割安全》的规定。', a: [0], e: '正确。4.2.4.2 o)：焊接作业应符合 GB 9448 的规定。', s: '4.2.4.2' },
+    { t: 'single', q: '要求金属焊后消氢、消应力处理的焊缝，未规定具体处理要求时，按哪个标准执行？', o: ['GB 50661', 'NB/T 47014', 'GB/T 19804—2005', 'ISO 5817—2023'], a: [0], e: '4.2.4.3.1：未规定具体处理要求时，按 GB 50661《钢结构焊接规范》执行。', s: '4.2.4.3.1' },
+    { t: 'judge', q: '奥氏体不锈钢一般不宜焊后热处理。', a: [0], e: '正确。4.2.4.3.5：奥氏体不锈钢一般不宜焊后热处理——固溶态奥氏体不锈钢热处理反而可能敏化，降低耐蚀性。', s: '4.2.4.3.5' },
+    { t: 'single', q: '焊接件未注尺寸公差应符合 GB/T 19804—2005 规定的：', o: ['A 级', 'B 级', 'F 级', 'C 级'], a: [1], e: '4.2.4.4.1：焊接件未注尺寸公差应符合 GB/T 19804—2005 规定的 B 级要求，未注形位公差应符合 F 级要求。', s: '4.2.4.4.1' },
+    { t: 'single', q: '焊接件未注形位公差应符合 GB/T 19804—2005 规定的：', o: ['B 级', 'D 级', 'F 级', 'K 级'], a: [2], e: '4.2.4.4.1：未注形位公差应符合 F 级要求。注意与机加工件（GB/T 1184—1996 K 级）区分。', s: '4.2.4.4.1' },
+    { t: 'single', q: '承受疲劳载荷的钢制件焊缝质量应符合 ISO 5817—2023 规定的：', o: ['B 级', 'C 级', 'D 级', 'E 级'], a: [0], e: '4.2.4.4.2：承受疲劳载荷的钢制件焊缝质量应符合 ISO 5817—2023 规定的 B 级要求；未规定焊缝质量等级时（4.2.4.4.3）应满足 C 级。', s: '4.2.4.4.2' },
+    { t: 'single', q: '未规定焊缝质量等级时，钢制件焊缝质量应满足 ISO 5817—2023 规定的：', o: ['A 级', 'B 级', 'C 级', 'D 级'], a: [2], e: '4.2.4.4.3：未规定焊缝质量等级时，钢制件焊缝质量应满足 ISO 5817—2023 规定的 C 级要求。', s: '4.2.4.4.3' },
+    { t: 'single', q: '铝合金件焊缝外观质量标准及尺寸允许偏差应符合：', o: ['ISO 5817—2023 附录 A', 'GB 50576—2010 中附录 A', 'GB/T 19804—2005 附录 B', 'GB 50661 附录 C'], a: [1], e: '4.2.4.4.4：铝合金件焊缝外观质量标准及尺寸允许偏差应符合 GB 50576—2010 中附录 A 的规定。', s: '4.2.4.4.4' },
+    { t: 'judge', q: '焊缝无损检测所采用的标准以及级别应在图样中标明。', a: [0], e: '正确。4.2.4.4.5：焊缝无损检测所采用的标准以及级别应在图样中标明。', s: '4.2.4.4.5' },
+    { t: 'single', q: '机加工件线性尺寸和角度尺寸的未注公差应符合 GB/T 1804—2000 规定的：', o: ['f 级', 'm 级', 'c 级', 'v 级'], a: [1], e: '4.2.5.11：机加工件线性尺寸和角度尺寸的未注公差应符合 GB/T 1804—2000 规定的 m 级（中等精度）。', s: '4.2.5.11' },
+    { t: 'single', q: '机加工件未注形状和位置公差应符合 GB/T 1184—1996 规定的：', o: ['H 级', 'K 级', 'L 级', 'M 级'], a: [1], e: '4.2.5.12：机加工件未注形状和位置公差应符合 GB/T 1184—1996 规定的 K 级。', s: '4.2.5.12' },
+    { t: 'judge', q: '精加工后的配合面、摩擦面和定位面等工作表面可以打印标记。', a: [1], e: '错误。4.2.5.7：精加工后的配合面、摩擦面和定位面等工作表面不可打印标记。', s: '4.2.5.7' },
+    { t: 'single', q: '普通螺纹精度等级按 GB/T 197—2018 规定的执行：', o: ['6H/6g', '7H/7g', '5H/5g', '6G/6h'], a: [0], e: '4.2.5.14 a)：普通螺纹精度等级按 GB/T 197—2018 规定的 6H/6g 执行（内螺纹 6H、外螺纹 6g）。', s: '4.2.5.14' },
+    { t: 'single', q: '内外螺纹旋入侧在加工螺纹前宜倒角，外螺纹为 45°，内螺纹为：', o: ['30°', '45°', '60°', '90°'], a: [2], e: '4.2.5.14 c)：外螺纹为 45°，内螺纹为 60°，倒角深度等于牙型高度。', s: '4.2.5.14' },
+    { t: 'single', q: '螺纹工作面未注明表面粗糙度时，外螺纹表面粗糙度值应不大于：', o: ['Ra3.2', 'Ra6.3', 'Ra12.5', 'Ra25'], a: [1], e: '4.2.5.14 e)：外螺纹表面粗糙度值不大于 Ra6.3，内螺纹表面粗糙度值不大于 Ra12.5。', s: '4.2.5.14' },
+    { t: 'single', q: '螺纹长度未注偏差取（P 为螺距）：', o: ['＋1P～2P', '＋2P～3P', '±2P', '0～3P'], a: [1], e: '4.2.5.14 f)：螺纹长度未注偏差取 ＋2P～3P，其中 P 表示螺距。', s: '4.2.5.14' },
+    { t: 'judge', q: '配对加工的零部件，应有配对标记。', a: [0], e: '正确。4.2.5.10：配对加工的零部件，应有配对标记。', s: '4.2.5.10' }
+  ]
+};
+
+</script>
+<script>
+window.CH05 = {
+  id: 5,
+  title: '技术要求·防腐（4.3）',
+  slides: [
+    { h: '防腐总则与表面处理', body: '<p><b>4.3.1 一般要求</b>：涂装前应对涂装施工人员进行专业培训；热喷涂操作人员按 <b>GB/T 19824</b> 考核，操作安全满足 <b>GB/T 11375</b>；钢制件的防腐蚀保护应符合 <b>ISO 12944（所有部分）</b>。</p><p><b>4.3.2 表面处理</b>关键数值：</p><div class="nums"><div class="num"><b>Sa2.5</b><span>喷射清理等级（GB/T 8923.1—2011）</span></div><div class="num"><b>2 级</b><span>表面清洁度（GB/T 18570.3—2005）</span></div><div class="num"><b>≤0.5 mm</b><span>扫砂磨料粒度</span></div><div class="num"><b>≤0.4 MPa</b><span>扫砂压力</span></div></div><ul><li>喷漆/喷粉/喷塑/喷锌表面宜喷砂或抛丸；热浸锌表面钢材酸洗符合 JB/T 6978；</li><li>喷砂前基材评估：锐边、火焰切割边缘、毛刺打磨圆滑过渡，焊疤及飞溅清除干净；</li><li>吹除灰尘用无水无油的压缩空气或工业除尘器。</li></ul>', src: '4.3.1；4.3.2' },
+    { h: '涂装时机与环境', body: '<p><b>4.3.2.4 第一道底漆涂覆时机</b>（按相对湿度分档）：</p><table><tr><th>相对湿度</th><th>涂覆时限</th></tr><tr><td>低于 80%</td><td>表面处理后 <b>4h 内</b></td></tr><tr><td>低于 65%</td><td>表面处理后 <b>4h~12h 内</b></td></tr></table><div class="kv">超过时限或出现返锈、表面污染时，应<b>重新进行表面处理</b>。</div><p><b>4.3.4.2 施工环境</b>：表面温度应高于露点温度 <b>3 ℃</b>；湿度大于 <b>80%</b> 不宜施工；施工、固化环境温度低于 <b>10 ℃</b> 时宜选用冬季固化剂。</p>', src: '4.3.2.4；4.3.4.2' },
+    { h: '沿海/海上与异种金属防护', body: '<p><b>4.3.2.5</b>：</p><ul><li>用于<b>沿海或海上</b>时：铝合金内附件宜进行<b>阳极氧化</b>；不锈钢内附件宜进行<b>钝化处理</b>；</li><li>户外使用要考虑防止<b>异种金属连接造成的电化学腐蚀</b>；</li><li>铝合金、不锈钢表面如需喷漆处理，宜进行扫砂处理（中性新鲜水冲洗去污 → 非金属磨料如氧化铝、石英砂，粒度不大于 0.5 mm，压力不大于 0.4 MPa 扫砂）。</li></ul><p><b>4.3.2.7</b>：如未规定时，配合的加工面、螺纹孔一般采用<b>防锈油</b>防腐。</p>', src: '4.3.2.5；4.3.2.6；4.3.2.7' },
+    { h: '涂层防护与实施', body: '<p><b>4.3.3 涂层防护</b>：</p><ul><li>涂层间应具有<b>相同或相近的热膨胀系数</b>、良好的匹配性及附着力；</li><li>防腐体系应与腐蚀环境相匹配，如未规定时<b>至少符合 ISO 12944-5</b>。</li></ul><p><b>4.3.4 涂层实施</b>：参考供应商施工工艺，符合 <b>ISO 12944-7</b>；对于不易操作的边角应<b>手工预涂、预刷</b>。</p>', src: '4.3.3；4.3.4' },
+    { h: '涂层检查（干膜厚度与附着力）', body: '<p><b>4.3.5 涂层检查</b>——干膜厚度：</p><table><tr><th>涂层类型</th><th>检验标准</th><th>关键判据</th></tr><tr><td>油漆</td><td>ISO 19840</td><td>平均值 ≥ 额定干膜厚度（NDFT）；允许单点低于 NDFT 但须 ≥ 90% NDFT，且此类点数量 < 测量点总数的 10%</td></tr><tr><td>镀锌</td><td>ISO 1461</td><td>实测在要求范围内；未注明时最小局部厚度 ≥ 规定值，最大厚度 ≤ 1.5 倍 NDFT</td></tr><tr><td>热喷锌</td><td>ISO 2063-2</td><td>同上（最小局部厚度 ≥ 规定值，最大 ≤ 1.5 倍 NDFT）</td></tr></table><p>——附着力：油漆与热喷锌按 <b>ISO 16276-1</b> 拉开法检验，一般<b>不低于 5 MPa</b>；油漆不适用拉开法时按 <b>ISO 16276-2</b> 检验并符合 <b>1 级或 0 级</b>。</p><p>——外观：涂层均匀性、颜色及光泽、气泡、脱落、流挂、起皮、漏涂等。</p>', src: '4.3.5' },
+    { h: '颜色', body: '<ul><li>内附件的颜色和光泽度根据<b>整机颜色配置方案</b>或特定项目要求确定；</li><li>金属覆盖层（热浸镀锌、热喷锌等）及耐蚀合金（不锈钢、铝合金等）除非特殊要求，否则<b>保留材料本色</b>；</li><li><b>安全护栏、安全挂点、安全扶手</b>等安全设施表面颜色应符合设计要求或选取警示色，例如 <b>RAL 1023（交通黄）</b>。</li></ul>', src: '4.3.6' }
+  ],
+  questions: [
+    { t: 'single', q: '钢制件的防腐蚀保护应符合哪个标准的规定？', o: ['ISO 12944（所有部分）', 'ISO 1461', 'GB/T 8923.1—2011', 'GB 50661'], a: [0], e: '4.3.1.2：钢制件的防腐蚀保护应符合 ISO 12944（所有部分）的规定。', s: '4.3.1.2' },
+    { t: 'judge', q: '热喷涂操作人员应按 GB/T 19824 的规定进行考核，操作安全应满足 GB/T 11375 的要求。', a: [0], e: '正确。4.3.1.1：热喷涂操作人员按 GB/T 19824 考核；热喷涂的操作安全满足 GB/T 11375（金属和其他无机覆盖层 热喷涂 操作安全）。', s: '4.3.1.1' },
+    { t: 'single', q: '对于喷漆、喷粉、喷塑及喷锌表面，表面处理宜采用：', o: ['酸洗', '喷砂或抛丸', '火焰清理', '机械抛光'], a: [1], e: '4.3.2.1：对于喷漆、喷粉、喷塑及喷锌表面，表面处理宜采用喷砂或抛丸处理；对于热浸锌表面，钢材酸洗应符合 JB/T 6978 的规定。', s: '4.3.2.1' },
+    { t: 'single', q: '喷射清理等级应达到 GB/T 8923.1—2011 规定的：', o: ['Sa1', 'Sa2', 'Sa2.5', 'Sa3'], a: [2], e: '4.3.2.2：喷射清理等级应达到 GB/T 8923.1—2011 规定的 Sa2.5 的要求。', s: '4.3.2.2' },
+    { t: 'single', q: '喷砂后基体表面附着的灰尘及磨料吹除后，其表面清洁度应不低于 GB/T 18570.3—2005 规定的：', o: ['1 级', '2 级', '3 级', '4 级'], a: [1], e: '4.3.2.3：采用无水无油的压缩空气或工业用除尘器吹除灰尘及磨料，表面清洁度应不低于 GB/T 18570.3—2005 规定的 2 级。', s: '4.3.2.3' },
+    { t: 'single', q: '相对湿度低于 80% 时，表面处理后应在多长时间内涂覆第一道底漆？', o: ['2h 内', '4h 内', '8h 内', '12h 内'], a: [1], e: '4.3.2.4：相对湿度低于 80% 时，表面处理后应在 4h 内涂覆第一道底漆；低于 65% 时可在 4h~12h 内涂覆。', s: '4.3.2.4' },
+    { t: 'single', q: '相对湿度低于 65% 时，表面处理后可在多长时间内涂覆第一道底漆？', o: ['2h~4h 内', '4h~8h 内', '4h~12h 内', '12h~24h 内'], a: [2], e: '4.3.2.4：相对湿度低于 65% 时，表面处理后可在 4h~12h 内涂覆第一道底漆。超过时限或返锈、表面污染应重新表面处理。', s: '4.3.2.4' },
+    { t: 'single', q: '用于沿海或海上时，铝合金内附件宜进行：', o: ['钝化处理', '阳极氧化', '镀锌', '磷化处理'], a: [1], e: '4.3.2.5：用于沿海或海上时，铝合金内附件宜进行阳极氧化；不锈钢内附件宜进行钝化处理。', s: '4.3.2.5' },
+    { t: 'single', q: '用于沿海或海上时，不锈钢内附件宜进行：', o: ['阳极氧化', '钝化处理', '镀铬', '发黑处理'], a: [1], e: '4.3.2.5：不锈钢内附件宜进行钝化处理——增强钝化膜致密性，提高耐氯离子腐蚀能力。', s: '4.3.2.5' },
+    { t: 'judge', q: '户外使用的内附件要考虑防止异种金属连接造成的电化学腐蚀。', a: [0], e: '正确。4.3.2.5：如在户外使用，还要考虑采取措施防止异种金属连接造成的电化学腐蚀。', s: '4.3.2.5' },
+    { t: 'single', q: '铝合金、不锈钢表面扫砂处理时，非金属磨料（氧化铝、石英砂）的粒度应不大于：', o: ['0.2 mm', '0.5 mm', '1 mm', '2 mm'], a: [1], e: '4.3.2.6 b)：采用干净的非金属磨料（如氧化铝、石英砂，粒度不大于 0.5 mm）以不大于 0.4 MPa 的压力扫砂。', s: '4.3.2.6' },
+    { t: 'single', q: '扫砂处理的压力应不大于：', o: ['0.2 MPa', '0.4 MPa', '0.6 MPa', '1 MPa'], a: [1], e: '4.3.2.6 b)：以不大于 0.4 MPa 的压力扫砂。', s: '4.3.2.6' },
+    { t: 'judge', q: '如未规定时，配合的加工面、螺纹孔一般采用防锈油防腐。', a: [0], e: '正确。4.3.2.7：如未规定时，配合的加工面、螺纹孔一般采用防锈油防腐。', s: '4.3.2.7' },
+    { t: 'single', q: '涂层间应具有的性质是：', o: ['相同或相近的热膨胀系数、良好的匹配性及附着力', '不同的热膨胀系数以抵消应力', '尽量高的表面能', '相同的颜色'], a: [0], e: '4.3.3.1：涂层间应具有相同或相近的热膨胀系数、良好的匹配性及附着力。', s: '4.3.3.1' },
+    { t: 'single', q: '如未规定时，内附件的防腐体系至少应符合：', o: ['ISO 12944-1', 'ISO 12944-5', 'ISO 12944-7', 'ISO 1461'], a: [1], e: '4.3.3.2：内附件的防腐体系应与腐蚀环境相匹配。如未规定时，防腐体系至少应符合 ISO 12944-5 的规定。', s: '4.3.3.2' },
+    { t: 'single', q: '涂层的实施应符合哪个标准的规定？', o: ['ISO 12944-5', 'ISO 12944-7', 'ISO 19840', 'ISO 16276-1'], a: [1], e: '4.3.4.1：涂层的实施应参考供应商提供的施工工艺进行，且符合 ISO 12944-7 的规定。', s: '4.3.4.1' },
+    { t: 'single', q: '施工过程中，表面温度应高于露点温度：', o: ['1 ℃', '3 ℃', '5 ℃', '10 ℃'], a: [1], e: '4.3.4.2：表面温度应高于露点温度 3 ℃。', s: '4.3.4.2' },
+    { t: 'judge', q: '施工、固化环境温度低于 10 ℃ 时，宜选用冬季固化剂。', a: [0], e: '正确。4.3.4.2：当施工、固化环境温度低于 10 ℃ 时，宜选用冬季固化剂。', s: '4.3.4.2' },
+    { t: 'single', q: '油漆干膜厚度按哪个标准规定的方法检验？', o: ['ISO 1461', 'ISO 19840', 'ISO 2063-2', 'ISO 16276-1'], a: [1], e: '4.3.5 a) 1)：油漆按 ISO 19840 规定的方法检验。镀锌按 ISO 1461，热喷锌按 ISO 2063-2。', s: '4.3.5' },
+    { t: 'single', q: '油漆干膜厚度检验中，允许单个测量膜厚低于额定膜厚要求，但应大于额定干膜厚度的 90%，且这些测量点的数量应：', o: ['少于所有测量点数量的 5%', '少于所有测量点数量的 10%', '少于所有测量点数量的 20%', '不作限制'], a: [1], e: '4.3.5 a) 1)：允许单个测量膜厚低于额定膜厚要求，但应大于额定干膜厚度的 90%，且这些测量点的数量应少于所有测量点数量的 10%。', s: '4.3.5' },
+    { t: 'single', q: '镀锌或热喷锌层未注明厚度范围时，最大厚度应不大于额定干膜厚度的：', o: ['1.2 倍', '1.5 倍', '2 倍', '3 倍'], a: [1], e: '4.3.5 a) 2)/3)：镀锌和热喷锌未注明厚度范围时，最小局部厚度不小于规定值，最大厚度不大于额定干膜厚度的 1.5 倍。', s: '4.3.5' },
+    { t: 'single', q: '油漆附着力按 ISO 16276-1 检验时，一般不应低于：', o: ['3 MPa', '5 MPa', '8 MPa', '10 MPa'], a: [1], e: '4.3.5 b)：油漆和热喷锌附着力按 ISO 16276-1 检验，一般不低于 5 MPa。', s: '4.3.5' },
+    { t: 'single', q: '油漆不适用拉开法检验时，可按 ISO 16276-2 检验，并应符合：', o: ['0 级或 1 级', '1 级或 2 级', '2 级或 3 级', '3 级或 4 级'], a: [0], e: '4.3.5 b) 1)：不适用拉开法时，可按 ISO 16276-2 检验，并符合 1 级或 0 级的规定（级别越小附着力越好）。', s: '4.3.5' },
+    { t: 'single', q: '安全护栏、安全挂点、安全扶手等安全设施表面颜色应选取警示色，例如：', o: ['RAL 1023（交通黄）', 'RAL 3000（火红）', 'RAL 5015（天蓝）', 'RAL 9010（纯白）'], a: [0], e: '4.3.6.3：安全设施表面颜色应符合设计要求或选取警示色，例如 RAL 1023（交通黄）。', s: '4.3.6.3' },
+    { t: 'judge', q: '金属覆盖层（热浸镀锌、热喷锌等）及耐蚀合金（不锈钢、铝合金等）除非特殊要求，否则应保留材料本色。', a: [0], e: '正确。4.3.6.2：金属覆盖层及耐蚀合金除非特殊要求，否则保留材料本色。', s: '4.3.6.2' },
+    { t: 'judge', q: '湿度大于 80% 时不宜进行涂层施工。', a: [0], e: '正确。4.3.4.2：当湿度大于 80%，不宜施工。', s: '4.3.4.2' }
+  ]
+};
+
+</script>
+<script>
+window.CH06 = {
+  id: 6,
+  title: '装配',
+  slides: [
+    { h: '装配总则', body: '<p><b>5.1 一般要求</b>：</p><ul><li>装配应符合设计要求，<b>成品外购件（电气柜体、升降机、免爬器等）还应参考对应厂家提供的产品安装说明文件</b>；</li><li>装配前应检验所有零部件的型号、规格，确保符合配置明细；</li><li>进入装配区的零部件应：检验合格并具有合格标志；关键零部件主要配合尺寸及编号复查并在质保卡中记录；经钳工修整的配合尺寸由质量检验部门复检并记录；</li><li>零件装配前应清理和清洗，不应有毛刺、翻边、氧化皮、锈蚀等；<b>涂层未干的零部件不应进行装配</b>；</li><li>量具应经过校准并在有效期内；设备、专用工具使用前检查运行状态；</li><li>各润滑处按组装工艺规程注入润滑油或润滑脂，<b>无特殊要求时不同型号、不同品牌的油、脂不应混用</b>。</li></ul>', src: '5.1' },
+    { h: '装配中的二次防腐与涂层修复', body: '<p><b>5.1.6</b> 二次防腐及涂层修复方法：</p><table><tr><th>损伤情况</th><th>修复方法</th></tr><tr><td>配件表面防腐失效</td><td>工序结束前进行二次防腐，补充油漆与周围漆面平滑自然过渡</td></tr><tr><td>涂层损伤未露出金属面</td><td>涂刷与原防腐层相同的面漆，总干膜厚度与未损伤部位相同</td></tr><tr><td>涂层损伤已露出金属面</td><td>裸露金属面及以外沿圆周方向<b>不小于 10 mm</b> 范围打磨至完全裸露，涂刷相同或相容的底漆、中间漆、面漆</td></tr><tr><td>锌铬涂层损伤</td><td>打磨去除锈渍后喷涂<b>镀铬自喷锌</b></td></tr><tr><td>热喷锌、热浸锌涂层损伤</td><td>喷涂与原损伤部位厚度相同的自喷锌；<b>配合面应喷涂锌含量大于 90% 的自喷锌</b></td></tr></table>', src: '5.1.6' },
+    { h: '关键部件——塔架门', body: '<p><b>5.2.1 塔架门</b>：</p><div class="nums"><div class="num"><b>≤0.15 kN</b><span>开启和关闭时所用力</span></div><div class="num"><b>&gt;90°</b><span>打开角度</span></div><div class="num"><b>淋水密封试验</b><span>制作完成后整体试验并记录</span></div></div><ul><li>装配后确保门开关灵活、无阻塞；门板平整、与门框间隙均匀、闭合后压实密封条；</li><li>塔架门锁及装配应符合设计要求。</li></ul><p><b>5.2.2 接近机械的固定设施</b>（GB/T 17888 系列）：一般要求符合 GB/T 17888.1；工作平台与通道符合 GB/T 17888.2；楼梯、阶梯和护栏符合 GB/T 17888.3；固定式直梯符合 GB/T 17888.4。</p>', src: '5.2' },
+    { h: '紧固件连接与试组装', body: '<p><b>5.3 紧固件连接</b>：</p><ul><li>高强紧固件的安装应符合 <b>GB/T 33628</b> 的规定；</li><li>有紧固扭矩要求的紧固件应使用规定的紧固扭矩扳手并按规定的紧固扭矩拧紧；<b>未规定紧固扭矩时按 GB/T 19568</b> 的规定；</li><li><b>不锈钢紧固件在施工过程中应匀速缓慢预紧，一般不使用电动扳手预紧</b>，防止锁死（不锈钢粘着倾向大，电动扳手易导致咬死）；</li><li>沿海和海上或环境湿度大时，紧固件终拧后应清除表面污物，喷涂自喷锌或涂漆二次防腐；塔架外部重要紧固件宜做<b>包覆</b>等封闭处理。</li></ul><p><b>5.4 工厂试组装</b>——存在以下情况时应进行工厂试组装：</p><ul><li>所有需要进行现场安装的关键部件；</li><li>设计要求或生产技术交底中明确需要试组装的；</li><li>监造方或业主方或采购方之一要求试组装的；</li><li>后续批次生产工艺与首批次生产存在差异的；</li><li>其他要求试组装的。</li></ul><p><b>5.5 现场安装</b>：应符合设计厂家的安装规范，且符合 <b>GB/T 19568</b> 的规定。</p>', src: '5.3；5.4；5.5' }
+  ],
+  questions: [
+    { t: 'judge', q: '对于成品外购件（例如电气柜体、升降机、免爬器等）的装配，还应参考对应厂家提供的产品安装说明文件。', a: [0], e: '正确。5.1.1：装配应符合设计要求，对于成品外购件的装配，还应参考对应厂家提供的产品安装说明文件。', s: '5.1.1' },
+    { t: 'judge', q: '装配前应检验所有零部件的型号、规格，确保符合配置明细。', a: [0], e: '正确。5.1.2：装配前应检验所有零部件的型号、规格，确保符合配置明细。', s: '5.1.2' },
+    { t: 'single', q: '经钳工修整的配合尺寸，应由哪个部门复检并在质保卡中做出记录？', o: ['装配班组', '质量检验部门', '设计部门', '监造方'], a: [1], e: '5.1.3 c)：经钳工修整的配合尺寸，应由质量检验部门复检并在质保卡中做出记录。', s: '5.1.3' },
+    { t: 'judge', q: '涂层未干的零部件不应进行装配。', a: [0], e: '正确。5.1.5：涂层未干的零部件不应进行装配。', s: '5.1.5' },
+    { t: 'single', q: '涂层损伤已露出金属面时，裸露金属面及以外沿圆周方向不小于多少的范围应打磨至完全裸露金属表面？', o: ['5 mm', '10 mm', '20 mm', '50 mm'], a: [1], e: '5.1.6 c)：裸露金属面及裸露金属面以外沿圆周方向不小于 10 mm 的范围，均应打磨至完全裸露金属表面。', s: '5.1.6' },
+    { t: 'single', q: '锌铬涂层损伤，打磨去除锈渍后应：', o: ['喷涂普通自喷漆', '喷涂镀铬自喷锌', '涂刷环氧底漆', '不作处理'], a: [1], e: '5.1.6 d)：锌铬涂层损伤，打磨去除锈渍后，在损伤部位喷涂镀铬自喷锌。', s: '5.1.6' },
+    { t: 'single', q: '热喷锌、热浸锌涂层损伤，配合面应喷涂锌含量大于多少的自喷锌？', o: ['50%', '70%', '90%', '99%'], a: [2], e: '5.1.6 e)：热喷锌、热浸锌涂层损伤，打磨去除锈渍后喷涂与原损伤部位厚度相同的自喷锌，配合面应喷涂锌含量大于 90% 的自喷锌。', s: '5.1.6' },
+    { t: 'judge', q: '测量内附件的量具应经过校准，并在有效期内。', a: [0], e: '正确。5.1.7：测量内附件的量具应经过校准，并在有效期内。', s: '5.1.7' },
+    { t: 'judge', q: '无特殊要求时，不同型号、不同品牌的润滑油、脂可以混用。', a: [1], e: '错误。5.1.9：零部件的各润滑处装配后应按组装工艺规程注入润滑油或润滑脂。无特殊要求时，不同型号、不同品牌的油、脂不应混用。', s: '5.1.9' },
+    { t: 'single', q: '塔架门装配后开启和关闭时所用力不宜超过：', o: ['0.05 kN', '0.10 kN', '0.15 kN', '0.20 kN'], a: [2], e: '5.2.1.4：塔架门装配后开启和关闭时所用力不宜超过 0.15 kN。', s: '5.2.1.4' },
+    { t: 'single', q: '塔架门打开角度应：', o: ['大于 60°', '大于 75°', '大于 90°', '大于 120°'], a: [2], e: '5.2.1.5：塔架门打开角度大于 90°。', s: '5.2.1.5' },
+    { t: 'judge', q: '塔架门制作完成后应进行整体淋水密封试验并进行记录，密封等级应达到设计要求。', a: [0], e: '正确。5.2.1.3：塔架门制作完成后应进行整体淋水密封试验并进行记录，密封等级应达到设计要求。', s: '5.2.1.3' },
+    { t: 'single', q: '楼梯、阶梯和护栏应符合 GB/T 17888 系列中的哪个部分？', o: ['GB/T 17888.1', 'GB/T 17888.2', 'GB/T 17888.3', 'GB/T 17888.4'], a: [2], e: '5.2.2.3：楼梯、阶梯和护栏应符合 GB/T 17888.3（第3部分：楼梯、阶梯和护栏）的规定。第1部分一般要求、第2部分工作平台与通道、第4部分固定式直梯。', s: '5.2.2.3' },
+    { t: 'single', q: '固定式直梯应符合 GB/T 17888 系列中的哪个部分？', o: ['GB/T 17888.1', 'GB/T 17888.2', 'GB/T 17888.3', 'GB/T 17888.4'], a: [3], e: '5.2.2.4：固定式直梯应符合 GB/T 17888.4（第4部分：固定式直梯）的规定。', s: '5.2.2.4' },
+    { t: 'single', q: '高强紧固件的安装应符合哪个标准的规定？', o: ['GB/T 19568', 'GB/T 33628', 'GB/T 3098.1', 'GB/T 17888'], a: [1], e: '5.3.1：高强紧固件的安装应符合 GB/T 33628（风力发电机组 高强螺纹连接副安装技术要求）的规定。', s: '5.3.1' },
+    { t: 'single', q: '未规定紧固扭矩时，紧固扭矩按哪个标准的规定执行？', o: ['GB/T 33628', 'GB/T 19568', 'GB/T 3098.1', 'JB/T 5000.3'], a: [1], e: '5.3.2：未规定紧固扭矩时，紧固扭矩按 GB/T 19568（风力发电机组 装配和安装规范）的规定。', s: '5.3.2' },
+    { t: 'judge', q: '不锈钢紧固件在施工过程中应匀速缓慢预紧，一般不使用电动扳手预紧，防止出现锁死现象。', a: [0], e: '正确。5.3.3：不锈钢紧固件在施工过程中应匀速缓慢预紧，一般不使用电动扳手预紧，防止出现锁死现象（不锈钢摩擦系数高、易粘着咬死）。', s: '5.3.3' },
+    { t: 'multi', q: '存在下列哪些情况时，应进行工厂试组装？（多选）', o: ['所有需要进行现场安装的关键部件', '监造方或者业主方或者采购方之一要求试组装的', '后续批次生产工艺与首批次生产存在差异的', '所有零部件均来自同一供应商'], a: [0, 1, 2], e: '5.4：应进行工厂试组装的情况：①所有需现场安装的关键部件；②设计要求或生产技术交底中明确需要试组装的；③监造方或业主方或采购方之一要求试组装的；④后续批次生产工艺与首批次生产存在差异的；⑤其他要求试组装的。零部件供应商相同并非触发条件。', s: '5.4' },
+    { t: 'judge', q: '现场安装应符合设计厂家的安装规范，且符合 GB/T 19568 的规定。', a: [0], e: '正确。5.5：现场安装应符合设计厂家的安装规范，且符合 GB/T 19568 的规定。', s: '5.5' },
+    { t: 'judge', q: '装配过程中零件可以出现轻微的磕伤、划伤，只要不影响使用即可。', a: [1], e: '错误。5.1.4：装配过程中零件不应磕伤、碰伤、划伤和锈蚀。', s: '5.1.4' }
+  ]
+};
+
+</script>
+<script>
+window.CH07 = {
+  id: 7,
+  title: '检验',
+  slides: [
+    { h: '检验要求（6.1）', body: '<ul><li>检验人员应是<b>专职质量管理人员、质检员和试验员</b>，检测用具、仪器及设备应符合计量检定和质量检测要求；</li><li>从事无损检测的人员应经过技术培训并按 <b>GB/T 9445 或 ISO 9712</b> 进行考核鉴定<b>持证上岗</b>；取得不同无损检测方法的各项技术等级人员只能从事与该等级相对应的无损检测工作，并负相应的技术责任；</li><li>内附件应<b>至少由制造方质量检验部门检查和验收</b>；</li><li><b>首件鉴定及验收</b>的触发条件：①涉及人身、设备安全的内附件；②制造设备、生产工艺等生产条件、制造能力或材质发生重大变化时。验收合格后方可进行批量生产。</li></ul>', src: '6.1' },
+    { h: '检验项目与方法（表5）', body: '<p>除另有规定外，内附件的常见检验项目和检验方法参考表5。关键项目的检验方法：</p><table><tr><th>检验项目</th><th>检验方法</th></tr><tr><td>材质</td><td>GB/T 1591、GB/T 700 等</td></tr><tr><td>焊接材料</td><td>GB/T 5117、GB/T 5293、GB/T 8110、GB/T 10045 等</td></tr><tr><td>高强度螺栓机械性能</td><td>GB/T 3098.1 等</td></tr><tr><td>产品焊接试板</td><td>NB/T 47016</td></tr><tr><td>焊接工艺评定</td><td>NB/T 47014</td></tr><tr><td>焊缝无损检测</td><td>NB/T 47013.3 等</td></tr><tr><td>孔的位置度</td><td>GB/T 1958</td></tr><tr><td>热浸锌层厚度 / 热喷锌层厚度</td><td>ISO 1461 / ISO 2063-2</td></tr><tr><td>漆层厚度 / 漆层附着力</td><td>ISO 19840 / ISO 16276-1、ISO 16276-2</td></tr><tr><td>紧固件紧固扭矩</td><td>GB/T 33628、GB/T 19568</td></tr><tr><td>接近机械的固定设施安全要求验证</td><td>GB/T 17888（所有部分）</td></tr></table>', src: '6.2；表5' },
+    { h: '表5 检验标记含义', body: '<p>表5 中每项检验在"首件验收 / 出厂检验"列的标记含义是高频考点：</p><div class="nums"><div class="num"><b>＊</b><span>文件检验（厂家提供的检验文件）</span></div><div class="num"><b>○</b><span>全检</span></div><div class="num"><b>—</b><span>不作规定的检验项目</span></div><div class="num"><b>△10</b><span>抽检比例 10%</span></div><div class="num"><b>△20</b><span>抽检比例 20%</span></div><div class="num"><b>□</b><span>批检</span></div></div><p>例：焊缝外观检测出厂检验为 △20（抽检 20%）；热浸锌层厚度出厂检验 △10（抽检 10%）；包装出厂检验 △10；接近机械的固定设施安全要求验证出厂检验为 □（批检）。</p>', src: '表5' }
+  ],
+  questions: [
+    { t: 'single', q: '从事无损检测的人员应经过技术培训并按哪个标准考核鉴定持证上岗？', o: ['GB/T 9445 或 ISO 9712', 'GB/T 19568 或 NB/T 47014', 'GB/T 15169 或 TSG Z6002', 'GB 9448 或 ISO 5817'], a: [0], e: '6.1.2：从事无损检测的人员应经过技术培训并按 GB/T 9445 或 ISO 9712 进行考核鉴定持证上岗。', s: '6.1.2' },
+    { t: 'judge', q: '取得不同无损检测方法的各项技术等级人员只能从事与该等级相对应的无损检测工作。', a: [0], e: '正确。6.1.3：取得不同无损检测方法的各项技术等级人员只能从事与该等级相对应的无损检测工作，并负相应的技术责任。', s: '6.1.3' },
+    { t: 'judge', q: '内附件应至少由制造方质量检验部门检查和验收。', a: [0], e: '正确。6.1.4：内附件应至少由制造方质量检验部门检查和验收。', s: '6.1.4' },
+    { t: 'judge', q: '对于涉及人身、设备安全的内附件应做首件鉴定及验收，验收合格后方可进行批量生产。', a: [0], e: '正确。6.1.5：对于涉及人身、设备安全的内附件应做首件鉴定及验收。验收合格后方可进行批量生产。', s: '6.1.5' },
+    { t: 'multi', q: '下列哪些情况出现时，内附件应做首件鉴定及验收？（多选）', o: ['涉及人身、设备安全的内附件', '制造设备、生产工艺等生产条件发生重大变化', '制造能力或材质发生重大变化', '批量生产的每一件产品'], a: [0, 1, 2], e: '6.1.5：涉及人身、设备安全的内附件应做首件鉴定及验收；制造设备、生产工艺等生产条件、制造能力或材质发生重大变化时，内附件应做首件鉴定及验收。并非每件产品都做首件鉴定。', s: '6.1.5' },
+    { t: 'single', q: '产品焊接试板的检验方法按哪个标准执行？', o: ['NB/T 47014', 'NB/T 47016', 'NB/T 47013.3', 'GB/T 1958'], a: [1], e: '表5 序号4：产品焊接试板 → NB/T 47016（承压设备产品焊接试件的力学性能检验）。注意与焊接工艺评定 NB/T 47014 区分。', s: '表5' },
+    { t: 'single', q: '焊接工艺评定的检验方法按哪个标准执行？', o: ['NB/T 47016', 'NB/T 47014', 'GB/T 19804—2005', 'ISO 5817—2023'], a: [1], e: '表5 序号5：焊接工艺评定 → NB/T 47014。', s: '表5' },
+    { t: 'single', q: '焊缝无损检测的检验方法按哪个标准执行？', o: ['GB/T 1958', 'NB/T 47013.3 等', 'ISO 5817—2023', 'GB 50576—2010'], a: [1], e: '表5 序号7：焊缝无损检测 → NB/T 47013.3 等（承压设备无损检测 超声检测）。', s: '表5' },
+    { t: 'single', q: '孔的位置度检验方法按哪个标准执行？', o: ['GB/T 1958', 'GB/T 19568', 'GB/T 1184—1996', 'GB/T 1804—2000'], a: [0], e: '表5 序号8：孔的位置度 → GB/T 1958（产品几何技术规范（GPS）几何公差 检测与验证）。', s: '表5' },
+    { t: 'single', q: '热浸锌层厚度的检验方法按哪个标准执行？', o: ['ISO 2063-2', 'ISO 1461', 'ISO 19840', 'ISO 16276-1'], a: [1], e: '表5 序号10：热浸锌层厚度 → ISO 1461；热喷锌层厚度（序号11）→ ISO 2063-2。', s: '表5' },
+    { t: 'single', q: '漆层厚度的检验方法按哪个标准执行？', o: ['ISO 1461', 'ISO 19840', 'ISO 16276-1', 'ISO 16276-2'], a: [1], e: '表5 序号13：漆层厚度 → ISO 19840；漆层附着力（序号14）→ ISO 16276-1、ISO 16276-2。', s: '表5' },
+    { t: 'single', q: '表5 中标记"＊"表示：', o: ['全检', '文件检验（厂家提供的检验文件）', '抽检比例 10%', '批检'], a: [1], e: '表5 注：标有"＊"为文件检验（厂家提供的检验文件）；"○"为全检；"—"为不作规定；"△10"为抽检比例 10%；"△20"为抽检比例 20%；"□"为批检。', s: '表5' },
+    { t: 'single', q: '表5 中标记"△10"表示：', o: ['全检', '抽检比例 10%', '抽检比例 20%', '批检'], a: [1], e: '表5 注："△10"为抽检比例 10％（如热浸锌层厚度、漆层厚度、包装等）；"△20"为抽检比例 20%（如焊缝外观检测、机加工外观检测、紧固件紧固扭矩）。', s: '表5' },
+    { t: 'single', q: '表5 中标记"□"表示：', o: ['不作规定的检验项目', '文件检验', '批检', '抽检比例 10%'], a: [2], e: '表5 注："□"为批检（如接近机械的固定设施安全要求的验证）。', s: '表5' },
+    { t: 'single', q: '紧固件紧固扭矩的出厂检验抽检比例为：', o: ['10%', '20%', '50%', '100%'], a: [1], e: '表5 序号19：紧固件紧固扭矩出厂检验为 △20（抽检比例 20%），检验方法 GB/T 33628、GB/T 19568。', s: '表5' },
+    { t: 'judge', q: '包装的出厂检验为抽检比例 10%。', a: [0], e: '正确。表5 序号21：包装出厂检验 △10（抽检比例 10%），检验方法目测；首件验收为"—"（不作规定）。', s: '表5' }
+  ]
+};
+
+</script>
+<script>
+window.CH08 = {
+  id: 8,
+  title: '包装、储存和运输',
+  slides: [
+    { h: '标识（7.1）', body: '<p><b>7.1.1 内容</b>：标识应清晰可见，命名中至少应包含设计图样中的内附件<b>名称、编号、制造商信息和出厂日期</b>；编号应具有<b>追溯性</b>。</p><p><b>7.1.2 方法</b>：</p><ul><li>需要单独标识的内附件，宜采用<b>标签、喷码、钢印</b>等；</li><li>无法单独标识的内附件，可以采用标签或喷码标识在<b>外包装</b>上；</li><li>承受疲劳载荷的内附件，如采用钢印标识，应采用<b>低应力或无应力钢印</b>——普通钢印的冲击印记会形成应力集中源，诱发疲劳裂纹。</li></ul>', src: '7.1' },
+    { h: '包装（7.2）', body: '<p><b>7.2.1 一般要求</b>：涂层完全干燥、具备出厂条件的内附件经检验合格后应妥善包装，防止二次污染。</p><p><b>7.2.2 紧固件包装</b>：</p><ul><li>随机发运的紧固件宜按<b>使用部位、规格型号</b>分类装箱或装盒；清除污垢及金属屑；</li><li>整体采用<b>木箱装运</b>，木箱内采用<b>聚乙烯等防水材料</b>包裹货物表面，防止雨水进入；</li><li>包装箱、盒外表标志内容：<b>使用部位、规格型号、数量</b>；标志不应褪色、脱落；</li><li>多个类别紧固件共用大包装发运时，外部显著位置粘贴紧固件清单，同时箱内放置清单；</li><li>其他未及之处按 <b>GB/T 90.2</b> 执行。</li></ul><p><b>7.2.3 内附件包装</b>：宜按使用部位分类包装且宜有标志，标志内容：<b>名称、图号</b>。</p>', src: '7.2' },
+    { h: '储存与运输（7.3/7.4）', body: '<p><b>7.3 储存</b>：储存场所应<b>干燥、清洁</b>，防止二次污染；储存中采取必要防护措施，确保装卸、转运、储存过程中产品涂层、性能不恶化。</p><p><b>7.4 运输</b>：</p><ul><li>运输前充分考虑尺寸、重量大小、运输方法（铁路、公路、水路）和包装要求，制定运输方案；</li><li>具有<b>部分悬空</b>的内附件应做好运输途中的固定，防止颠簸损伤；具有<b>活动功能</b>的内附件应确保活动件处于可靠的固定状态；</li><li><b>大型内附件运输</b>：保证运输安全；提出运输对道路的要求；运输前对运输路线进行<b>路况勘探</b>（内容：道路限高、限宽、承载能力、坡度、转弯半径等）；勘探结果符合要求后方可运输；与运输车辆之间采用<b>专用工装</b>固定牢固；采取防雨防尘措施（篷布包装时应另加<b>网套</b>包裹防护）；安装在大型内附件内的电气设备或控制柜在运输期间应防雨、防尘，且宜有<b>防振、防晒</b>保护。</li></ul>', src: '7.3；7.4' }
+  ],
+  questions: [
+    { t: 'multi', q: '内附件标识命名中至少应包含：（多选）', o: ['设计图样中的内附件名称', '编号', '制造商信息', '出厂日期'], a: [0, 1, 2, 3], e: '7.1.1：标识应清晰可见，命名中至少应包含设计图样中的内附件名称、编号、制造商信息和出厂日期。四项缺一不可。', s: '7.1.1' },
+    { t: 'judge', q: '内附件的编号应具有追溯性。', a: [0], e: '正确。7.1.1：编号应具有追溯性——通过编号可回溯到设计、制造、检验记录。', s: '7.1.1' },
+    { t: 'single', q: '对于需要单独标识的内附件，宜采用的标识方法是：', o: ['仅用油漆书写', '标签、喷码、钢印等', '激光打标于配合面', '雕刻于焊缝处'], a: [1], e: '7.1.2：对于需要单独标识的内附件，宜采用标签、喷码、钢印等。', s: '7.1.2' },
+    { t: 'judge', q: '对于无法单独标识的内附件，可以采用标签或喷码标识在外包装上。', a: [0], e: '正确。7.1.2：对于无法单独标识的内附件，可以采用标签或喷码标识在外包装上。', s: '7.1.2' },
+    { t: 'judge', q: '承受疲劳载荷的内附件，如采用钢印标识，应采用低应力或无应力钢印。', a: [0], e: '正确。7.1.2：承受疲劳载荷的内附件，如采用钢印标识，应采用低应力或无应力钢印——避免冲击印记产生应力集中。', s: '7.1.2' },
+    { t: 'judge', q: '涂层完全干燥，具备出厂条件的内附件经检验合格后应妥善包装，防止二次污染。', a: [0], e: '正确。7.2.1：涂层完全干燥，具备出厂条件的内附件经检验合格后应妥善包装，防止二次污染。', s: '7.2.1' },
+    { t: 'single', q: '随机发运的紧固件整体采用什么方式装运？', o: ['纸箱', '木箱', '塑料箱', '编织袋'], a: [1], e: '7.2.2：整体采用木箱装运，木箱内采用聚乙烯等防水材料包裹货物表面，防止雨水等进入。', s: '7.2.2' },
+    { t: 'judge', q: '紧固件包装箱、盒外表的标志允许印刷、标打，也允许栓挂或粘贴。', a: [0], e: '正确。7.2.2：紧固件的包装箱、盒外表应有标志。标志一般采用印刷或标打，也允许栓挂或粘贴。标志不应褪色、脱落。', s: '7.2.2' },
+    { t: 'multi', q: '紧固件包装箱、盒外表的标志内容应包括：（多选）', o: ['使用部位', '规格型号', '数量', '紧固件价格'], a: [0, 1, 2], e: '7.2.2：标志内容如下：a) 使用部位；b) 规格型号；c) 数量。', s: '7.2.2' },
+    { t: 'multi', q: '随机发运的内附件包装标志内容应包括：（多选）', o: ['名称', '图号', '出厂价格', '操作人员姓名'], a: [0, 1], e: '7.2.3：内附件包装标志内容：a) 名称；b) 图号。注意与紧固件标志（使用部位、规格型号、数量）区分。', s: '7.2.3' },
+    { t: 'judge', q: '紧固件包装的其他未及之处按 GB/T 90.2 执行。', a: [0], e: '正确。7.2.2：其他未及之处按 GB/T 90.2《紧固件 标志与包装》执行。', s: '7.2.2' },
+    { t: 'single', q: '内附件的储存场所应：', o: ['通风但不限湿度', '干燥、清洁，防止二次污染', '恒温恒湿', '露天存放'], a: [1], e: '7.3：储存场所应干燥，清洁，防止二次污染。', s: '7.3' },
+    { t: 'judge', q: '具有部分悬空的内附件，运输中应做好固定，防止颠簸造成的损伤。', a: [0], e: '正确。7.4.1：对于具有部分悬空的内附件，应做好运输途中的固定，防止颠簸造成的损伤。', s: '7.4.1' },
+    { t: 'judge', q: '对于具有活动功能的内附件，应确保活动件处于可靠的固定状态。', a: [0], e: '正确。7.4.1：对于具有活动功能的内附件，应确保活动件处于可靠的固定状态。', s: '7.4.1' },
+    { t: 'multi', q: '大型内附件运输前路况勘探的内容包括：（多选）', o: ['道路限高、限宽', '承载能力', '坡度、转弯半径', '沿途加油站数量'], a: [0, 1, 2], e: '7.4.2 c)：运输前对运输路线应进行路况勘探，勘探内容包括道路限高、限宽、承载能力、坡度、转弯半径等。', s: '7.4.2' },
+    { t: 'judge', q: '大型内附件与运输车辆之间应采用专用工装固定牢固。', a: [0], e: '正确。7.4.2 e)：大型内附件与运输车辆之间应采用专用工装固定牢固。', s: '7.4.2' },
+    { t: 'single', q: '大型内附件采用篷布包装时，应：', o: ['直接捆扎即可', '另加网套包裹进行防护', '外加金属护角', '喷淋保湿'], a: [1], e: '7.4.2 f)：大型内附件在运输期间应采取防雨防尘措施，采用篷布包装时应另加网套包裹进行防护。', s: '7.4.2' },
+    { t: 'judge', q: '安装在大型内附件内的电气设备或控制柜在运输期间应防雨、防尘，且宜有防振、防晒保护。', a: [0], e: '正确。7.4.2 g)：安装在大型内附件内的电气设备或控制柜在运输期间应防雨、防尘，且宜有防振、防晒保护。', s: '7.4.2' }
+  ]
+};
+
+</script>
+<script>
+window.CH09 = {
+  id: 9,
+  title: '综合应用与易错点',
+  slides: [
+    { h: '数值辨析（一）：温度与尺寸', body: '<p>本文件温度类数值多，考试极易混淆，集中对照：</p><table><tr><th>数值</th><th>含义</th><th>出处</th></tr><tr><td>-40 ℃~110 ℃</td><td>尼龙 66 电缆夹具工作温度</td><td>4.1.7</td></tr><tr><td>247 ℃~250 ℃</td><td>尼龙 66 熔点</td><td>4.1.7</td></tr><tr><td>220 ℃</td><td>尼龙 66 热变形温度（1.8 MPa）</td><td>4.1.7</td></tr><tr><td>580 ℃</td><td>屈服 &lt;355 MPa 结构钢热加工上限</td><td>4.2.3.1</td></tr><tr><td>600 ℃~650 ℃</td><td>屈服 ≥355 MPa 结构钢红热成形</td><td>4.2.3.1</td></tr><tr><td>250 ℃~380 ℃</td><td>蓝脆温度区间（禁止弯曲成形）</td><td>4.2.3.1</td></tr><tr><td>900 ℃</td><td>加热矫正温度上限</td><td>4.2.3.4</td></tr><tr><td>-16 ℃ / -12 ℃</td><td>碳素钢 / 低合金钢冷矫正下限</td><td>4.2.3.4</td></tr><tr><td>0 ℃</td><td>焊接件施焊下限（低于则防护）</td><td>4.2.4.2</td></tr><tr><td>10 ℃</td><td>涂层施工固化低温阈值（冬季固化剂）</td><td>4.3.4.2</td></tr></table>', src: '4.1.7；4.2.3；4.2.4.2；4.3.4.2' },
+    { h: '数值辨析（二）：尺寸、力与公差等级', body: '<table><tr><th>数值</th><th>含义</th><th>出处</th></tr><tr><td>0.2 mm</td><td>加工后零件划痕/凹痕深度上限</td><td>4.2.1</td></tr><tr><td>1 mm</td><td>切割边棱割痕深度上限</td><td>4.2.2</td></tr><tr><td>0.5 mm</td><td>剪切冲压后打磨/机加最小厚度</td><td>4.2.2</td></tr><tr><td>4 倍板厚</td><td>铝合金最小弯曲半径推荐值</td><td>4.2.3.3.2</td></tr><tr><td>25 mm</td><td>焊接清洁区域接头边缘范围</td><td>4.2.4.1</td></tr><tr><td>3 倍厚度且 ≥100 mm</td><td>局部预热范围</td><td>4.2.4.2</td></tr><tr><td>0.15 kN</td><td>塔架门开关力上限</td><td>5.2.1.4</td></tr><tr><td>90°</td><td>塔架门打开角度下限</td><td>5.2.1.5</td></tr><tr><td>10 mm</td><td>涂层损伤打磨裸露范围（沿圆周）</td><td>5.1.6</td></tr><tr><td>90%</td><td>自喷锌锌含量下限（配合面）</td><td>5.1.6</td></tr><tr><td>2 m</td><td>电缆夹具跌落试验高度</td><td>4.1.7</td></tr></table><p>公差等级对照：切割（3/2 级）、焊接件未注尺寸 B 级/形位 F 级、机加工件未注尺寸 m 级/形位 K 级、疲劳焊缝 ISO 5817 B 级/常规 C 级。</p>', src: '4.2；4.1.7；5.1.6；5.2.1' },
+    { h: '等级与标准对照速记', body: '<p>材料与检验的"分级逻辑"高度规律，记住模式即可：</p><table><tr><th>场景</th><th>静力载荷</th><th>疲劳载荷</th></tr><tr><td>热轧钢板厚度偏差（GB/T 709—2019）</td><td>A 级</td><td>B 级</td></tr><tr><td>热轧钢板表面质量（GB/T 14977—2008）</td><td>B1</td><td>B3</td></tr><tr><td>型钢表面质量（YB/T 4427—2014）</td><td>B1</td><td>B3</td></tr></table><div class="kv">标准号速记：<b>结构钢 GB/T 1591、焊材 GB/T 5117/5293/8110、铝焊丝 GB/T 10858、工艺评定 NB/T 47014、试板 NB/T 47016、超声 NB/T 47013.3、焊缝 ISO 5817、防腐 ISO 12944、附着力 ISO 16276、干膜厚度 ISO 19840、镀锌 ISO 1461、热喷锌 ISO 2063-2</b>。</div>', src: '4.1.2；4.3.5；表5' }
+  ],
+  questions: [
+    { t: 'single', q: '下列温度数值中，属于尼龙 66 电缆夹具工作温度范围的是：', o: ['-25 ℃~55 ℃', '-40 ℃~110 ℃', '247 ℃~250 ℃', '250 ℃~380 ℃'], a: [1], e: '4.1.7 a)：工作温度 -40 ℃~110 ℃。247~250 ℃ 是熔点、250~380 ℃ 是蓝脆温度区间、-25~55 ℃ 是 GB/T 46154 电梯标准的工作温度，均非本项。', s: '4.1.7；4.2.3.1' },
+    { t: 'single', q: '下列哪个温度区间是结构钢弯曲或成形的禁区（蓝脆区）？', o: ['100 ℃~200 ℃', '250 ℃~380 ℃', '400 ℃~500 ℃', '600 ℃~650 ℃'], a: [1], e: '4.2.3.1 b)：不应在蓝脆温度区间（250 ℃～380 ℃）进行弯曲或成形。600~650 ℃ 是屈服 ≥355 MPa 钢的红热成形区间，注意区分。', s: '4.2.3.1' },
+    { t: 'single', q: '碳素结构钢与低合金结构钢冷矫正、冷弯曲的环境温度下限分别是：', o: ['-16 ℃ 和 -12 ℃', '-12 ℃ 和 -16 ℃', '-20 ℃ 和 -10 ℃', '-16 ℃ 和 -8 ℃'], a: [0], e: '4.2.3.4 a)：碳素结构钢在环境温度低于 -16 ℃、低合金结构钢在环境温度低于 -12 ℃ 时，不应进行冷矫正和冷弯曲。碳素钢下限更低（更抗低温脆断）。', s: '4.2.3.4' },
+    { t: 'single', q: '下列对应关系中，错误的是：', o: ['屈服 &lt;355 MPa 结构钢热加工上限 580 ℃', '屈服 ≥355 MPa 结构钢红热成形 600 ℃~650 ℃', '加热矫正温度上限 900 ℃', '涂层施工表面温度应高于露点 10 ℃'], a: [3], e: '4.3.4.2：涂层施工表面温度应高于露点温度 3 ℃（不是 10 ℃）。其余三项均正确：580 ℃、600~650 ℃、900 ℃。', s: '4.2.3.1；4.2.3.4；4.3.4.2' },
+    { t: 'single', q: '关于"静力 / 疲劳"分档要求，下列说法正确的是：', o: ['厚度偏差：静力 B 级、疲劳 A 级', '钢板表面质量：静力 B1、疲劳 B3', '型钢表面质量：静力 B3、疲劳 B1', '厚度偏差：静力与疲劳均为 A 级'], a: [1], e: '4.1.2.2/.3：厚度偏差静力 A、疲劳 B；钢板表面质量静力 B1、疲劳 B3；型钢表面质量静力 B1、疲劳 B3。疲劳载荷要求更严。', s: '4.1.2.2；4.1.2.3' },
+    { t: 'single', q: '机加工件未注尺寸公差为 GB/T 1804—2000 的 m 级，而焊接件未注尺寸公差为 GB/T 19804—2005 的：', o: ['A 级', 'B 级', 'C 级', 'F 级'], a: [1], e: '4.2.5.11 与 4.2.4.4.1 对照：机加工件未注尺寸公差 m 级（GB/T 1804—2000）；焊接件未注尺寸公差 B 级、未注形位公差 F 级（GB/T 19804—2005）。', s: '4.2.4.4.1；4.2.5.11' },
+    { t: 'single', q: '承受疲劳载荷的钢制件焊缝质量等级（ISO 5817—2023）与未规定时的默认等级分别是：', o: ['A 级和 B 级', 'B 级和 C 级', 'C 级和 D 级', 'B 级和 B 级'], a: [1], e: '4.2.4.4.2/.3：疲劳载荷钢制件焊缝质量应符合 ISO 5817—2023 规定的 B 级要求；未规定焊缝质量等级时，应满足 C 级要求。', s: '4.2.4.4.2；4.2.4.4.3' },
+    { t: 'judge', q: '未处理的冲孔可以用于靠摩擦连接的连接节点。', a: [1], e: '错误。4.2.3.5 b)：未经处理的冲孔，不可用于靠摩擦连接的或者使用不低于 8.8 级高强螺栓的连接节点。', s: '4.2.3.5' },
+    { t: 'single', q: '下列哪项不是尼龙 66 电缆夹具的主要性能要求？', o: ['拉伸强度大于 115 MPa', '缺口悬梁冲击强度大于 5.5 kJ/㎡', '防火等级 UL94 V-0', '弹性模量大于 3000 MPa'], a: [3], e: '4.1.7：尼龙 66 夹具性能包括工作温度、熔点、弯曲强度 180 MPa、拉伸强度大于 115 MPa、缺口悬梁冲击大于 5.5 kJ/㎡、无缺口悬臂梁冲击大于 30 kJ/㎡、热变形温度 220 ℃、防火 UL94 V-0。弹性模量不是本文件规定项。', s: '4.1.7' },
+    { t: 'single', q: '焊接工艺评定、产品焊接试板、焊缝无损检测对应的标准分别是：', o: ['NB/T 47014、NB/T 47016、NB/T 47013.3', 'NB/T 47016、NB/T 47014、NB/T 47013.3', 'NB/T 47013.3、NB/T 47014、NB/T 47016', 'GB 50661、NB/T 47014、GB/T 19804'], a: [0], e: '表5 对照：焊接工艺评定 → NB/T 47014；产品焊接试板 → NB/T 47016；焊缝无损检测 → NB/T 47013.3 等。三个 NB/T 4701x 标准要分清。', s: '表5' },
+    { t: 'single', q: '漆层厚度、漆层附着力、热浸锌层厚度对应的检验标准分别是：', o: ['ISO 19840、ISO 16276-1/2、ISO 1461', 'ISO 1461、ISO 19840、ISO 16276-1', 'ISO 16276-1、ISO 1461、ISO 19840', 'ISO 2063-2、ISO 19840、ISO 1461'], a: [0], e: '表5 对照：漆层厚度 → ISO 19840；漆层附着力 → ISO 16276-1、ISO 16276-2；热浸锌层厚度 → ISO 1461；热喷锌层厚度 → ISO 2063-2。', s: '表5' },
+    { t: 'judge', q: '铝合金内附件螺栓连接采用有预拉力的高强度螺栓是推荐做法。', a: [1], e: '错误。4.1.6 b)：铝合金内附件的螺栓连接不宜采用有预拉力的高强度螺栓——铝合金基体较软，预拉力易压溃或导致松弛。', s: '4.1.6' },
+    { t: 'single', q: '下列哪组标准与"防腐涂装"直接相关？', o: ['ISO 12944、ISO 19840、ISO 16276、ISO 1461', 'GB/T 5117、GB/T 5293、GB/T 8110', 'NB/T 47013、NB/T 47014、NB/T 47016', 'GB/T 17888.1~.4'], a: [0], e: 'ISO 12944（防腐体系）、ISO 19840（干膜厚度）、ISO 16276（附着力）、ISO 1461（镀锌层）均属防腐涂装检验链。GB/T 5117 等为焊接材料，NB/T 4701x 为承压设备检验，GB/T 17888 为接近机械固定设施。', s: '4.3；表5' },
+    { t: 'single', q: '内附件标识中"编号"的作用是：', o: ['美观装饰', '实现追溯性', '区分颜色', '标明重量'], a: [1], e: '7.1.1：编号应具有追溯性——通过编号可追溯设计与制造检验记录。', s: '7.1.1' },
+    { t: 'judge', q: '承受疲劳载荷的内附件采用钢印标识时，应采用低应力或无应力钢印。', a: [0], e: '正确。7.1.2：承受疲劳载荷的内附件，如采用钢印标识，应采用低应力或无应力钢印，避免应力集中诱发疲劳裂纹。', s: '7.1.2' },
+    { t: 'single', q: '本文件适用于内附件的制造、装配和检验，但下列哪项不属于本文件规定的内容？', o: ['技术要求', '设计计算方法', '包装、储存和运输', '检验'], a: [1], e: '第1章：本文件规定了技术要求、装配、检验、包装、储存和运输。设计计算方法不在规定范围内——这是标准适用范围类考题的常见干扰项。', s: '第1章 范围' },
+    { t: 'single', q: '下列关于紧固件等级的说法正确的是：', o: ['碳钢或合金钢紧固件选用 4.8 级及以上', '碳钢或合金钢紧固件选用 6.8 级及以上', '铝合金紧固件应符合 GB/T 3098.1', '不锈钢紧固件应符合 GB/T 3098.10'], a: [1], e: '4.1.6：碳钢或合金钢紧固件 6.8 级及以上（GB/T 3098.1）；铝合金紧固件 GB/T 3098.10；不锈钢紧固件 GB/T 3098.6、GB/T 3098.15。', s: '4.1.6' }
+  ]
+};
+
+</script>
+<script>
+/* NB/T 11773—2025 填空题库（知识巩固）
+ * 结构：{ ch: 章号, t: 'fill', q: 题干(____ 为空), a: [[空1可接受答案...],[空2...]], e: 解析, s: 出处 }
+ */
+window.FILL = {
+  id: 15,
+  title: '填空题（知识巩固）',
+  questions: [
+    /* ============ 第 1 章 范围与规范性引用文件 ============ */
+    { ch: 1, t: 'fill', q: 'NB/T 11773—2025 于 ____ 年 ____ 月 ____ 日发布，于 ____ 年 ____ 月 ____ 日实施。', a: [['2025'], ['6', '06'], ['30'], ['2025'], ['12'], ['30']], e: '封面载明：2025-06-30 发布，2025-12-30 实施。发布与实施之间留有约半年过渡期，供制造单位完成文件转换与工艺准备。', s: '封面' },
+    { ch: 1, t: 'fill', q: '本文件由 ____ 提出，由能源行业风电标准化技术委员会风电场机械设备分技术委员会（代号 ____）归口。', a: [['国家能源局'], ['NEA/TC1/SC5', 'TC1/SC5']], e: '前言载明：本文件由国家能源局提出，由 NEA/TC1/SC5 归口。注意区分"提出"（国家能源局）与"归口"（NEA/TC1/SC5）。', s: '前言' },
+    { ch: 1, t: 'fill', q: '本文件规定了风力发电机组内附件技术要求、装配、检验、包装、储存和 ____。', a: [['运输']], e: '第 1 章：本文件规定了风力发电机组内附件技术要求、装配、检验、包装、储存和运输。', s: '1 范围' },
+    { ch: 1, t: 'fill', q: '本文件适用于风力发电机组内附件的制造、装配和 ____。', a: [['检验']], e: '第 1 章：本文件适用于风力发电机组内附件的制造、装配和检验。', s: '1 范围' },
+    { ch: 1, t: 'fill', q: '注日期的引用文件，仅该日期对应的 ____ 适用于本文件；不注日期的引用文件，其 ____ 版本（包括所有的修改单）适用于本文件。', a: [['版本'], ['最新']], e: '第 2 章：注日期的引用文件仅该日期对应的版本适用；不注日期的引用文件其最新版本（包括所有的修改单）适用。两者方向相反，是易错点。', s: '2 规范性引用文件' },
+    { ch: 1, t: 'fill', q: '本文件属于 ____ 行业标准，标准编号为 ____。', a: [['能源'], ['NB/T11773—2025', 'NB/T 11773—2025', 'NB/T 11773-2025']], e: '封面载明：中华人民共和国能源行业标准 NB/T 11773—2025。NB 为能源行业标准代号。', s: '封面' },
+
+    /* ============ 第 2 章 术语和定义 ============ */
+    { ch: 2, t: 'fill', q: '内附件泛指风力发电机组中除了主要大部件（塔架、轮毂、____ 等）之外的结构件或功能件。', a: [['传动系', '传动系统']], e: '3.1 定义：内附件泛指除了主要大部件（塔架、轮毂、传动系等）之外的结构件或功能件。', s: '3.1' },
+    { ch: 2, t: 'fill', q: '内附件主要用于连接、固定、支撑以及提供 ____ 和安全功能等。', a: [['维护']], e: '3.1 定义：内附件主要用于连接、固定、支撑以及提供维护和安全功能等。', s: '3.1' },
+    { ch: 2, t: 'fill', q: '常见的内附件包括护栏、爬梯、____ 等。', a: [['维护平台']], e: '3.1 术语注：常见的内附件包括护栏、爬梯、维护平台等。', s: '3.1' },
+    { ch: 2, t: 'fill', q: '内附件的英文术语为 ____。', a: [['internals']], e: '3.1：内附件 internals。', s: '3.1' },
+
+    /* ============ 第 3 章 技术要求·材料 ============ */
+    { ch: 3, t: 'fill', q: '如未规定时，结构钢宜采用 Q235、Q355、Q390 和 ____ 钢等。', a: [['Q420']], e: '4.1.2.1 a)：结构钢宜采用 Q235、Q355、Q390 和 Q420 钢等，其质量至少应符合 GB/T 700 和 GB/T 1591 的规定。', s: '4.1.2.1' },
+    { ch: 3, t: 'fill', q: '对于需要焊接的内附件，应使用 GB/T 1591—2018 中规定的 ____ 级及以上的质量等级，例如 Q235B、Q355B。', a: [['B']], e: '4.1.2.1 b)：焊接内附件应使用 B 级及以上质量等级（如 Q235B、Q355B）。', s: '4.1.2.1' },
+    { ch: 3, t: 'fill', q: '承受疲劳载荷的内附件，超声波探伤质量等级不宜低于 NB/T 47013.3—2023 规定的 ____ 级。', a: [['Ⅱ', 'II', '2', '二']], e: '4.1.2.1 c)：疲劳载荷内附件超声探伤质量等级不宜低于Ⅱ级。', s: '4.1.2.1' },
+    { ch: 3, t: 'fill', q: '承受静力载荷的内附件，热轧钢板厚度偏差不低于 GB/T 709—2019 规定的 ____ 级；承受疲劳载荷的不宜低于 ____ 级。', a: [['A'], ['B']], e: '4.1.2.2：静力载荷 A 级、疲劳载荷 B 级。静力 A、疲劳 B 是对照记忆点。', s: '4.1.2.2' },
+    { ch: 3, t: 'fill', q: '承受静力载荷的内附件，热轧钢板表面质量应符合 GB/T 14977—2008 规定的 ____ 级别；承受疲劳载荷的宜符合 ____ 级别。', a: [['B1'], ['B3']], e: '4.1.2.3：钢板表面质量静力 B1、疲劳 B3。型钢表面质量（YB/T 4427—2014）同理。', s: '4.1.2.3' },
+    { ch: 3, t: 'fill', q: '铝合金内附件宜采用 ____ 系列和 6XXX 系列铝合金。', a: [['5XXX', '5000', '5系']], e: '4.1.3.1 a)：铝合金内附件宜采用 5XXX 系列和 6XXX 系列铝合金，内部不应有裂纹、分层等。', s: '4.1.3.1' },
+    { ch: 3, t: 'fill', q: '不锈钢内附件宜选用 ____、S31608 等系列不锈钢。', a: [['S30408']], e: '4.1.4.1 a)：不锈钢内附件宜选用 S30408、S31608 等系列。', s: '4.1.4.1' },
+    { ch: 3, t: 'fill', q: '对直接承受动力载荷或需要验算疲劳的内附件，以及低温环境下工作的厚板内附件，宜采用 ____ 型焊接材料。', a: [['低氢']], e: '4.1.5：宜采用低氢型焊接材料——扩散氢含量低，抗冷裂纹能力强。', s: '4.1.5' },
+    { ch: 3, t: 'fill', q: '铝合金内附件焊接用焊丝宜选用 SAL ____ 及 SAL 4043。', a: [['5356']], e: '4.1.5：铝合金焊丝宜选用 SAL 5356 及 SAL 4043；焊接工艺可采用 MIG 焊和 TIG 焊。', s: '4.1.5' },
+    { ch: 3, t: 'fill', q: '铝合金与不锈钢内附件焊接工艺可采用熔化极惰性气体保护电弧焊（____ 焊）和钨极惰性气体保护电弧焊（____ 焊）。', a: [['MIG'], ['TIG']], e: '4.1.5：铝合金与不锈钢内附件焊接工艺可采用 MIG 焊（熔化极惰性气体保护电弧焊）和 TIG 焊（钨极惰性气体保护电弧焊）。', s: '4.1.5' },
+    { ch: 3, t: 'fill', q: '如未规定时，碳钢或合金钢紧固件应符合 GB/T 3098.1 的规定，并选用 ____ 级及以上等级。', a: [['6.8', '6,8']], e: '4.1.6 a)：碳钢或合金钢紧固件选用 6.8 级及以上等级。', s: '4.1.6' },
+    { ch: 3, t: 'fill', q: '电缆夹具材料一般采用 ____，跌落试验要求 ____ m 高空掉落水泥地面，夹具应不开裂，不破损。', a: [['尼龙66', '尼龙 66'], ['2']], e: '4.1.7：电缆夹具材料一般采用尼龙 66；跌落试验 2 m 高空掉落水泥地面，不开裂不破损。', s: '4.1.7' },
+    { ch: 3, t: 'fill', q: '如未规定时，尼龙 66 电缆夹具的工作温度为 -40 ℃~____ ℃，熔点 ____ ℃~250 ℃。', a: [['110'], ['247']], e: '4.1.7 a)/b)：工作温度 -40~110 ℃；熔点 247~250 ℃。', s: '4.1.7' },
+    { ch: 3, t: 'fill', q: '如未规定时，尼龙 66 电缆夹具的防火等级为 ____，拉伸强度大于 ____ MPa。', a: [['UL94V-0', 'UL94 V-0', 'V-0'], ['115']], e: '4.1.7 h)/d)：防火等级 UL94 V-0；拉伸强度大于 115 MPa。', s: '4.1.7' },
+
+    /* ============ 第 4 章 技术要求·工艺 ============ */
+    { ch: 4, t: 'fill', q: '除产品图样有要求外，加工后的零件不应有毛刺、尖角、锐边和深度超过 ____ mm 的划痕或凹痕。', a: [['0.2', '0,2']], e: '4.2.1 c)：加工后零件不应有深度超过 0.2 mm 的划痕或凹痕。', s: '4.2.1' },
+    { ch: 4, t: 'fill', q: '零件切割的边棱，不应有深度大于 ____ mm 的割痕。', a: [['1']], e: '4.2.2 c)：切割边棱不应有深度大于 1 mm 的割痕。', s: '4.2.2' },
+    { ch: 4, t: 'fill', q: '承受静力载荷的内附件，热切割自由面粗糙度不大于 ____；机械切割自由面粗糙度不大于 ____。', a: [['Rz100', 'RZ100'], ['Ra25', 'RA25']], e: '4.2.2 d)：热切割自由面粗糙度不大于 Rz100；机械切割自由面粗糙度不大于 Ra25。', s: '4.2.2' },
+    { ch: 4, t: 'fill', q: '剪切或冲压后进行机加或打磨，打磨或机加厚度至少 ____ mm。', a: [['0.5', '0,5']], e: '4.2.2 h)：打磨或机加厚度至少 0.5 mm。', s: '4.2.2' },
+    { ch: 4, t: 'fill', q: '屈服强度低于 355 MPa 的结构钢，热加工温度不应高于 ____ ℃。', a: [['580']], e: '4.2.3.1 a)：屈服强度低于 355 MPa 的结构钢，热加工温度不应高于 580 ℃。', s: '4.2.3.1' },
+    { ch: 4, t: 'fill', q: '屈服强度不低于 355 MPa 的结构钢，热成形应在红热状态（____ ℃～____ ℃）进行。', a: [['600'], ['650']], e: '4.2.3.1 b)：屈服强度不低于 355 MPa 的结构钢，热成形应在红热状态（600 ℃～650 ℃）进行。', s: '4.2.3.1' },
+    { ch: 4, t: 'fill', q: '结构钢不应在蓝脆温度区间（____ ℃～____ ℃）进行弯曲或成形。', a: [['250'], ['380']], e: '4.2.3.1 b)：不应在蓝脆温度区间（250 ℃～380 ℃）进行弯曲或成形。', s: '4.2.3.1' },
+    { ch: 4, t: 'fill', q: '如未规定时，常用铝合金板、带材最小弯曲半径推荐 ____ 倍板厚。', a: [['4']], e: '4.2.3.3.2 a)：铝合金板带材最小弯曲半径推荐 4 倍板厚，且不小于 GB/T 3880.2 的规定。', s: '4.2.3.3.2' },
+    { ch: 4, t: 'fill', q: '压弯为直角时，最小孔边距 L = ____ + 2t（R 为内圆角半径，t 为钢板厚度）。', a: [['R']], e: '4.2.3.3.1 c) 式（1）：L = R + 2t。', s: '4.2.3.3.1' },
+    { ch: 4, t: 'fill', q: '普通碳素结构钢和低合金结构钢加热矫正时，加热温度不应超过 ____ ℃。', a: [['900']], e: '4.2.3.4 a)：加热矫正温度不应超过 900 ℃。', s: '4.2.3.4' },
+    { ch: 4, t: 'fill', q: '碳素结构钢在环境温度低于 ____ ℃、低合金结构钢在环境温度低于 ____ ℃ 时，不应进行冷矫正和冷弯曲。', a: [['-16', '—16', '-16℃'], ['-12', '—12', '-12℃']], e: '4.2.3.4 a)：碳素钢 -16 ℃、低合金钢 -12 ℃。', s: '4.2.3.4' },
+    { ch: 4, t: 'fill', q: '冲孔完成后经二次钻孔或铰孔处理，孔的光洁度不小于 ____。', a: [['Ra12.5', 'RA12.5']], e: '4.2.3.5 b)：处理后的孔的光洁度不小于 Ra12.5。', s: '4.2.3.5' },
+    { ch: 4, t: 'fill', q: '未经处理的冲孔，不可用于靠摩擦连接的或者使用不低于 ____ 级高强螺栓的连接节点。', a: [['8.8', '8,8']], e: '4.2.3.5 b)：未经处理的冲孔不可用于摩擦连接或使用不低于 8.8 级高强螺栓的连接节点。', s: '4.2.3.5' },
+    { ch: 4, t: 'fill', q: '材料厚度不大于 12 mm 时，定位焊焊缝最小长度为材料厚度的 ____ 倍；材料厚度大于 12 mm 且不大于 50 mm 时，最小长度不小于 ____ mm。', a: [['4', '四'], ['50']], e: '4.2.4.1 e)：定位焊最小长度：≤12 mm 厚为厚度的 4 倍；12~50 mm 厚不小于 50 mm；>50 mm 应增加长度。', s: '4.2.4.1' },
+    { ch: 4, t: 'fill', q: '焊接清洁区域应包括所有接头表面以及接头边缘不小于 ____ mm 的区域。', a: [['25']], e: '4.2.4.1 d)：清洁区域包括所有接头表面及接头边缘不小于 25 mm 的区域。', s: '4.2.4.1' },
+    { ch: 4, t: 'fill', q: '气体保护焊时风速大于 ____ m/s；其他焊接方法时风速大于 ____ m/s，应采用有效防护措施否则不应施焊。', a: [['2'], ['8']], e: '4.2.4.2 e)：气体保护焊 2 m/s、其他方法 8 m/s。', s: '4.2.4.2' },
+    { ch: 4, t: 'fill', q: '相对湿度大于 ____% 时，应采用有效防护措施否则不应施焊；焊接件温度低于 ____ ℃ 时应防护。', a: [['90'], ['0']], e: '4.2.4.2 e)：相对湿度大于 90%、焊接件温度低于 0 ℃ 时应采用有效防护措施，否则不应施焊。', s: '4.2.4.2' },
+    { ch: 4, t: 'fill', q: '局部预热时，预热的范围为焊缝两侧各不小于焊接件厚度的 3 倍，且不小于 ____ mm。', a: [['100']], e: '4.2.4.2 h)：预热范围焊缝两侧各不小于厚度的 3 倍，且不小于 100 mm。', s: '4.2.4.2' },
+    { ch: 4, t: 'fill', q: '焊缝同一部位返修次数不宜超过 ____ 次。', a: [['2', '两', '二']], e: '4.2.4.2 n)：焊缝同一部位返修次数不宜超过两次。', s: '4.2.4.2' },
+    { ch: 4, t: 'fill', q: '焊接件未注尺寸公差应符合 GB/T 19804—2005 规定的 ____ 级要求，未注形位公差应符合 ____ 级要求。', a: [['B'], ['F']], e: '4.2.4.4.1：未注尺寸公差 B 级、未注形位公差 F 级。', s: '4.2.4.4.1' },
+    { ch: 4, t: 'fill', q: '承受疲劳载荷的钢制件焊缝质量应符合 ISO 5817—2023 规定的 ____ 级要求；未规定焊缝质量等级时，应满足 ____ 级要求。', a: [['B'], ['C']], e: '4.2.4.4.2/.3：疲劳焊缝 B 级、默认 C 级。', s: '4.2.4.4.2；4.2.4.4.3' },
+    { ch: 4, t: 'fill', q: '机加工件线性尺寸和角度尺寸的未注公差应符合 GB/T 1804—2000 规定的 ____ 级；未注形状和位置公差应符合 GB/T 1184—1996 规定的 ____ 级。', a: [['m'], ['K']], e: '4.2.5.11/.12：机加工件未注尺寸公差 m 级、未注形位公差 K 级。', s: '4.2.5.11；4.2.5.12' },
+    { ch: 4, t: 'fill', q: '普通螺纹精度等级按 GB/T 197—2018 规定的 ____ 执行。', a: [['6H/6g', '6H 6g']], e: '4.2.5.14 a)：普通螺纹精度等级按 6H/6g 执行（内螺纹 6H、外螺纹 6g）。', s: '4.2.5.14' },
+    { ch: 4, t: 'fill', q: '内外螺纹旋入侧加工螺纹前宜倒角，外螺纹为 ____°，内螺纹为 ____°，倒角深度等于牙型高度。', a: [['45'], ['60']], e: '4.2.5.14 c)：外螺纹 45°、内螺纹 60°。', s: '4.2.5.14' },
+    { ch: 4, t: 'fill', q: '螺纹工作面未注明表面粗糙度时，外螺纹表面粗糙度值不大于 ____，内螺纹表面粗糙度值不大于 ____。', a: [['Ra6.3', 'RA6.3'], ['Ra12.5', 'RA12.5']], e: '4.2.5.14 e)：外螺纹 Ra6.3、内螺纹 Ra12.5。', s: '4.2.5.14' },
+    { ch: 4, t: 'fill', q: '螺纹长度未注偏差取 ____（P 表示螺距）。', a: [['+2P~3P', '＋2P～3P', '2P~3P']], e: '4.2.5.14 f)：螺纹长度未注偏差取＋2P～3P。', s: '4.2.5.14' },
+
+    /* ============ 第 5 章 技术要求·防腐 ============ */
+    { ch: 5, t: 'fill', q: '钢制件的防腐蚀保护应符合 ____（所有部分）的规定。', a: [['ISO12944', 'ISO 12944']], e: '4.3.1.2：钢制件的防腐蚀保护应符合 ISO 12944（所有部分）的规定。', s: '4.3.1.2' },
+    { ch: 5, t: 'fill', q: '喷射清理等级应达到 GB/T 8923.1—2011 规定的 ____ 的要求。', a: [['Sa2.5', 'SA2.5', 'Sa 2.5']], e: '4.3.2.2：喷射清理等级应达到 Sa2.5。', s: '4.3.2.2' },
+    { ch: 5, t: 'fill', q: '吹除喷砂后灰尘及磨料后，表面清洁度应不低于 GB/T 18570.3—2005 规定的 ____ 级。', a: [['2']], e: '4.3.2.3：表面清洁度应不低于 2 级。', s: '4.3.2.3' },
+    { ch: 5, t: 'fill', q: '相对湿度低于 80% 时，表面处理后应在 ____ h 内涂覆第一道底漆；相对湿度低于 65% 时，可在 ____ h~12 h 内涂覆。', a: [['4'], ['4']], e: '4.3.2.4：湿度<80% 时 4h 内涂底漆；湿度<65% 时 4~12h 内涂底漆。', s: '4.3.2.4' },
+    { ch: 5, t: 'fill', q: '用于沿海或海上时，铝合金内附件宜进行 ____；不锈钢内附件宜进行 ____ 处理。', a: [['阳极氧化', '阳极氧化处理'], ['钝化', '钝化处理']], e: '4.3.2.5：沿海/海上铝合金宜阳极氧化、不锈钢宜钝化处理。', s: '4.3.2.5' },
+    { ch: 5, t: 'fill', q: '扫砂磨料（氧化铝、石英砂）粒度不大于 ____ mm，压力不大于 ____ MPa。', a: [['0.5', '0,5'], ['0.4', '0,4']], e: '4.3.2.6 b)：粒度不大于 0.5 mm，压力不大于 0.4 MPa。', s: '4.3.2.6' },
+    { ch: 5, t: 'fill', q: '如未规定时，内附件的防腐体系至少应符合 ISO ____-5 的规定；涂层的实施应符合 ISO 12944-____ 的规定。', a: [['12944'], ['7']], e: '4.3.3.2：防腐体系至少符合 ISO 12944-5；4.3.4.1：涂层实施符合 ISO 12944-7。', s: '4.3.3.2；4.3.4.1' },
+    { ch: 5, t: 'fill', q: '涂层施工时，表面温度应高于露点温度 ____ ℃；湿度大于 ____% 时不宜施工。', a: [['3'], ['80']], e: '4.3.4.2：表面温度高于露点 3 ℃；湿度大于 80% 不宜施工。', s: '4.3.4.2' },
+    { ch: 5, t: 'fill', q: '油漆干膜厚度按 ____ 规定的方法检验；镀锌层按 ISO 1461 检验；热喷锌层按 ____ 检验。', a: [['ISO19840', 'ISO 19840'], ['ISO2063-2', 'ISO 2063-2', 'ISO20632', 'ISO 2063 2']], e: '4.3.5：油漆 ISO 19840、镀锌 ISO 1461、热喷锌 ISO 2063-2。', s: '4.3.5' },
+    { ch: 5, t: 'fill', q: '油漆干膜厚度允许单个测量膜厚低于额定干膜厚度（NDFT），但应大于额定干膜厚度的 ____%，且这些测量点的数量应少于所有测量点数量的 ____%。', a: [['90'], ['10']], e: '4.3.5 a) 1)：单点 ≥90% NDFT，且此类点数量 <10%。', s: '4.3.5' },
+    { ch: 5, t: 'fill', q: '镀锌和热喷锌未注明厚度范围时，最大厚度不大于额定干膜厚度的 ____ 倍。', a: [['1.5', '1,5']], e: '4.3.5 a) 2)/3)：最大厚度不大于额定干膜厚度的 1.5 倍。', s: '4.3.5' },
+    { ch: 5, t: 'fill', q: '油漆和热喷锌附着力按 ISO 16276-1 检验，一般不低于 ____ MPa。', a: [['5']], e: '4.3.5 b)：附着力一般不低于 5 MPa。', s: '4.3.5' },
+    { ch: 5, t: 'fill', q: '安全护栏、安全挂点、安全扶手等安全设施表面颜色应符合设计要求或选取警示色，例如 ____（交通黄）。', a: [['RAL1023', 'RAL 1023']], e: '4.3.6.3：安全设施警示色例如 RAL 1023（交通黄）。', s: '4.3.6.3' },
+
+    /* ============ 第 6 章 装配 ============ */
+    { ch: 6, t: 'fill', q: '塔架门装配后开启和关闭时所用力不宜超过 ____ kN。', a: [['0.15', '0,15']], e: '5.2.1.4：塔架门开关力不宜超过 0.15 kN。', s: '5.2.1.4' },
+    { ch: 6, t: 'fill', q: '塔架门打开角度应大于 ____°。', a: [['90']], e: '5.2.1.5：塔架门打开角度大于 90°。', s: '5.2.1.5' },
+    { ch: 6, t: 'fill', q: '塔架门制作完成后应进行整体 ____ 密封试验并进行记录，密封等级应达到设计要求。', a: [['淋水']], e: '5.2.1.3：塔架门制作完成后应进行整体淋水密封试验并进行记录。', s: '5.2.1.3' },
+    { ch: 6, t: 'fill', q: '涂层损伤已露出金属面时，裸露金属面及以外沿圆周方向不小于 ____ mm 的范围均应打磨至完全裸露金属表面。', a: [['10']], e: '5.1.6 c)：沿圆周方向不小于 10 mm 范围打磨至完全裸露金属表面。', s: '5.1.6' },
+    { ch: 6, t: 'fill', q: '热喷锌、热浸锌涂层损伤修复时，配合面应喷涂锌含量大于 ____% 的自喷锌。', a: [['90']], e: '5.1.6 e)：配合面应喷涂锌含量大于 90% 的自喷锌。', s: '5.1.6' },
+    { ch: 6, t: 'fill', q: '高强紧固件的安装应符合 GB/T ____ 的规定；未规定紧固扭矩时，紧固扭矩按 GB/T 19568 的规定。', a: [['33628']], e: '5.3.1：高强紧固件安装符合 GB/T 33628；5.3.2：未规定扭矩时按 GB/T 19568。', s: '5.3.1；5.3.2' },
+    { ch: 6, t: 'fill', q: '不锈钢紧固件在施工过程中应匀速缓慢 ____，一般不使用电动扳手预紧，防止出现锁死现象。', a: [['预紧']], e: '5.3.3：不锈钢紧固件应匀速缓慢预紧，一般不使用电动扳手预紧。', s: '5.3.3' },
+    { ch: 6, t: 'fill', q: '楼梯、阶梯和护栏应符合 GB/T 17888.____ 的规定；固定式直梯应符合 GB/T 17888.____ 的规定。', a: [['3'], ['4']], e: '5.2.2.3/.4：楼梯阶梯护栏 GB/T 17888.3；固定式直梯 GB/T 17888.4。', s: '5.2.2.3；5.2.2.4' },
+
+    /* ============ 第 7 章 检验 ============ */
+    { ch: 7, t: 'fill', q: '从事无损检测的人员应经过技术培训并按 GB/T 9445 或 ____ 进行考核鉴定持证上岗。', a: [['ISO9712', 'ISO 9712']], e: '6.1.2：无损检测人员按 GB/T 9445 或 ISO 9712 考核鉴定持证上岗。', s: '6.1.2' },
+    { ch: 7, t: 'fill', q: '对于涉及人身、设备安全的内附件应做 ____ 鉴定及验收；制造设备、生产工艺等生产条件发生重大变化时也应做此鉴定。', a: [['首件']], e: '6.1.5：涉及人身设备安全的内附件应做首件鉴定及验收；生产条件重大变化时也应做。', s: '6.1.5' },
+    { ch: 7, t: 'fill', q: '表5 中"＊"表示文件检验（厂家提供的检验文件），"○"表示 ____，"—"表示不作规定，"△10"表示抽检比例 ____%。', a: [['全检'], ['10']], e: '表5 注：○ 全检、＊ 文件检验、— 不作规定、△10 抽检 10%、△20 抽检 20%、□ 批检。', s: '表5' },
+    { ch: 7, t: 'fill', q: '产品焊接试板检验按 NB/T ____ 执行；焊接工艺评定按 NB/T 47014 执行。', a: [['47016']], e: '表5：产品焊接试板 NB/T 47016；焊接工艺评定 NB/T 47014。', s: '表5' },
+
+    /* ============ 第 8 章 包装、储存和运输 ============ */
+    { ch: 8, t: 'fill', q: '内附件标识命名中至少应包含设计图样中的内附件名称、编号、制造商信息和 ____ 日期。', a: [['出厂']], e: '7.1.1：标识至少包含名称、编号、制造商信息和出厂日期；编号应具有追溯性。', s: '7.1.1' },
+    { ch: 8, t: 'fill', q: '承受疲劳载荷的内附件，如采用钢印标识，应采用 ____ 或无应力钢印。', a: [['低应力']], e: '7.1.2：疲劳载荷内附件钢印应采用低应力或无应力钢印，避免应力集中。', s: '7.1.2' },
+    { ch: 8, t: 'fill', q: '紧固件整体采用 ____ 装运，木箱内采用 ____ 等防水材料包裹货物表面。', a: [['木箱'], ['聚乙烯']], e: '7.2.2：紧固件整体木箱装运，木箱内采用聚乙烯等防水材料包裹。', s: '7.2.2' },
+    { ch: 8, t: 'fill', q: '紧固件包装标志内容包括使用部位、规格型号、____；内附件包装标志内容包括名称、____。', a: [['数量'], ['图号']], e: '7.2.2/.3：紧固件标志（使用部位、规格型号、数量）；内附件标志（名称、图号）。', s: '7.2.2；7.2.3' },
+    { ch: 8, t: 'fill', q: '大型内附件运输前路况勘探内容包括道路限高、限宽、承载能力、坡度、____ 等。', a: [['转弯半径']], e: '7.4.2 c)：路况勘探内容包括道路限高、限宽、承载能力、坡度、转弯半径等。', s: '7.4.2' },
+    { ch: 8, t: 'fill', q: '大型内附件采用篷布包装时应另加 ____ 包裹进行防护。', a: [['网套']], e: '7.4.2 f)：采用篷布包装时应另加网套包裹进行防护。', s: '7.4.2' }
+  ]
+};
+
+</script>
+<script>
+/* NB/T 11773—2025 知识库（自动生成自 _extract/clean.txt）
+ * 结构：window.KB = { items: {条款号:{t:标题,c:内容}}, special: {名称:{t,c}}, standards: {规范号:{t:名称,c:内容}} }
+ * 用于答题"出处"点击后在课程内展示对应知识点，不跳转外部网页。
+ * 生成脚本：_verify/build_kb.js（改动 clean.txt 或题库后重新生成）
+ */
+window.KB = {"items":{"3.1":{"t":"","c":"内附件 internals 泛指风力发电机组中除了主要大部件（塔架、轮毂、传动系等）之外的结构件或功能件，主要用于连接、 固定、支撑以及提供维护和安全功能等。 维护平台等。"},"4.1.1":{"t":"一般要求","c":"一般要求 应满足设计要求，适用于所处的工作环境，且应有完整合格的产品出厂证明：质量证明书原件或加 盖供材单位检验公章的有效复印件。 材料选择时，规格优选原则如下： a) 材料的选用应遵循技术可靠、经济合理的原则，综合考虑结构的重要性、载荷特征、结构形式、 应力状态、连接方法、工作环境、钢材厚度和价格等因素，选用合适的钢材； b) 材料规格应符合相关标准，避免使用非标型材。"},"4.1.2":{"t":"结构钢","c":"结构钢"},"4.1.2.1":{"t":"质量要求","c":"质量要求 结构钢的质量等级应按设计要求选择；如未规定时，根据内附件的使用场景，按以下原则进行选择： a) 结构钢宜采用Q235、Q355、Q390 和Q420 钢等，其质量至少应符合GB/T 700 和GB/T 1591 的 规定； b) 对于需要焊接的内附件，应使用GB/T 1591—2018中规定的B级及以上的质量等级，例如Q235B、 Q355B； c) 对于承受疲劳载荷的内附件，宜使用高质量等级的材料，内部不应有超出设计要求的夹杂、 裂纹、气孔和分层等，此时超声波探伤质量等级不宜低于NB/T 47013.3—2023 规定的Ⅱ级； d) 焊接结构为防止钢材的层状撕裂而采用Z 向钢时，其质量应符合GB/T 5313 的规定。"},"4.1.2.2":{"t":"尺寸、外形、重量及允许偏差","c":"尺寸、外形、重量及允许偏差 结构钢的尺寸、外形、重量及允许偏差应按设计要求选择；如未规定时，应符合国家现行标准的规 定，并按以下要求进行选择： a) 对于承受静力载荷的内附件，热轧钢板的厚度偏差不低于GB/T 709—2019 规定的A 级； b) 对于承受疲劳载荷的内附件，热轧钢板的厚度偏差不宜低于GB/T 709—2019 规定的B 级； c) 常用型钢的尺寸、外形、重量及允许偏差应符合表1 的规定。 型钢 类型 热轧扁钢 热轧角钢 热轧工字钢 热轧槽钢 H型钢/T型钢 焊接钢管 结构用冷弯 空心型钢 通用冷弯开 口型钢 花纹钢板 标准 GB/T 702 GB/T 706 GB/T 706 GB/T 706 GB/T 11263 GB/T 21835 GB/T 6728 GB/T 6723 GB/T 33974"},"4.1.2.3":{"t":"外观要求","c":"外观要求 结构钢的表面质量应按设计要求选择；如未规定时，根据内附件的使用场景，按以下要求进行选择： a) 对于承受静力载荷的内附件，热轧钢板表面质量应符合GB/T 14977—2008 规定的B1 级别； b) 对于承受疲劳载荷的内附件，热轧钢板表面质量宜符合GB/T 14977—2008 规定的B3 级别； c) 对于承受静力载荷的内附件，型钢表面质量应符合YB/T 4427—2014 规定的B1 级别； d) 对于承受疲劳载荷的内附件，型钢表面质量宜符合YB/T 4427—2014 规定的B3 级别。"},"4.1.3":{"t":"铝合金","c":"铝合金"},"4.1.3.1":{"t":"质量要求","c":"质量要求 铝合金牌号、规格及相应状态应按设计要求选择；如未规定时，根据内附件的使用场景，按以下要 求进行选择： a) 铝合金内附件宜采用5XXX系列和6XXX系列铝合金，内部不应有裂纹、分层等； b) 铝合金板材应符合GB/T 3880（所有部分）的规定；铝及铝合金花纹板应符合GB/T 3190、GB/T 3618的规定；型材及棒材应符合GB/T 3191、GB/T 4437（所有部分）、GB/T 5237（所有部分）、 GB/T 6892、GB/T 6893的规定。"},"4.1.3.2":{"t":"尺寸、外形、重量及允许偏差","c":"尺寸、外形、重量及允许偏差 未注明偏差等级时，铝合金材料的尺寸、外形、重量及允许偏差至少应符合本文件4.1.3.1中相关 标准规定的普通精度要求。"},"4.1.3.3":{"t":"外观要求","c":"外观要求 未经表面处理的铝合金材料表面应清洁，不应有裂纹和腐蚀斑点等存在。其他未及之处，应符合本 文件4.1.3.1中相关标准的规定。"},"4.1.4":{"t":"不锈钢","c":"不锈钢"},"4.1.4.1":{"t":"质量要求","c":"质量要求 不锈钢牌号、规格应按设计要求选择；如未规定时，根据内附件的使用场景，按以下原则进行选择： a) 不锈钢内附件宜选用S30408、S31608等系列不锈钢，当有可靠依据时也可采用其他牌号的不锈 钢，材料内部不应有裂纹、分层等； b) 不锈钢钢板应符合GB/T 4237、GB/T 3280的规定；不锈钢其他型材应符合GB/T 12770、GB/T 14975、 GB/T 20878等标准的规定。"},"4.1.4.2":{"t":"尺寸、外形、重量及允许偏差","c":"尺寸、外形、重量及允许偏差 未注明偏差等级时，不锈钢材料的尺寸、外形、重量及允许偏差至少应符合本文件4.1.4.1中相关 标准规定的普通精度要求。"},"4.1.4.3":{"t":"外观要求","c":"外观要求 不锈钢材料不应存在影响使用的缺陷。经酸洗后的不锈钢材料表面不应有氧化皮及过酸洗。允许有 个别深度小于厚度公差之半的轻微麻点、擦划伤、压痕、凹坑、辊印和色差等不影响使用的缺陷。其他 未及之处，应符合本文件4.1.4.1中的规定。"},"4.1.5":{"t":"焊接材料","c":"焊接材料 焊接材料应与相应母材的性能相适应并具有有效质量证明书或复验报告，其熔敷金属的力学性能应 符合设计要求，且保证焊接接头强度、塑性和冲击韧性等不低于相应母材标准的规定。最终的焊接材料 选用应通过焊接工艺评定确定。 结构钢内附件焊接材料（焊条、焊丝、焊剂等）应符合GB/T 5117、GB/T 5293、GB/T 8110、GB/T 10045、 GB/T 36034、GB/T 36037的规定。对直接承受动力载荷或需要验算疲劳的内附件，以及低温环境下工作 的厚板内附件，宜采用低氢型焊接材料。 铝合金内附件焊接用焊丝应符合GB/T 10858的规定，宜选用SAL 5356及SAL 4043。焊接工艺可采用 熔化极惰性气体保护电弧焊（MIG焊）和钨极惰性气体保护电弧焊（TIG焊）。 不锈钢内附件焊接材料应符合GB/T 983、GB/T 17853、GB/T 17854、GB/T 29713的规定。焊接工艺 可采用熔化极惰性气体保护电弧焊（MIG焊）和钨极惰性气体保护电弧焊（TIG焊）。"},"4.1.6":{"t":"紧固件","c":"紧固件 如未规定时，紧固件应符合以下规定： a) 碳钢或合金钢紧固件应符合GB/T 3098.1的规定，并选用6.8级及以上等级； b) 铝合金紧固件应符合GB/T 3098.10的规定。铝合金内附件的螺栓连接不宜采用有预拉力的高强 度螺栓； c) 不锈钢紧固件应符合GB/T 3098.6、GB/T 3098.15的规定。"},"4.1.7":{"t":"电缆夹具","c":"电缆夹具 电缆夹具材料一般采用尼龙66,表面不应有龟裂、银纹、斑点、孔眼、缺口、凹陷、尖角、毛刺和 油污等缺陷。跌落试验要求2 m高空掉落水泥地面，夹具应不开裂，不破损。 如未规定时，尼龙66电缆夹具其他主要性能要求如下： a) 工作温度：-40 ℃~110 ℃； b) 熔点：247 ℃~250 ℃； c) 弯曲强度：180 MPa； d) 拉伸强度：大于115 MPa； e) 缺口悬梁冲击强度：大于5.5 kJ/㎡； f) 无缺口悬臂梁冲击强度：大于30 kJ/㎡； g) 热变形温度（1.8 MPa）：220 ℃； h) 防火等级：UL94 V-0。 工艺"},"4.2.1":{"t":"一般要求","c":"一般要求 工艺应符合以下要求： a) 应采取合适的工艺措施，防止生产中材料性能的恶化； b) 零件制造每道工序应检查、验收，在前道工序检查合格后方可转入下道工序； c) 除产品图样有要求外，加工后的零件不应有毛刺、尖角、锐边和深度超过0.2 mm 的划痕或凹 痕； d) 严禁使用牌号不明及未经过质量检验部门验收的各种材料。"},"4.2.2":{"t":"下料","c":"下料 下料应符合以下要求： a) 金属板类、型材、管材、棒材等原材料可采用热切割或机械切割方式进行切割下料； b) 钢材在下料前的形状偏差应符合JB/T 5000.3 的相关规定，否则应予矫正； c) 除特殊要求外，所有内附件切割自由面，应去毛刺，并锐边倒钝，零件切割的边棱，不应有 深度大于1 mm 的割痕； d) 对于承受静力载荷的内附件，热切割自由面粗糙度不大于Rz100；对于机械切割自由面粗糙度 不大于Ra25； e) 对于承受疲劳载荷的内附件，所有切割自由面宜打磨处理，使表面不连续和修磨部分的厚度 不低于钢板允许的最小厚度，不可通过焊补进行表面处理； f) 切割表面的质量检测、评定方法按照JB/T 10045—2017 执行,无特殊要求时，内附件的切割 垂直度和斜度公差等级为3 级，平均割纹深度为3 级，公称尺寸极限偏差为2 级；关键件、 重要件的切割质量，其切割垂直度和斜度公差等级为2 级，平均割纹深度为2 级，公称尺寸 极限偏差为1 级； g) 机械切割的内附件切割质量及尺寸公差不应低于热切割内附件质量要求； h) 剪切或冲压后的边缘应保证平整无缺陷。如果剪切或冲压后进行机加或打磨，则打磨或机加 厚度至少0.5 mm。"},"4.2.3":{"t":"成形","c":"成形"},"4.2.3.1":{"t":"一般要求","c":"一般要求 成形加工应符合以下要求： a) 对于屈服强度低于355 MPa 的结构钢，热加工温度不应高于580 ℃； b) 对于屈服强度不低于355 MPa 的结构钢，热成形应在红热状态（600 ℃～650 ℃）进行。温度、 保温时间和冷却速率应适合特定类型钢材，且不应在蓝脆温度区间（250 ℃～380 ℃）进行弯 曲或成形； c) 对于铝合金和不锈钢，不宜采用热成形； d) 成形后的内附件不应出现裂纹、层状撕裂、层叠等缺陷。"},"4.2.3.2":{"t":"卷圆成形","c":"卷圆成形 钢材的卷圆成形应符合JB/T 5000.3的规定。"},"4.2.3.3":{"t":"折弯成形","c":"折弯成形"},"4.2.3.3.1":{"t":"非合金结构钢","c":"非合金结构钢 对于非合金结构钢： a) 折弯半径应满足表2 的要求； 钢 材 牌 号 折 弯 方 向 a 最小推荐内折弯半径 b mm ＞1 ≤1.5 ＞1.5 ≤2.5 ＞2.5 ≤3 ＞3 ≤4 ＞4 ≤5 ＞5 ≤6 ＞6 ≤7 ＞7 ≤8 ＞8 ≤10 ＞10 ≤12 ＞12 ≤14 ＞14 ≤16 ＞16 ≤18 Q235 T L"},"4.2.3.3.2":{"t":"常用铝及铝合金板、带材","c":"常用铝及铝合金板、带材 一般要求如下： a) 如未规定时，常用铝合金板、带材最小弯曲半径推荐4 倍板厚，最小弯曲半径不小于GB/T"},"3880.2":{"t":"的规定；","c":"的规定； b) 铝合金折弯易产生压痕，制造时应采取适当的工艺措施减轻或防止压痕形成。"},"4.2.3.4":{"t":"矫正","c":"矫正 矫正的一般要求如下： a) 普通碳素结构钢和低合金结构钢加热矫正时，加热温度不应超过900 ℃。低合金结构钢在加 热矫正后应自然冷却；碳素结构钢在环境温度低于-16 ℃、低合金结构钢在环境温度低于-12 ℃ 时，不应进行冷矫正和冷弯曲； b) 采用火焰矫正时，不宜在同一部位重复加热，防止钢材金相组织和机械性能恶化； c) 低合金高强度结构钢材质的重要件，不应使用水冷等急速冷却的方法强制冷却。也不应在同 一部位进行造成拉、压应力的反复矫正； d) 矫正后焊接件表面不应有裂纹、熔坑及其他影响焊接件强度和外观的缺陷； e) 不锈钢、铝合金内附件不宜采用火焰矫正。"},"4.2.3.5":{"t":"开孔","c":"开孔 开孔的一般要求如下： a) 对于有配合要求的螺栓孔，宜采用数控钻床或激光切割进行，或者采用配开孔方式进行； b) 如果采用冲孔，冲孔完成后，应对冲击造成的变形孔边缘进行处理。处理方式包括二次钻孔 或铰孔等，处理后的孔的光洁度不小于Ra12.5。未经处理的冲孔，不可用于靠摩擦连接的或 者使用不低于8.8 级高强螺栓的连接节点； c) 孔的规格及尺寸公差应满足设计要求及GB/T 5277 的要求。"},"4.2.4":{"t":"焊接连接","c":"焊接连接"},"4.2.4.1":{"t":"焊前准备","c":"焊前准备 焊前准备如下： a) 全部零件应检验合格后，方可组对； b) 组对焊接零件的焊缝坡口形式与尺寸及焊缝间隙量应符合GB/T 985.1 和GB/T 985.2 的规定； c) 重要件焊缝坡口应除去影响焊接质量的表面层，保持平整无毛刺、不应有裂纹、分层、夹渣 等缺陷，必要时对坡口按NB/T 47013.4、NB/T 47013.5 或相当的权威标准进行磁粉检验或渗 透检验； d) 在焊接工作开始前，焊接区域应干燥且无氧化皮、轧屑、锈迹、油漆、油污和电镀涂层等。 清根后应对表面氧化物进行清理。清洁区域应包括所有接头表面以及接头边缘不小于25 mm 的区域； e) 材料的厚度不大于12 mm 时，定位焊焊缝最小长度为材料厚度的四倍；当材料厚度大于12 mm， 且不大于50 mm 时，定位焊焊缝最小长度不小于50 mm；当材料厚度大于50 mm，应增加定位 焊焊缝长度； f) 定位焊焊接工艺应与正式施焊工艺一致，一般正式施焊有预热要求的，定位焊焊接时也需要 预热。组对时，定位焊釆用的焊材和焊接规范以及对焊工的要求，应与正式焊接时相同； g) 定位焊焊缝不应出现表面裂纹、气孔、夹杂、咬边等缺陷。"},"4.2.4.2":{"t":"焊接要求","c":"焊接要求 焊接的一般要求如下： a) 焊接工人、焊接技术人员及焊接质量检验人员应经过专门的培训，并按TSG Z6002、GB/T 15169 或相当的权威标准的规定考核合格； b) 焊接工作人员应从事资格证书中规定项目的焊接工作； c) 焊接设备及检验器具应具有合格证明书，焊接设备应参数稳定、调节灵活和安全可靠，并能 满足焊接参数的要求，每年按规定定期对焊接设备进行校正和审核； d) 焊接材料的使用及管理应符合JB/T 3223 的规定； e) 焊接件环境出现下列任一情况时，应采用有效防护措施，否则不应施焊： 1) 气体保护焊时风速大于2 m/s； 2) 其他焊接方法时风速大于8 m/s； 3) 相对湿度大于90%； 4) 雨雪环境； 5) 焊接件温度低于0 ℃。 f) 焊接件焊接前应按NB/T 47014 进行焊接工艺评定，并制定适用的焊接工艺文件,应能保证熔 敷金属不低于母材的力学性能；对于不锈钢、铝合金材料，还应能够保证熔敷金属具有不低 于母材的耐腐蚀性； g) 制造商对焊接工艺评定负责，且应保留所使用的工艺和焊接操作的记录，记录中要包括日期、 程序结果和执行规范，以及焊后热处理记录、焊工资质和操作的任务等； h) 局部预热时，应防止局部应力过大。预热的范围为焊缝两侧各不小于焊接件厚度的3 倍，且 不小于100 mm； i) 需要预热的焊接件在整个焊接过程中应不低于预热温度； j) 不同材质之间焊接预热温度按焊接性差的一种选定； k) 应按批准的焊接作业指导书（包括临时焊道）实施焊接并满足以下要求： 1) 焊接过程中，应保证工作区不受天气影响。低温（小于5 ℃）时，应采取适当措施确保 焊接顺利进行； 2) 尽可能在平焊或平角焊位置焊接； 3) 应在引弧板或坡口内引弧，禁止在非焊接部位引弧； 4) 引弧板、熄弧板及工艺支撑不应锤击拆除； 5) 施焊过程中应控制层间温度，确保不超过规定范围； 6) 当焊接件预热时，应控制层间温度不低于预热温度； 7) 每条焊缝宜一次焊完。当中断焊接时，对冷裂纹敏感的焊接件应及时采取保温、后热或 缓冷等措施； 8) 重新施焊时，应按规定重新预热； 9) 低温焊接件禁止焊道层间锤击； 10) 焊后热处理前，可通过局部加热的工艺方法来矫正，加热温度不应超过本文件4.2.3.4 的规定。严禁使用水冷等急速冷却的方法强制冷却，并应记录加热和冷却循环过程； 11) 如未规定时，所有焊缝应进行完整连续的周边焊，不应在拐角处开始和中断焊缝。 l) 焊缝返修工艺应执行原工艺或经评定合格的工艺； m) 要求焊后热处理的焊缝，返修应在热处理前进行。若热处理后发生返修，则返修后应重新进 行热处理。返修部位的焊缝应按原检查方法及合格标准重新进行检测； n) 焊缝同一部位返修次数不宜超过两次； o) 焊接作业应符合GB 9448 的规定。"},"4.2.4.3":{"t":"焊后消氢、消应力处理","c":"焊后消氢、消应力处理"},"4.2.4.3.1":{"t":"要求金属焊后消氢、消应力处理的焊缝，未规定具体处理要求时，按GB 50661 执行。","c":"要求金属焊后消氢、消应力处理的焊缝，未规定具体处理要求时，按GB 50661 执行。"},"4.2.4.3.2":{"t":"热处理温度以在焊接件上直接测量为准，在整个热处理过程中应当连续记录。","c":"热处理温度以在焊接件上直接测量为准，在整个热处理过程中应当连续记录。"},"4.2.4.3.3":{"t":"所有温度均指金属的温度，并利用热电偶自动测量温度。","c":"所有温度均指金属的温度，并利用热电偶自动测量温度。"},"4.2.4.3.4":{"t":"有密闭内腔的焊接件，在热处理之前，应在中间隔板或盖板上适当的位置加工透气孔，使","c":"有密闭内腔的焊接件，在热处理之前，应在中间隔板或盖板上适当的位置加工透气孔，使 其空腔与外界相通。在盖板上钻的孔，热处理后应重新堵上。"},"4.2.4.3.5":{"t":"奧氏体不锈钢一般不宜焊后热处理。","c":"奧氏体不锈钢一般不宜焊后热处理。"},"4.2.4.4":{"t":"焊接质量控制","c":"焊接质量控制"},"4.2.4.4.1":{"t":"焊接件未注尺寸公差应符合GB/T 19804—2005 规定的B 级要求，未注形位公差应符合GB/T","c":"焊接件未注尺寸公差应符合GB/T 19804—2005 规定的B 级要求，未注形位公差应符合GB/T 19804—2005 规定的F 级要求。"},"4.2.4.4.2":{"t":"承受疲劳载荷的钢制件焊缝质量应符合ISO 5817—2023 规定的B 级要求。","c":"承受疲劳载荷的钢制件焊缝质量应符合ISO 5817—2023 规定的B 级要求。"},"4.2.4.4.3":{"t":"未规定焊缝质量等级时，钢制件焊缝质量应满足ISO 5817—2023 规定的C 级要求。","c":"未规定焊缝质量等级时，钢制件焊缝质量应满足ISO 5817—2023 规定的C 级要求。"},"4.2.4.4.4":{"t":"铝合金件焊缝外观质量标准及尺寸允许偏差应符合GB 50576—2010 中附录A 的规定。","c":"铝合金件焊缝外观质量标准及尺寸允许偏差应符合GB 50576—2010 中附录A 的规定。"},"4.2.4.4.5":{"t":"焊缝无损检测所采用的标准以及级别应在图样中标明。","c":"焊缝无损检测所采用的标准以及级别应在图样中标明。"},"4.2.4.4.6":{"t":"有密封性要求的焊缝，不应出现渗漏现象。","c":"有密封性要求的焊缝，不应出现渗漏现象。"},"4.2.5":{"t":"机加工","c":"机加工"},"4.2.5.1":{"t":"对于铸件、锻件和焊接件，为了消除毛坯制造过程中产生的内应力，改善机械加工性能，宜","c":"对于铸件、锻件和焊接件，为了消除毛坯制造过程中产生的内应力，改善机械加工性能，宜 在机械加工前进行时效、退火或正火处理。"},"4.2.5.2":{"t":"对大而复杂的铸造毛坯件及刚度较差的精密零件,应在粗加工之前及粗加工与半精加工之间","c":"对大而复杂的铸造毛坯件及刚度较差的精密零件,应在粗加工之前及粗加工与半精加工之间 安排时效处理。时效可以是人工时效或自然时效，并进行相应的工艺验证。"},"4.2.5.3":{"t":"加工后表面不应有锈蚀以及影响性能和外观的磕、碰、划伤等缺陷。","c":"加工后表面不应有锈蚀以及影响性能和外观的磕、碰、划伤等缺陷。"},"4.2.5.4":{"t":"除有特殊要求外，加工后的零件应倒角、倒圆、去毛刺。","c":"除有特殊要求外，加工后的零件应倒角、倒圆、去毛刺。"},"4.2.5.5":{"t":"图样中未注明的回转体类零件倒角（如图5 所示）应符合表3 的规定，非回转体类零件也可","c":"图样中未注明的回转体类零件倒角（如图5 所示）应符合表3 的规定，非回转体类零件也可 参考表3 执行，主参数D（d）取倒角相邻两几何要素中较短者。 单位：mm D(d) ≤100 ＞100～1000 ＞1000 倒角CC 0.3～0.5 0.5～2 2～3"},"4.2.5.6":{"t":"图样中未注明的回转体类零件倒圆（如图6 所示）半径又无清根要求时，应符合表4 的规定。","c":"图样中未注明的回转体类零件倒圆（如图6 所示）半径又无清根要求时，应符合表4 的规定。 主参数d 取倒圆角相邻两几何要素中较短者。 单位：mm D-D1 d-d1 ≤4 ＞4～12 ＞12～30 ＞30～80 ＞80～140 ＞140～200 ＞200 D、d 3～10 ＞10～30 ＞30～80 ＞80～260 ＞260～630 ＞630～1000 ＞1000 倒圆半径 R、r"},"4.2.5.7":{"t":"精加工后的配合面、摩擦面和定位面等工作表面不可打印标记。","c":"精加工后的配合面、摩擦面和定位面等工作表面不可打印标记。"},"4.2.5.8":{"t":"最终工序为热处理的零件，热处理后表面不应有氧化皮。","c":"最终工序为热处理的零件，热处理后表面不应有氧化皮。"},"4.2.5.9":{"t":"精加工后的配合面、齿面不应有退火、发蓝、变色现象。","c":"精加工后的配合面、齿面不应有退火、发蓝、变色现象。"},"4.2.5.10":{"t":"配对加工的零部件，应有配对标记。","c":"配对加工的零部件，应有配对标记。"},"4.2.5.11":{"t":"机加工件线性尺寸和角度尺寸的未注公差应符合GB/T 1804—2000 规定的m 级。","c":"机加工件线性尺寸和角度尺寸的未注公差应符合GB/T 1804—2000 规定的m 级。"},"4.2.5.12":{"t":"机加工件未注形状和位置公差应符合GB/T 1184—1996 规定的K 级。","c":"机加工件未注形状和位置公差应符合GB/T 1184—1996 规定的K 级。"},"4.2.5.13":{"t":"精加工后的零件不应直接摆放在地面上，应采取必要的支撑和保护措施。搬运和存放时应防","c":"精加工后的零件不应直接摆放在地面上，应采取必要的支撑和保护措施。搬运和存放时应防 止损伤、变形。"},"4.2.5.14":{"t":"螺纹加工","c":"螺纹加工 螺纹加工的一般要求如下： a) 普通螺纹精度等级按GB/T 197—2018 规定的6H/6g 执行； b) 普通螺纹收尾、肩距、退刀槽和倒角尺寸应符合GB/T 3 的规定； c) 内外螺纹旋入侧在加工螺纹前宜倒角，外螺纹为45°，内螺纹为60°，倒角深度等于牙型高 度； d) 加工的螺纹表面不应有黑皮、磕碰、乱扣和毛刺等缺陷； e) 螺纹工作面未注明表面粗糙度时，外螺纹表面粗糙度值不大于Ra6.3，内螺纹表面粗糙度值不 大于Ra12.5； f) 螺纹长度未注偏差取＋2P～3P，其中P 表示螺距。 防腐"},"4.3.1":{"t":"一般要求","c":"一般要求"},"4.3.1.1":{"t":"涂装前应对涂装施工人员进行专业培训，熟悉有关涂料的性能和涂层作业要领后，方可施工。","c":"涂装前应对涂装施工人员进行专业培训，熟悉有关涂料的性能和涂层作业要领后，方可施工。 热喷涂操作人员应按GB/T 19824 的规定进行考核，热喷涂的操作安全应满足GB/T 11375 的要求。"},"4.3.1.2":{"t":"钢制件的防腐蚀保护应符合ISO 12944（所有部分）的规定。","c":"钢制件的防腐蚀保护应符合ISO 12944（所有部分）的规定。"},"4.3.2":{"t":"表面处理","c":"表面处理"},"4.3.2.1":{"t":"对于喷漆、喷粉、喷塑及喷锌表面，表面处理宜采用喷砂或拋丸处理；对于热浸锌表面，钢","c":"对于喷漆、喷粉、喷塑及喷锌表面，表面处理宜采用喷砂或拋丸处理；对于热浸锌表面，钢 材酸洗应符合JB/T 6978 的规定。"},"4.3.2.2":{"t":"在喷砂前应对基材状况进行评估。内附件的锐边、火焰切割边缘、毛刺应打磨到圆滑过渡；","c":"在喷砂前应对基材状况进行评估。内附件的锐边、火焰切割边缘、毛刺应打磨到圆滑过渡； 焊疤及焊接熔合性飞溅应打磨清除干净。用溶剂、净化化合物或蒸汽等清除基体表面的水分、油污、尘 垢、污染物、铁锈、氧化皮、盐类及其他物质；喷射清理等级应达到GB/T 8923.1—2011 规定的Sa2.5 的要求。表面粗糙度应遵循涂料供应商的建议。"},"4.3.2.3":{"t":"采用无水无油的压缩空气或工业用除尘器，吹除喷砂后基体表面附着的灰尘及磨料，其表面","c":"采用无水无油的压缩空气或工业用除尘器，吹除喷砂后基体表面附着的灰尘及磨料，其表面 清洁度应不低于GB/T 18570.3—2005 规定的2 级。"},"4.3.2.4":{"t":"当相对湿度低于80%时，表面处理后应在4h 内涂覆第一道底漆；当相对湿度低于65%时，表","c":"当相对湿度低于80%时，表面处理后应在4h 内涂覆第一道底漆；当相对湿度低于65%时，表 面处理后可在4h~12h 内涂覆第一道底漆。超过以上时限或当出现返锈或表面污染时，应重新进行表面 处理。"},"4.3.2.5":{"t":"用于沿海或海上时，铝合金内附件宜进行阳极氧化；不锈钢内附件宜进行钝化处理。如在户","c":"用于沿海或海上时，铝合金内附件宜进行阳极氧化；不锈钢内附件宜进行钝化处理。如在户 外使用，还要考虑采取措施防止异种金属连接造成的电化学腐蚀。"},"4.3.2.6":{"t":"对于铝合金、不锈钢等表面，如需进一步采用喷漆处理，宜进行扫砂处理：","c":"对于铝合金、不锈钢等表面，如需进一步采用喷漆处理，宜进行扫砂处理： a) 表面清理应采用中性的新鲜水冲洗去污； b) 干燥后采用干净的非金属磨料（如氧化铝、石英砂，粒度不大于0.5 mm）以不大于0.4 MPa 的压力扫砂。"},"4.3.2.7":{"t":"如未规定时，配合的加工面、螺纹孔一般采用防锈油防腐。","c":"如未规定时，配合的加工面、螺纹孔一般采用防锈油防腐。"},"4.3.3":{"t":"涂层防护","c":"涂层防护"},"4.3.3.1":{"t":"涂层间应具有相同或相近的热膨胀系数、良好的匹配性及附着力。","c":"涂层间应具有相同或相近的热膨胀系数、良好的匹配性及附着力。"},"4.3.3.2":{"t":"内附件的防腐体系应与腐蚀环境相匹配。如未规定时，防腐体系至少应符合ISO 12944-5 的","c":"内附件的防腐体系应与腐蚀环境相匹配。如未规定时，防腐体系至少应符合ISO 12944-5 的 规定。"},"4.3.4":{"t":"涂层实施","c":"涂层实施"},"4.3.4.1":{"t":"涂层的实施应参考供应商提供的施工工艺进行，且符合ISO 12944-7 的规定。","c":"涂层的实施应参考供应商提供的施工工艺进行，且符合ISO 12944-7 的规定。"},"4.3.4.2":{"t":"施工过程中的环境条件：表面温度应高于露点温度3 ℃；当湿度大于80%，不宜施工；当施","c":"施工过程中的环境条件：表面温度应高于露点温度3 ℃；当湿度大于80%，不宜施工；当施 工、固化环境温度低于10 ℃时，宜选用冬季固化剂。"},"4.3.4.3":{"t":"对于不易操作的边角，应手工预涂、预刷。","c":"对于不易操作的边角，应手工预涂、预刷。"},"4.3.5":{"t":"涂层检查","c":"涂层检查 应检查涂层是否满足设计要求，并检验以下性能： a) 干膜厚度： 1) 油漆：按ISO 19840 规定的方法检验。所有测量膜厚的平均值应大于等于额定干膜厚度 (NDFT)，允许单个测量膜厚低于额定膜厚要求，但应大于额定干膜厚度的90%，且这些测 量点的数量应少于所有测量点数量的10%。若要求最大漆膜厚度，不超过最大值； 2) 镀锌：按ISO 1461 规定的方法检验。实测厚度应在要求的厚度范围内。未注明厚度范围 时，最小局部厚度不小于规定值，最大厚度不大于额定干膜厚度的1.5 倍； 3) 热喷锌：按ISO 2063-2 规定的方法检验。实测厚度应在要求的厚度范围内。未注明厚度 范围时，最小局部厚度不小于规定值，最大厚度不大于额定干膜厚度的1.5 倍。 b) 附着力： 1) 油漆：按ISO 16276-1 规定的方法检验，一般不低于5 MPa；不适用拉开法时检验时，可 按ISO 16276-2 检验, 并符合1 级或0 级的规定； 2) 热喷锌：按ISO 16276-1 规定的方法检验，一般不低于5 MPa。 c) 外观：涂层均匀性、颜色及光泽、气泡、脱落、流挂、起皮、漏涂等。"},"4.3.6":{"t":"颜色","c":"颜色"},"4.3.6.1":{"t":"内附件的颜色和光泽度根据整机颜色配置方案或特定项目要求确定。","c":"内附件的颜色和光泽度根据整机颜色配置方案或特定项目要求确定。"},"4.3.6.2":{"t":"金属覆盖层（热浸镀锌、热喷锌等）及耐蚀合金（不锈钢、铝合金等）除非特殊要求，否则","c":"金属覆盖层（热浸镀锌、热喷锌等）及耐蚀合金（不锈钢、铝合金等）除非特殊要求，否则 保留材料本色。"},"4.3.6.3":{"t":"安全护栏、安全挂点、安全扶手等安全设施表面颜色应符合设计要求或选取警示色，例如RAL","c":"安全护栏、安全挂点、安全扶手等安全设施表面颜色应符合设计要求或选取警示色，例如RAL 1023（交通黄）。 5 装配 一般要求"},"5.1.1":{"t":"装配应符合设计要求，对于成品外购件（例如电气柜体、升降机、免爬器等）的装配，还应参","c":"装配应符合设计要求，对于成品外购件（例如电气柜体、升降机、免爬器等）的装配，还应参 考对应厂家提供的产品安装说明文件。"},"5.1.2":{"t":"装配前应检验所有零部件的型号、规格，确保符合配置明细。","c":"装配前应检验所有零部件的型号、规格，确保符合配置明细。"},"5.1.3":{"t":"装配前检验进入装配区的零部件应符合以下要求后方可进行装配：","c":"装配前检验进入装配区的零部件应符合以下要求后方可进行装配： a) 检验合格并具有合格标志； b) 对文件中要求的关键零部件主要配合尺寸及编号进行复查并在质保卡中做出记录； c) 经钳工修整的配合尺寸，应由质量检验部门复检并在质保卡中做出记录。"},"5.1.4":{"t":"零件在装配前应进行清理和清洗，不应有毛刺、翻边、氧化皮、锈蚀、切削、油污、着色剂和","c":"零件在装配前应进行清理和清洗，不应有毛刺、翻边、氧化皮、锈蚀、切削、油污、着色剂和 灰尘等；对有尖角或高点的配合面，在装配前应将其修正；除有特殊规定外，装配前应将零件尖角和锐 边倒钝。装配过程中零件不应磕伤、碰伤、划伤和锈蚀。"},"5.1.5":{"t":"涂层未干的零部件不应进行装配。","c":"涂层未干的零部件不应进行装配。"},"5.1.6":{"t":"零部件在装配过程中的二次防腐及不同涂层修复方法如下。","c":"零部件在装配过程中的二次防腐及不同涂层修复方法如下。 a) 配件表面防腐失效时，宜在工序结束前，对配件防腐失效位置进行二次防腐。二次防腐处理后， 补充油漆表面应与周围漆面保持平滑和自然过渡； b) 涂层损伤未露出金属面时，宜涂刷与原防腐层相同的面漆，涂刷后总干膜厚度与未损伤部位相 同； c) 涂层损伤已露出金属面时，裸露金属面及裸露金属面以外沿圆周方向不小于10 mm 的范围，均 应打磨至完全裸露金属表面。涂刷与原防腐层相同或相容的底漆、中间漆、面漆等，涂刷后总 干膜厚度与未损伤部位相同； d) 锌铬涂层损伤，打磨去除锈渍后，在损伤部位喷涂镀铬自喷锌； e) 热喷锌、热浸锌涂层损伤，打磨去除锈渍后，在损伤部位喷涂与原损伤部位厚度相同的自喷锌， 配合面应喷涂锌含量大于90%的自喷锌。"},"5.1.7":{"t":"测量内附件的量具应经过校准，并在有效期内。","c":"测量内附件的量具应经过校准，并在有效期内。"},"5.1.8":{"t":"设备、专用工具在使用前应对其运行状态进行检查，在确定无任何异常的情况下方可使用。","c":"设备、专用工具在使用前应对其运行状态进行检查，在确定无任何异常的情况下方可使用。"},"5.1.9":{"t":"零部件的各润滑处装配后应按组装工艺规程注入润滑油或润滑脂。无特殊要求时，不同型号、","c":"零部件的各润滑处装配后应按组装工艺规程注入润滑油或润滑脂。无特殊要求时，不同型号、 不同品牌的油、脂不应混用。"},"5.1.10":{"t":"装配作业环境应满足作业要求。","c":"装配作业环境应满足作业要求。 关键部件及装配要求"},"5.2.1":{"t":"塔架门","c":"塔架门"},"5.2.1.1":{"t":"塔架门装配后，应确保门开关灵活，无阻塞等不良现象。门板应平整，与门框间隙均匀，闭","c":"塔架门装配后，应确保门开关灵活，无阻塞等不良现象。门板应平整，与门框间隙均匀，闭 合后能够压实密封条。"},"5.2.1.2":{"t":"塔架门锁及装配应符合设计要求。","c":"塔架门锁及装配应符合设计要求。"},"5.2.1.3":{"t":"塔架门制作完成后应进行整体淋水密封试验并进行记录，密封等级应达到设计要求。","c":"塔架门制作完成后应进行整体淋水密封试验并进行记录，密封等级应达到设计要求。"},"5.2.1.4":{"t":"塔架门装配后开启和关闭时所用力不宜超过0.15 kN。","c":"塔架门装配后开启和关闭时所用力不宜超过0.15 kN。"},"5.2.1.5":{"t":"塔架门打开角度大于90°。","c":"塔架门打开角度大于90°。"},"5.2.2":{"t":"接近机械的固定设施","c":"接近机械的固定设施"},"5.2.2.1":{"t":"接近机械的固定设施的一般要求应符合GB/T 17888.1 的相关规定。","c":"接近机械的固定设施的一般要求应符合GB/T 17888.1 的相关规定。"},"5.2.2.2":{"t":"工作平台与通道应符合GB/T 17888.2 的相关规定。","c":"工作平台与通道应符合GB/T 17888.2 的相关规定。"},"5.2.2.3":{"t":"楼梯、阶梯和护栏应符合GB/T 17888.3 的相关规定。","c":"楼梯、阶梯和护栏应符合GB/T 17888.3 的相关规定。"},"5.2.2.4":{"t":"固定式直梯应符合GB/T 17888.4 的相关规定。","c":"固定式直梯应符合GB/T 17888.4 的相关规定。 紧固件连接"},"5.3.1":{"t":"高强紧固件的安装应符合GB/T 33628 的规定。","c":"高强紧固件的安装应符合GB/T 33628 的规定。"},"5.3.2":{"t":"有紧固扭矩要求的紧固件，应使用规定的紧固扭矩扳手并按规定的紧固扭矩拧紧；未规定紧固","c":"有紧固扭矩要求的紧固件，应使用规定的紧固扭矩扳手并按规定的紧固扭矩拧紧；未规定紧固 扭矩时，紧固扭矩按GB/T 19568 的规定。"},"5.3.3":{"t":"不锈钢紧固件在施工过程中应匀速缓慢预紧，一般不使用电动扳手预紧，防止出现锁死现象。","c":"不锈钢紧固件在施工过程中应匀速缓慢预紧，一般不使用电动扳手预紧，防止出现锁死现象。"},"5.3.4":{"t":"对于沿海和海上，或环境湿度大等使用环境，在紧固件终拧后，清除表面污物，喷涂自喷锌或","c":"对于沿海和海上，或环境湿度大等使用环境，在紧固件终拧后，清除表面污物，喷涂自喷锌或 涂漆进行二次防腐；对于塔架外部的重要紧固件还宜做包覆等封闭处理。 工厂试组装"},"5.4":{"t":"","c":"当存在以下情况时，应进行工厂试组装： a) 所有需要进行现场安装的关键部件； b) 设计要求或生产技术交底中明确需要试组装的； c) 监造方或者业主方或者采购方之一要求试组装的； d) 后续批次生产工艺与首批次生产存在差异的； e) 其他要求试组装的。 现场安装"},"5.5":{"t":"","c":"现场安装应符合设计厂家的安装规范，且符合GB/T 19568的规定。 6 检验 检验要求"},"6.1.1":{"t":"检验人员应是专职质量管理人员、质检员和试验员，检测用具、仪器及设备应符合计量检定和","c":"检验人员应是专职质量管理人员、质检员和试验员，检测用具、仪器及设备应符合计量检定和 质量检测要求，能够提供精确可靠的检测数据。"},"6.1.2":{"t":"从事无损检测的人员应经过技术培训并按GB/T 9445 或ISO 9712 进行考核鉴定持证上岗。","c":"从事无损检测的人员应经过技术培训并按GB/T 9445 或ISO 9712 进行考核鉴定持证上岗。"},"6.1.3":{"t":"取得不同无损检测方法的各项技术等级人员只能从事与该等级相对应的无损检测工作，并负相","c":"取得不同无损检测方法的各项技术等级人员只能从事与该等级相对应的无损检测工作，并负相 应的技术责任。"},"6.1.4":{"t":"内附件应至少由制造方质量检验部门检查和验收。","c":"内附件应至少由制造方质量检验部门检查和验收。"},"6.1.5":{"t":"对于涉及人身、设备安全的内附件应做首件鉴定及验收；制造设备、生产工艺等生产条件、制","c":"对于涉及人身、设备安全的内附件应做首件鉴定及验收；制造设备、生产工艺等生产条件、制 造能力或材质发生重大变化时，内附件应做首件鉴定及验收。验收合格后方可进行批量生产。 检验项目与方法"},"6.2.1":{"t":"除另有规定外，内附件的常见检验项目和检验方法参考表5 规定。","c":"除另有规定外，内附件的常见检验项目和检验方法参考表5 规定。 序号 检验项目 首件 验收 出厂 检验 检验方法 材质 ○ ＊ GB/T 1591、GB/T 700 等 焊接材料 ○ ＊ GB/T 5117、GB/T 5293、GB/T 8110、GB/T 10045 等 高强度螺栓机械性能 ○ ＊ GB/T 3098.1 等 产品焊接试板 ○ ＊ NB/T 47016 焊接工艺评定 ○ — NB/T 47014 焊缝外观检测 ○ △20 ISO 5817、GB 50576 等 焊缝无损检测 ○ ＊ NB/T 47013.3 等 孔的位置度 ○ ＊ GB/T 1958 机加工外观检测 ○ △20 目测 热浸锌层厚度 ○ △10 ISO 1461 热喷锌层厚度 ○ △10 ISO 2063-2 热喷锌层附着力 ○ △10 ISO 16276-1 漆层厚度 ○ △10 ISO 19840 漆层附着力 ○ △10 ISO 16276-1、ISO 16276-2 热浸锌层外观 ○ ○ 目测 热喷锌层外观 ○ ○ 目测 涂层外观 ○ ○ 目测 内附件外形尺寸 ○ ○ 目测 紧固件紧固扭矩 ○ △20 GB/T 33628、GB/T 19568 接近机械的固定设施安全 要求的验证 ○ □ GB/T 17888（所有部分） 包装 — △10 目测 检验项目；标有“△10”为抽检比例10％，“△20”为抽检比例20％；标有“□”为批检。 7 包装、储存和运输 标识"},"7.1.1":{"t":"内容","c":"内容 标识应清晰可见，命名中至少应包含设计图样中的内附件名称、编号、制造商信息和出厂日期；编 号应具有追溯性。"},"7.1.2":{"t":"方法","c":"方法 对于需要单独标识的内附件，宜采用标签、喷码、钢印等。 对于无法单独标识的内附件，可以采用标签或喷码标识在外包装上。 对于承受疲劳载荷的内附件，如采用钢印标识，应采用低应力或无应力钢印。 包装"},"7.2.1":{"t":"一般要求","c":"一般要求 涂层完全干燥，具备出厂条件的内附件经检验合格后应妥善包装，防止二次污染。"},"7.2.2":{"t":"紧固件包装","c":"紧固件包装 随机发运的紧固件宜按使用部位、规格型号分类装箱或装盒。紧固件应清除污垢及金属屑，并采取 必要的防护措施，确保在装卸及运输过程中不被磕碰损坏；整体采用木箱装运，木箱内采用聚乙烯等防 水材料包裹货物表面，防止雨水等进入。 紧固件的包装箱、盒外表应有标志。标志一般采用印刷或标打，也允许栓挂或粘贴。标志不应褪色、 脱落。标志内容如下： a) 使用部位； b) 规格型号； c) 数量。 对于多个类别紧固件包装箱或包装盒共用一个大包装箱或包装盒发运的，在大包装箱或包装盒外部 显著位置粘贴紧固件清单，同时在大包装箱或包装盒内放置紧固件清单。 其他未及之处按GB/T 90.2执行。"},"7.2.3":{"t":"内附件包装","c":"内附件包装 随机发运的内附件宜按使用部位分类包装且宜有标志，并采取必要的防护措施，确保在装卸及运输 过程中不被磕碰损坏。标志一般粘贴在内附件表面或外包装表面，并用透明胶带等进行可靠防护和固定。 标志不应褪色、脱落。标志内容如下： a) 名称； b) 图号。 储存"},"7.3":{"t":"","c":"储存场所应干燥，清洁，防止二次污染。 储存中应采取必要的防护措施，确保在装卸、转运、储存过程中产品涂层、性能不恶化。 运输"},"7.4.1":{"t":"一般要求","c":"一般要求 运输前应充分考虑内附件尺寸、重量大小、运输方法（铁路、公路、水路）和包装要求等特点，制 定运输方案。运输中应采取必要的防护措施，确保在装卸、运输过程中产品涂层、性能不恶化。且对于 具有部分悬空的内附件，应做好运输途中的固定，防止颠簸造成的损伤；对于具有活动功能的内附件， 应确保活动件处于可靠的固定状态。"},"7.4.2":{"t":"大型内附件运输要求","c":"大型内附件运输要求 风力发电机组大型内附件的运输要求如下： a) 大型内附件运输时应采取有效措施，保证运输的安全； b) 大型内附件在运输时应提出运输对道路的要求； c) 运输前对运输路线应进行路况勘探，勘探内容包括道路限高、限宽、承载能力、坡度、转弯半 径等； d) 路况勘探结果符合大型内附件运输对道路的要求后方可运输； e) 大型内附件与运输车辆之间应采用专用工装固定牢固； f) 大型内附件在运输期间应采取防雨防尘措施，采用篷布包装时应另加网套包裹进行防护； g) 安装在大型内附件内的电气设备或控制柜在运输期间应防雨、防尘，且宜有防振，防晒保护。"}},"special":{"封面":{"t":"封面","c":"2025 - 06 - 30 发布 2025 - 12 - 30 实施"},"前言":{"t":"前言","c":"前 言 本文件按照GB/T 1.1—2020《标准化工作导则 第1部分：标准化文件的结构和起草规则》的规定 起草。 本文件由国家能源局提出。 本文件由能源行业风电标准化技术委员会风电机械设备分技术委员会（NEA/TC1/SC5）归口。 本文件起草单位：金风科技股份有限公司、中国长江三峡集团有限公司、上海能源科技发展有限公 司、上海电力实业有限公司、青岛同荣机电设备股份有限公司、南通鋆鼎精密科技股份有限公司、国家 电投集团内蒙古能源有限公司、内蒙古察哈尔新能源有限公司、江苏金风科技有限公司、北京鉴衡认证 中心有限公司、上海电气风电集团股份有限公司、上海泰胜风能装备股份有限公司、北京金风科创风电 设备有限公司、湖南兴蓝风电有限公司、明阳智慧能源集团股份公司、运达能源科技集团股份有限公司、 中车株洲电力机车研究所有限公司风电事业部、西门子歌美飒可再生能源科技（中国）有限公司、华锐 风电科技（集团）股份有限公司、中车山东风电有限公司、中船海装风电有限公司。 本文件主要起草人：韩军杰、张紫平、石峰、邓屹、张智伟、邱辉、陈洪良、李国俭、王震峰、姜 富军、周伟兵、李勇芝、刘希彬、陆辉、冯涛、陈小军、薛振峰、陈立功、吕中界、李跃、乔元、赵润、 付仟仟。 1 风力发电机组内附件技术规范"},"第1章 范围":{"t":"第1章 范围","c":"1 范围 本文件规定了风力发电机组内附件技术要求、装配、检验、包装、储存和运输。 本文件适用于风力发电机组内附件的制造、装配和检验"},"第2章 规范性引用文件":{"t":"第2章 规范性引用文件","c":"2 规范性引用文件 下列文件中的内容通过文中的规范性引用而构成本文件必不可少的条款。其中，注日期的引用文件， 仅该日期对应的版本适用于本文件；不注日期的引用文件，其最新版本（包括所有的修改单）适用于本 文件。 GB/T 3 普通螺纹收尾、肩距、退刀槽和倒角 GB/T 90.2 紧固件 标志与包装 GB/T 197—2018 普通螺纹 公差 GB/T 700 碳素结构钢 GB/T 702 热轧钢棒尺寸、外形、重量及允许偏差 GB/T 706 热轧型钢 GB/T 709—2019 热轧钢板和钢带的尺寸、外形、重量及允许偏差 GB/T 983 不锈钢焊条 GB/T 985.1 气焊、焊条电弧焊、气体保护焊和高能束焊的推荐坡口 GB/T 985.2 埋弧焊的推荐坡口 GB/T 1184—1996 形状和位置公差 未注公差值 GB/T 1591—2008 低合金高强度结构钢 GB/T 1804—2000 一般公差 未注公差的线性和角度尺寸的公差 GB/T 1958 产品几何技术规范（GPS) 几何公差 检测与验证 GB/T 3098.1 紧固件机械性能 螺栓、螺钉和螺柱 GB/T 3098.6 紧固件机械性能 不锈钢螺栓、螺钉和螺柱 GB/T 3098.10 紧固件机械性能 有色金属制造的螺栓、螺钉、螺柱和螺母 GB/T 3098.15 紧固件机械性能 不锈钢螺母 GB/T 3190 变形铝及铝合金化学成分 GB/T 3191 铝及铝合金挤压棒材 GB/T 3280 不锈钢冷轧钢板和钢带 GB/T 3618 铝及铝合金花纹板 GB/T 3880（所有部分） 一般工业用铝及铝合金板、带材 GB/T 4237 不锈钢热轧钢板和钢带 GB/T 4437（所有部分） 铝及铝合金热挤压管 GB/T 5117 非合金钢及细晶粒钢焊条 GB/T 5237（所有部分） 铝合金建筑型材 GB/T 5277 紧固件 螺栓和螺钉通孔 GB/T 5293 埋弧焊用非合金钢及细晶粒钢实心焊丝、药芯焊丝和焊丝-焊剂组合分类要求 GB/T 5313 厚度方向性能钢板 GB/T 6723 通用冷弯开口型钢 GB/T 6728 结构用冷弯空心型钢 GB/T 6892 一般工业用铝及铝合金挤压型材 GB/T 6893 铝及铝合金拉(轧)制管材 GB/T 8110 熔化极气体保护电弧焊用非合金钢及细晶粒钢实心焊丝 2 GB/T 8923.1—2011 涂覆涂料前钢材表面处理 表面清洁度的目视评定 第1部分：未涂覆过的钢材 表面和全面清除原有涂层后的钢材表面的锈蚀等级和处理等级 GB/T 9445 无损检测 人员资格鉴定与认证 GB 9448 焊接与切割安全 GB/T 10045 非合金钢及细晶粒钢药芯焊丝 GB/T 10858 铝及铝合金焊丝 GB/T 11263 热轧H型钢和剖分T型钢 GB/T 11375 金属和其他无机覆盖层 热喷涂 操作安全 GB/T 12770 机械结构用不锈钢焊接钢管 GB/T 14975 结构用不锈钢无缝钢管 GB/T 14977—2008 热轧钢板表面质量的一般要求 GB/T 15169 钢熔化焊焊工技能评定 GB/T 17853 不锈钢药芯焊丝 GB/T 17854 埋弧焊用不锈钢焊丝-焊剂组合分类要求 GB/T 17888（所有部分） 机械安全 接近机械的固定设施 GB/T 18570.3—2005 涂覆涂料前钢材表面处理 表面清洁度的评定试验 第3部分：涂覆涂料前钢 材表面的灰尘评定(压敏粘带法) GB/T 19568 风力发电机组 装配和安装规范 GB/T 19804—2005 焊接结构的一般尺寸公差和形位公差 GB/T 19824 热喷涂 热喷涂操作人员考核要求 GB/T 20878 不锈钢和耐热钢 牌号及化学成分 GB/T 21835 焊接钢管尺寸及单位长度重量 GB/T 29713 不锈钢焊丝和焊带 GB/T 33628 风力发电机组 高强螺纹连接副安装技术要求 GB/T 33974 热轧花纹钢板及钢带 GB/T 36034 埋弧焊用高强钢实心焊丝、药芯焊丝和焊丝-焊剂组合分类要求 GB/T 36037 埋弧焊和电渣焊用焊剂 GB 50576—2010 铝合金结构工程施工质量验收规范 GB 50661 钢结构焊接规范 JB/T 3223 焊接材料质量管理规程 JB/T 5000.3 重型机械通用技术条件 第3部分：焊接件 JB/T 6978 涂装前处理准备 酸洗 JB/T 10045—2017 热切割 质量和几何技术规范 NB/T 47013.3—2023 承压设备无损检测 第3部分：超声检测 NB/T 47013.4 承压设备无损检测 第4部分：磁粉检测 NB/T 47013.5 承压设备无损检测 第5部分：渗透检测 NB/T 47014 承压设备焊接工艺评定 NB/T 47016 承压设备产品焊接试件的力学性能检验 YB/T 4427—2014 热轧型钢表面质量一般要求 ISO 1461 钢铁制件热浸镀锌层 规范和试验方法（Hot dip galvanized coatings on fabricated iron and steel articles — Specifications and test methods） ISO 2063-2 热喷涂 锌，铝及其合金 第2部分 防腐系统的实行（Thermal spraying — Zinc， aluminium and their alloys — Part 2：Execution of corrosion protection systems） ISO 5817—2023 焊接钢、镍、钛及其合金的熔焊接头（束焊除外）缺陷质量等级（Welding — Fusion-welded joints in steel, nickel, titanium and their alloys (beam welding excluded) — Quality levels for imperfections） ISO 9712 无损检测 无损检测人员的资格鉴定与认证（Non-destructive testing — Qualification and certification of NDT personnel） ISO 12944（所有部分） 涂料和清漆 保护漆系统对钢结构的腐蚀防护 3 ISO 16276-1 用防护漆系统的钢结构防腐蚀 涂层的粘附力/结合力（断裂强度）的评估和验收准 则 第1部分:脱落测试（Corrosion protection of steel structures by protective paint systems — Assessment of，and acceptance criteria for，the adhesion/cohesion (fracture strength) of a coating — Part 1: Pull-off testing） ISO 16276-2 用防护漆系统的钢结构防腐蚀 涂层的粘附力/结合力（断裂强度）的评估和验收准 则 第2部分:横切测试和纵切测试（Corrosion protection of steel structures by protective paint systems — Assessment of，and acceptance criteria for，the adhesion/cohesion (fracture strength) of a coating — Part 2: Cross-cut testing and X-cut testing） ISO 19840 色漆和清漆 防护漆系对钢结构的防腐蚀 粗糙表面干膜厚度的测量与验收准则 （Paints and varnishes. Corrosion protection of steel structures by protective paint systems. Measurement of,and acceptance criteria for,the thickness of dry films on rough surfaces） TSG Z6002 特种设备焊接操作人员考核细则"},"第3章 术语和定义":{"t":"第3章 术语和定义","c":"3 术语和定义 下列术语和定义适用于本文件。 3.1 内附件 internals 泛指风力发电机组中除了主要大部件（塔架、轮毂、传动系等）之外的结构件或功能件，主要用于连接、 固定、支撑以及提供维护和安全功能等。 注： 它是风力发电制造业中一个约定俗成的分类称呼，又称附件、内件或内饰件。常见的内附件包括护栏、爬梯、 维护平台等。"},"第4章 技术要求":{"t":"第4章 技术要求","c":"4 技术要求 材料 4.1 4.1.1 一般要求 应满足设计要求，适用于所处的工作环境，且应有完整合格的产品出厂证明：质量证明书原件或加 盖供材单位检验公章的有效复印件。 材料选择时，规格优选原则如下： a) 材料的选用应遵循技术可靠、经济合理的原则，综合考虑结构的重要性、载荷特征、结构形式、 应力状态、连接方法、工作环境、钢材厚度和价格等因素，选用合适的钢材； b) 材料规格应符合相关标准，避免使用非标型材。 4.1.2 结构钢 4.1.2.1 质量要求 结构钢的质量等级应按设计要求选择；如未规定时，根据内附件的使用场景，按以下原则进行选择： a) 结构钢宜采用Q235、Q355、Q390 和Q420 钢等，其质量至少应符合GB/T 700 和GB/T 1591 的 规定； b) 对于需要焊接的内附件，应使用GB/T 1591—2018中规定的B级及以上的质量等级，例如Q235B、 Q355B； c) 对于承受疲劳载荷的内附件，宜使用高质量等级的材料，内部不应有超出设计要求的夹杂、 裂纹、气孔和分层等，此时超声波探伤质量等级不宜低于NB/T 47013.3—2023 规定的Ⅱ级； d) 焊接结构为防止钢材的层状撕裂而采用Z 向钢时，其质量应符合GB/T 5313 的规定。 4.1.2.2 尺寸、外形、重量及允许偏差 结构钢的尺寸、外形、重量及允许偏差应按设计要求选择；如未规定时，应符合国家现行标准的规 定，并按以下要求进行选择： a) 对于承受静力载荷的内附件，热轧钢板的厚度偏差不低于GB/T 709—2019 规定的A 级； 4 b) 对于承受疲劳载荷的内附件，热轧钢板的厚度偏差不宜低于GB/T 709—2019 规定的B 级； c) 常用型钢的尺寸、外形、重量及允许偏差应符合表1 的规定。"},"表1":{"t":"表1","c":"表 1 型钢的相关标准 型钢 类型 热轧扁钢 热轧角钢 热轧工字钢 热轧槽钢 H型钢/T型钢 焊接钢管 结构用冷弯 空心型钢 通用冷弯开 口型钢 花纹钢板 标准 GB/T 702 GB/T 706 GB/T 706 GB/T 706 GB/T 11263 GB/T 21835 GB/T 6728 GB/T 6723 GB/T 33974 4.1.2.3 外观要求 结构钢的表面质量应按设计要求选择；如未规定时，根据内附件的使用场景，按以下要求进行选择： a) 对于承受静力载荷的内附件，热轧钢板表面质量应符合GB/T 14977—2008 规定的B1 级别； b) 对于承受疲劳载荷的内附件，热轧钢板表面质量宜符合GB/T 14977—2008 规定的B3 级别； c) 对于承受静力载荷的内附件，型钢表面质量应符合YB/T 4427—2014 规定的B1 级别； d) 对于承受疲劳载荷的内附件，型钢表面质量宜符合YB/T 4427—2014 规定的B3 级别。 4.1.3 铝合金 4.1.3.1 质量要求 铝合金牌号、规格及相应状态应按设计要求选择；如未规定时，根据内附件的使用场景，按以下要 求进行选择： a) 铝合金内附件宜采用5XXX系列和6XXX系列铝合金，内部不应有裂纹、分层等； b) 铝合金板材应符合GB/T 3880（所有部分）的规定；铝及铝合金花纹板应符合GB/T 3190、GB/T 3618的规定；型材及棒材应符合GB/T 3191、GB/T 4437（所有部分）、GB/T 5237（所有部分）、 GB/T 6892、GB/T 6893的规定。 4.1.3.2 尺寸、外形、重量及允许偏差 未注明偏差等级时，铝合金材料的尺寸、外形、重量及允许偏差至少应符合本文件4.1.3.1中相关 标准规定的普通精度要求。 4.1.3.3 外观要求 未经表面处理的铝合金材料表面应清洁，不应有裂纹和腐蚀斑点等存在。其他未及之处，应符合本 文件4.1.3.1中相关标准的规定。 4.1.4 不锈钢 4.1.4.1 质量要求 不锈钢牌号、规格应按设计要求选择；如未规定时，根据内附件的使用场景，按以下原则进行选择： a) 不锈钢内附件宜选用S30408、S31608等系列不锈钢，当有可靠依据时也可采用其他牌号的不锈 钢，材料内部不应有裂纹、分层等； b) 不锈钢钢板应符合GB/T 4237、GB/T 3280的规定；不锈钢其他型材应符合GB/T 12770、GB/T 14975、 GB/T 20878等标准的规定。 4.1.4.2 尺寸、外形、重量及允许偏差 未注明偏差等级时，不锈钢材料的尺寸、外形、重量及允许偏差至少应符合本文件4.1.4.1中相关 标准规定的普通精度要求。 4.1.4.3 外观要求 不锈钢材料不应存在影响使用的缺陷。经酸洗后的不锈钢材料表面不应有氧化皮及过酸洗。允许有 个别深度小于厚度公差之半的轻微麻点、擦划伤、压痕、凹坑、辊印和色差等不影响使用的缺陷。其他 未及之处，应符合本文件4.1.4.1中的规定。 4.1.5 焊接材料 5 焊接材料应与相应母材的性能相适应并具有有效质量证明书或复验报告，其熔敷金属的力学性能应 符合设计要求，且保证焊接接头强度、塑性和冲击韧性等不低于相应母材标准的规定。最终的焊接材料 选用应通过焊接工艺评定确定。 结构钢内附件焊接材料（焊条、焊丝、焊剂等）应符合GB/T 5117、GB/T 5293、GB/T 8110、GB/T 10045、 GB/T 36034、GB/T 36037的规定。对直接承受动力载荷或需要验算疲劳的内附件，以及低温环境下工作 的厚板内附件，宜采用低氢型焊接材料。 铝合金内附件焊接用焊丝应符合GB/T 10858的规定，宜选用SAL 5356及SAL 4043。焊接工艺可采用 熔化极惰性气体保护电弧焊（MIG焊）和钨极惰性气体保护电弧焊（TIG焊）。 不锈钢内附件焊接材料应符合GB/T 983、GB/T 17853、GB/T 17854、GB/T 29713的规定。焊接工艺 可采用熔化极惰性气体保护电弧焊（MIG焊）和钨极惰性气体保护电弧焊（TIG焊）。 4.1.6 紧固件 如未规定时，紧固件应符合以下规定： a) 碳钢或合金钢紧固件应符合GB/T 3098.1的规定，并选用6.8级及以上等级； b) 铝合金紧固件应符合GB/T 3098.10的规定。铝合金内附件的螺栓连接不宜采用有预拉力的高强 度螺栓； c) 不锈钢紧固件应符合GB/T 3098.6、GB/T 3098.15的规定。 4.1.7 电缆夹具 电缆夹具材料一般采用尼龙66,表面不应有龟裂、银纹、斑点、孔眼、缺口、凹陷、尖角、毛刺和 油污等缺陷。跌落试验要求2 m高空掉落水泥地面，夹具应不开裂，不破损。 如未规定时，尼龙66电缆夹具其他主要性能要求如下： a) 工作温度：-40 ℃~110 ℃； b) 熔点：247 ℃~250 ℃； c) 弯曲强度：180 MPa； d) 拉伸强度：大于115 MPa； e) 缺口悬梁冲击强度：大于5.5 kJ/㎡； f) 无缺口悬臂梁冲击强度：大于30 kJ/㎡； g) 热变形温度（1.8 MPa）：220 ℃； h) 防火等级：UL94 V-0。 工艺 4.2 4.2.1 一般要求 工艺应符合以下要求： a) 应采取合适的工艺措施，防止生产中材料性能的恶化； b) 零件制造每道工序应检查、验收，在前道工序检查合格后方可转入下道工序； c) 除产品图样有要求外，加工后的零件不应有毛刺、尖角、锐边和深度超过0.2 mm 的划痕或凹 痕； d) 严禁使用牌号不明及未经过质量检验部门验收的各种材料。 4.2.2 下料 下料应符合以下要求： a) 金属板类、型材、管材、棒材等原材料可采用热切割或机械切割方式进行切割下料； b) 钢材在下料前的形状偏差应符合JB/T 5000.3 的相关规定，否则应予矫正； c) 除特殊要求外，所有内附件切割自由面，应去毛刺，并锐边倒钝，零件切割的边棱，不应有 深度大于1 mm 的割痕； d) 对于承受静力载荷的内附件，热切割自由面粗糙度不大于Rz100；对于机械切割自由面粗糙度 不大于Ra25； 6 e) 对于承受疲劳载荷的内附件，所有切割自由面宜打磨处理，使表面不连续和修磨部分的厚度 不低于钢板允许的最小厚度，不可通过焊补进行表面处理； f) 切割表面的质量检测、评定方法按照JB/T 10045—2017 执行,无特殊要求时，内附件的切割 垂直度和斜度公差等级为3 级，平均割纹深度为3 级，公称尺寸极限偏差为2 级；关键件、 重要件的切割质量，其切割垂直度和斜度公差等级为2 级，平均割纹深度为2 级，公称尺寸 极限偏差为1 级； g) 机械切割的内附件切割质量及尺寸公差不应低于热切割内附件质量要求； h) 剪切或冲压后的边缘应保证平整无缺陷。如果剪切或冲压后进行机加或打磨，则打磨或机加 厚度至少0.5 mm。 4.2.3 成形 4.2.3.1 一般要求 成形加工应符合以下要求： a) 对于屈服强度低于355 MPa 的结构钢，热加工温度不应高于580 ℃； b) 对于屈服强度不低于355 MPa 的结构钢，热成形应在红热状态（600 ℃～650 ℃）进行。温度、 保温时间和冷却速率应适合特定类型钢材，且不应在蓝脆温度区间（250 ℃～380 ℃）进行弯 曲或成形； c) 对于铝合金和不锈钢，不宜采用热成形； d) 成形后的内附件不应出现裂纹、层状撕裂、层叠等缺陷。 4.2.3.2 卷圆成形 钢材的卷圆成形应符合JB/T 5000.3的规定。 4.2.3.3 折弯成形 4.2.3.3.1 非合金结构钢 对于非合金结构钢： a) 折弯半径应满足表2 的要求；"},"表2":{"t":"表2","c":"表 2 折弯半径 钢 材 牌 号 折 弯 方 向 a 最小推荐内折弯半径 b mm ＞1 ≤1.5 ＞1.5 ≤2.5 ＞2.5 ≤3 ＞3 ≤4 ＞4 ≤5 ＞5 ≤6 ＞6 ≤7 ＞7 ≤8 ＞8 ≤10 ＞10 ≤12 ＞12 ≤14 ＞14 ≤16 ＞16 ≤18 Q235 T L 1.6 1.6 2.5 2.5 3 3 5 6 6 8 8 10 10 12 12 16 16 20 20 25 25 28 28 32 36 40 Q355 T L 2.5 2.5 4 4 5 5 6 8 8 10 10 12 12 16 16 20 20 25 25 32 32 36 36 40 45 50 a T——垂直于轧制方向； L——平行于轧制方向。 b适用于折弯角度不大于90°。 b) 折弯半径优选系列。常用的折弯件内圆角半径优先选择系列如下（单位为mm）：1.0，1.2， 1.5，2.0，2.5，3，4，5，6，8，10，12，15，20，25，30，35，40，45，50，63，80，100； c) 在弯曲边附近有孔时，孔至弯曲边的距离应不小于孔边距L。当压弯为直角时（图1），孔边 距L 见下式（1）： 7"},"图1":{"t":"图1","c":"图 1 压弯直角最小孔边距示意图 L = R + 2t …………………………………………（1） 式中： L ——最小孔边距,单位为毫米（mm）； R ——内圆角半径,单位为毫米（mm）； t ——钢板厚度,单位为毫米（mm）。 d) 带斜边的折弯边应避开变形区（避开尺寸不小于折弯半径），如图2 所示："},"图2":{"t":"图2","c":"图 2 折弯边避开变形区 e) 在局部压弯时，为了防止在交接处产生撕裂，可设计工艺孔（图3）或切槽（图4）； 标引说明： t——钢板厚度； d——工艺孔直径。"},"图3":{"t":"图3","c":"图 3 局部压弯工艺孔示意图 标引说明： H——切槽深度； r——圆角半径。"},"图4":{"t":"图4","c":"图 4 局部压弯切槽示意图 8 4.2.3.3.2 常用铝及铝合金板、带材 一般要求如下： a) 如未规定时，常用铝合金板、带材最小弯曲半径推荐4 倍板厚，最小弯曲半径不小于GB/T 3880.2 的规定； b) 铝合金折弯易产生压痕，制造时应采取适当的工艺措施减轻或防止压痕形成。 4.2.3.4 矫正 矫正的一般要求如下： a) 普通碳素结构钢和低合金结构钢加热矫正时，加热温度不应超过900 ℃。低合金结构钢在加 热矫正后应自然冷却；碳素结构钢在环境温度低于-16 ℃、低合金结构钢在环境温度低于-12 ℃ 时，不应进行冷矫正和冷弯曲； b) 采用火焰矫正时，不宜在同一部位重复加热，防止钢材金相组织和机械性能恶化； c) 低合金高强度结构钢材质的重要件，不应使用水冷等急速冷却的方法强制冷却。也不应在同 一部位进行造成拉、压应力的反复矫正； d) 矫正后焊接件表面不应有裂纹、熔坑及其他影响焊接件强度和外观的缺陷； e) 不锈钢、铝合金内附件不宜采用火焰矫正。 4.2.3.5 开孔 开孔的一般要求如下： a) 对于有配合要求的螺栓孔，宜采用数控钻床或激光切割进行，或者采用配开孔方式进行； b) 如果采用冲孔，冲孔完成后，应对冲击造成的变形孔边缘进行处理。处理方式包括二次钻孔 或铰孔等，处理后的孔的光洁度不小于Ra12.5。未经处理的冲孔，不可用于靠摩擦连接的或 者使用不低于8.8 级高强螺栓的连接节点； c) 孔的规格及尺寸公差应满足设计要求及GB/T 5277 的要求。 4.2.4 焊接连接 4.2.4.1 焊前准备 焊前准备如下： a) 全部零件应检验合格后，方可组对； b) 组对焊接零件的焊缝坡口形式与尺寸及焊缝间隙量应符合GB/T 985.1 和GB/T 985.2 的规定； c) 重要件焊缝坡口应除去影响焊接质量的表面层，保持平整无毛刺、不应有裂纹、分层、夹渣 等缺陷，必要时对坡口按NB/T 47013.4、NB/T 47013.5 或相当的权威标准进行磁粉检验或渗 透检验； d) 在焊接工作开始前，焊接区域应干燥且无氧化皮、轧屑、锈迹、油漆、油污和电镀涂层等。 清根后应对表面氧化物进行清理。清洁区域应包括所有接头表面以及接头边缘不小于25 mm 的区域； e) 材料的厚度不大于12 mm 时，定位焊焊缝最小长度为材料厚度的四倍；当材料厚度大于12 mm， 且不大于50 mm 时，定位焊焊缝最小长度不小于50 mm；当材料厚度大于50 mm，应增加定位 焊焊缝长度； f) 定位焊焊接工艺应与正式施焊工艺一致，一般正式施焊有预热要求的，定位焊焊接时也需要 预热。组对时，定位焊釆用的焊材和焊接规范以及对焊工的要求，应与正式焊接时相同； g) 定位焊焊缝不应出现表面裂纹、气孔、夹杂、咬边等缺陷。 4.2.4.2 焊接要求 焊接的一般要求如下： a) 焊接工人、焊接技术人员及焊接质量检验人员应经过专门的培训，并按TSG Z6002、GB/T 15169 或相当的权威标准的规定考核合格； b) 焊接工作人员应从事资格证书中规定项目的焊接工作； 9 c) 焊接设备及检验器具应具有合格证明书，焊接设备应参数稳定、调节灵活和安全可靠，并能 满足焊接参数的要求，每年按规定定期对焊接设备进行校正和审核； d) 焊接材料的使用及管理应符合JB/T 3223 的规定； e) 焊接件环境出现下列任一情况时，应采用有效防护措施，否则不应施焊： 1) 气体保护焊时风速大于2 m/s； 2) 其他焊接方法时风速大于8 m/s； 3) 相对湿度大于90%； 4) 雨雪环境； 5) 焊接件温度低于0 ℃。 f) 焊接件焊接前应按NB/T 47014 进行焊接工艺评定，并制定适用的焊接工艺文件,应能保证熔 敷金属不低于母材的力学性能；对于不锈钢、铝合金材料，还应能够保证熔敷金属具有不低 于母材的耐腐蚀性； g) 制造商对焊接工艺评定负责，且应保留所使用的工艺和焊接操作的记录，记录中要包括日期、 程序结果和执行规范，以及焊后热处理记录、焊工资质和操作的任务等； h) 局部预热时，应防止局部应力过大。预热的范围为焊缝两侧各不小于焊接件厚度的3 倍，且 不小于100 mm； i) 需要预热的焊接件在整个焊接过程中应不低于预热温度； j) 不同材质之间焊接预热温度按焊接性差的一种选定； k) 应按批准的焊接作业指导书（包括临时焊道）实施焊接并满足以下要求： 1) 焊接过程中，应保证工作区不受天气影响。低温（小于5 ℃）时，应采取适当措施确保 焊接顺利进行； 2) 尽可能在平焊或平角焊位置焊接； 3) 应在引弧板或坡口内引弧，禁止在非焊接部位引弧； 4) 引弧板、熄弧板及工艺支撑不应锤击拆除； 5) 施焊过程中应控制层间温度，确保不超过规定范围； 6) 当焊接件预热时，应控制层间温度不低于预热温度； 7) 每条焊缝宜一次焊完。当中断焊接时，对冷裂纹敏感的焊接件应及时采取保温、后热或 缓冷等措施； 8) 重新施焊时，应按规定重新预热； 9) 低温焊接件禁止焊道层间锤击； 10) 焊后热处理前，可通过局部加热的工艺方法来矫正，加热温度不应超过本文件4.2.3.4 的规定。严禁使用水冷等急速冷却的方法强制冷却，并应记录加热和冷却循环过程； 11) 如未规定时，所有焊缝应进行完整连续的周边焊，不应在拐角处开始和中断焊缝。 l) 焊缝返修工艺应执行原工艺或经评定合格的工艺； m) 要求焊后热处理的焊缝，返修应在热处理前进行。若热处理后发生返修，则返修后应重新进 行热处理。返修部位的焊缝应按原检查方法及合格标准重新进行检测； n) 焊缝同一部位返修次数不宜超过两次； o) 焊接作业应符合GB 9448 的规定。 4.2.4.3 焊后消氢、消应力处理 4.2.4.3.1 要求金属焊后消氢、消应力处理的焊缝，未规定具体处理要求时，按GB 50661 执行。 4.2.4.3.2 热处理温度以在焊接件上直接测量为准，在整个热处理过程中应当连续记录。 4.2.4.3.3 所有温度均指金属的温度，并利用热电偶自动测量温度。 4.2.4.3.4 有密闭内腔的焊接件，在热处理之前，应在中间隔板或盖板上适当的位置加工透气孔，使 其空腔与外界相通。在盖板上钻的孔，热处理后应重新堵上。 4.2.4.3.5 奧氏体不锈钢一般不宜焊后热处理。 4.2.4.4 焊接质量控制 4.2.4.4.1 焊接件未注尺寸公差应符合GB/T 19804—2005 规定的B 级要求，未注形位公差应符合GB/T 10 19804—2005 规定的F 级要求。 4.2.4.4.2 承受疲劳载荷的钢制件焊缝质量应符合ISO 5817—2023 规定的B 级要求。 4.2.4.4.3 未规定焊缝质量等级时，钢制件焊缝质量应满足ISO 5817—2023 规定的C 级要求。 4.2.4.4.4 铝合金件焊缝外观质量标准及尺寸允许偏差应符合GB 50576—2010 中附录A 的规定。 4.2.4.4.5 焊缝无损检测所采用的标准以及级别应在图样中标明。 4.2.4.4.6 有密封性要求的焊缝，不应出现渗漏现象。 4.2.5 机加工 4.2.5.1 对于铸件、锻件和焊接件，为了消除毛坯制造过程中产生的内应力，改善机械加工性能，宜 在机械加工前进行时效、退火或正火处理。 4.2.5.2 对大而复杂的铸造毛坯件及刚度较差的精密零件,应在粗加工之前及粗加工与半精加工之间 安排时效处理。时效可以是人工时效或自然时效，并进行相应的工艺验证。 4.2.5.3 加工后表面不应有锈蚀以及影响性能和外观的磕、碰、划伤等缺陷。 4.2.5.4 除有特殊要求外，加工后的零件应倒角、倒圆、去毛刺。 4.2.5.5 图样中未注明的回转体类零件倒角（如图5 所示）应符合表3 的规定，非回转体类零件也可 参考表3 执行，主参数D（d）取倒角相邻两几何要素中较短者。"},"图5":{"t":"图5","c":"图 5 倒角"},"表3":{"t":"表3","c":"表 3 倒角尺寸 单位：mm D(d) ≤100 ＞100～1000 ＞1000 倒角CC 0.3～0.5 0.5～2 2～3 注1：D为回转体内径； 注2：d为回转体外径。 4.2.5.6 图样中未注明的回转体类零件倒圆（如图6 所示）半径又无清根要求时，应符合表4 的规定。 主参数d 取倒圆角相邻两几何要素中较短者。"},"图6":{"t":"图6","c":"图 6 倒圆 11"},"表4":{"t":"表4","c":"表 4 倒圆半径 单位：mm D-D1 d-d1 ≤4 ＞4～12 ＞12～30 ＞30～80 ＞80～140 ＞140～200 ＞200 D、d 3～10 ＞10～30 ＞30～80 ＞80～260 ＞260～630 ＞630～1000 ＞1000 倒圆半径 R、r 0.4 1 2 4 8 12 16 注1：D、D1为回转体内径； 注2：d、d1为回转体外径。 4.2.5.7 精加工后的配合面、摩擦面和定位面等工作表面不可打印标记。 4.2.5.8 最终工序为热处理的零件，热处理后表面不应有氧化皮。 4.2.5.9 精加工后的配合面、齿面不应有退火、发蓝、变色现象。 4.2.5.10 配对加工的零部件，应有配对标记。 4.2.5.11 机加工件线性尺寸和角度尺寸的未注公差应符合GB/T 1804—2000 规定的m 级。 4.2.5.12 机加工件未注形状和位置公差应符合GB/T 1184—1996 规定的K 级。 4.2.5.13 精加工后的零件不应直接摆放在地面上，应采取必要的支撑和保护措施。搬运和存放时应防 止损伤、变形。 4.2.5.14 螺纹加工 螺纹加工的一般要求如下： a) 普通螺纹精度等级按GB/T 197—2018 规定的6H/6g 执行； b) 普通螺纹收尾、肩距、退刀槽和倒角尺寸应符合GB/T 3 的规定； c) 内外螺纹旋入侧在加工螺纹前宜倒角，外螺纹为45°，内螺纹为60°，倒角深度等于牙型高 度； d) 加工的螺纹表面不应有黑皮、磕碰、乱扣和毛刺等缺陷； e) 螺纹工作面未注明表面粗糙度时，外螺纹表面粗糙度值不大于Ra6.3，内螺纹表面粗糙度值不 大于Ra12.5； f) 螺纹长度未注偏差取＋2P～3P，其中P 表示螺距。 防腐 4.3 4.3.1 一般要求 4.3.1.1 涂装前应对涂装施工人员进行专业培训，熟悉有关涂料的性能和涂层作业要领后，方可施工。 热喷涂操作人员应按GB/T 19824 的规定进行考核，热喷涂的操作安全应满足GB/T 11375 的要求。 4.3.1.2 钢制件的防腐蚀保护应符合ISO 12944（所有部分）的规定。 4.3.2 表面处理 4.3.2.1 对于喷漆、喷粉、喷塑及喷锌表面，表面处理宜采用喷砂或拋丸处理；对于热浸锌表面，钢 材酸洗应符合JB/T 6978 的规定。 4.3.2.2 在喷砂前应对基材状况进行评估。内附件的锐边、火焰切割边缘、毛刺应打磨到圆滑过渡； 焊疤及焊接熔合性飞溅应打磨清除干净。用溶剂、净化化合物或蒸汽等清除基体表面的水分、油污、尘 垢、污染物、铁锈、氧化皮、盐类及其他物质；喷射清理等级应达到GB/T 8923.1—2011 规定的Sa2.5 的要求。表面粗糙度应遵循涂料供应商的建议。 4.3.2.3 采用无水无油的压缩空气或工业用除尘器，吹除喷砂后基体表面附着的灰尘及磨料，其表面 清洁度应不低于GB/T 18570.3—2005 规定的2 级。 4.3.2.4 当相对湿度低于80%时，表面处理后应在4h 内涂覆第一道底漆；当相对湿度低于65%时，表 面处理后可在4h~12h 内涂覆第一道底漆。超过以上时限或当出现返锈或表面污染时，应重新进行表面 处理。 4.3.2.5 用于沿海或海上时，铝合金内附件宜进行阳极氧化；不锈钢内附件宜进行钝化处理。如在户 外使用，还要考虑采取措施防止异种金属连接造成的电化学腐蚀。 4.3.2.6 对于铝合金、不锈钢等表面，如需进一步采用喷漆处理，宜进行扫砂处理： 12 a) 表面清理应采用中性的新鲜水冲洗去污； b) 干燥后采用干净的非金属磨料（如氧化铝、石英砂，粒度不大于0.5 mm）以不大于0.4 MPa 的压力扫砂。 4.3.2.7 如未规定时，配合的加工面、螺纹孔一般采用防锈油防腐。 4.3.3 涂层防护 4.3.3.1 涂层间应具有相同或相近的热膨胀系数、良好的匹配性及附着力。 4.3.3.2 内附件的防腐体系应与腐蚀环境相匹配。如未规定时，防腐体系至少应符合ISO 12944-5 的 规定。 4.3.4 涂层实施 4.3.4.1 涂层的实施应参考供应商提供的施工工艺进行，且符合ISO 12944-7 的规定。 4.3.4.2 施工过程中的环境条件：表面温度应高于露点温度3 ℃；当湿度大于80%，不宜施工；当施 工、固化环境温度低于10 ℃时，宜选用冬季固化剂。 4.3.4.3 对于不易操作的边角，应手工预涂、预刷。 4.3.5 涂层检查 应检查涂层是否满足设计要求，并检验以下性能： a) 干膜厚度： 1) 油漆：按ISO 19840 规定的方法检验。所有测量膜厚的平均值应大于等于额定干膜厚度 (NDFT)，允许单个测量膜厚低于额定膜厚要求，但应大于额定干膜厚度的90%，且这些测 量点的数量应少于所有测量点数量的10%。若要求最大漆膜厚度，不超过最大值； 2) 镀锌：按ISO 1461 规定的方法检验。实测厚度应在要求的厚度范围内。未注明厚度范围 时，最小局部厚度不小于规定值，最大厚度不大于额定干膜厚度的1.5 倍； 3) 热喷锌：按ISO 2063-2 规定的方法检验。实测厚度应在要求的厚度范围内。未注明厚度 范围时，最小局部厚度不小于规定值，最大厚度不大于额定干膜厚度的1.5 倍。 b) 附着力： 1) 油漆：按ISO 16276-1 规定的方法检验，一般不低于5 MPa；不适用拉开法时检验时，可 按ISO 16276-2 检验, 并符合1 级或0 级的规定； 2) 热喷锌：按ISO 16276-1 规定的方法检验，一般不低于5 MPa。 c) 外观：涂层均匀性、颜色及光泽、气泡、脱落、流挂、起皮、漏涂等。 4.3.6 颜色 4.3.6.1 内附件的颜色和光泽度根据整机颜色配置方案或特定项目要求确定。 4.3.6.2 金属覆盖层（热浸镀锌、热喷锌等）及耐蚀合金（不锈钢、铝合金等）除非特殊要求，否则 保留材料本色。 4.3.6.3 安全护栏、安全挂点、安全扶手等安全设施表面颜色应符合设计要求或选取警示色，例如RAL 1023（交通黄）。"},"第5章 装配":{"t":"第5章 装配","c":"5 装配 一般要求 5.1 5.1.1 装配应符合设计要求，对于成品外购件（例如电气柜体、升降机、免爬器等）的装配，还应参 考对应厂家提供的产品安装说明文件。 5.1.2 装配前应检验所有零部件的型号、规格，确保符合配置明细。 5.1.3 装配前检验进入装配区的零部件应符合以下要求后方可进行装配： a) 检验合格并具有合格标志； b) 对文件中要求的关键零部件主要配合尺寸及编号进行复查并在质保卡中做出记录； c) 经钳工修整的配合尺寸，应由质量检验部门复检并在质保卡中做出记录。 13 5.1.4 零件在装配前应进行清理和清洗，不应有毛刺、翻边、氧化皮、锈蚀、切削、油污、着色剂和 灰尘等；对有尖角或高点的配合面，在装配前应将其修正；除有特殊规定外，装配前应将零件尖角和锐 边倒钝。装配过程中零件不应磕伤、碰伤、划伤和锈蚀。 5.1.5 涂层未干的零部件不应进行装配。 5.1.6 零部件在装配过程中的二次防腐及不同涂层修复方法如下。 a) 配件表面防腐失效时，宜在工序结束前，对配件防腐失效位置进行二次防腐。二次防腐处理后， 补充油漆表面应与周围漆面保持平滑和自然过渡； b) 涂层损伤未露出金属面时，宜涂刷与原防腐层相同的面漆，涂刷后总干膜厚度与未损伤部位相 同； c) 涂层损伤已露出金属面时，裸露金属面及裸露金属面以外沿圆周方向不小于10 mm 的范围，均 应打磨至完全裸露金属表面。涂刷与原防腐层相同或相容的底漆、中间漆、面漆等，涂刷后总 干膜厚度与未损伤部位相同； d) 锌铬涂层损伤，打磨去除锈渍后，在损伤部位喷涂镀铬自喷锌； e) 热喷锌、热浸锌涂层损伤，打磨去除锈渍后，在损伤部位喷涂与原损伤部位厚度相同的自喷锌， 配合面应喷涂锌含量大于90%的自喷锌。 5.1.7 测量内附件的量具应经过校准，并在有效期内。 5.1.8 设备、专用工具在使用前应对其运行状态进行检查，在确定无任何异常的情况下方可使用。 5.1.9 零部件的各润滑处装配后应按组装工艺规程注入润滑油或润滑脂。无特殊要求时，不同型号、 不同品牌的油、脂不应混用。 5.1.10 装配作业环境应满足作业要求。 关键部件及装配要求 5.2 5.2.1 塔架门 5.2.1.1 塔架门装配后，应确保门开关灵活，无阻塞等不良现象。门板应平整，与门框间隙均匀，闭 合后能够压实密封条。 5.2.1.2 塔架门锁及装配应符合设计要求。 5.2.1.3 塔架门制作完成后应进行整体淋水密封试验并进行记录，密封等级应达到设计要求。 5.2.1.4 塔架门装配后开启和关闭时所用力不宜超过0.15 kN。 5.2.1.5 塔架门打开角度大于90°。 5.2.2 接近机械的固定设施 5.2.2.1 接近机械的固定设施的一般要求应符合GB/T 17888.1 的相关规定。 5.2.2.2 工作平台与通道应符合GB/T 17888.2 的相关规定。 5.2.2.3 楼梯、阶梯和护栏应符合GB/T 17888.3 的相关规定。 5.2.2.4 固定式直梯应符合GB/T 17888.4 的相关规定。 紧固件连接 5.3 5.3.1 高强紧固件的安装应符合GB/T 33628 的规定。 5.3.2 有紧固扭矩要求的紧固件，应使用规定的紧固扭矩扳手并按规定的紧固扭矩拧紧；未规定紧固 扭矩时，紧固扭矩按GB/T 19568 的规定。 5.3.3 不锈钢紧固件在施工过程中应匀速缓慢预紧，一般不使用电动扳手预紧，防止出现锁死现象。 5.3.4 对于沿海和海上，或环境湿度大等使用环境，在紧固件终拧后，清除表面污物，喷涂自喷锌或 涂漆进行二次防腐；对于塔架外部的重要紧固件还宜做包覆等封闭处理。 工厂试组装 5.4 当存在以下情况时，应进行工厂试组装： a) 所有需要进行现场安装的关键部件； b) 设计要求或生产技术交底中明确需要试组装的； c) 监造方或者业主方或者采购方之一要求试组装的； 14 d) 后续批次生产工艺与首批次生产存在差异的； e) 其他要求试组装的。 现场安装 5.5 现场安装应符合设计厂家的安装规范，且符合GB/T 19568的规定。"},"第6章 检验":{"t":"第6章 检验","c":"6 检验 检验要求 6.1 6.1.1 检验人员应是专职质量管理人员、质检员和试验员，检测用具、仪器及设备应符合计量检定和 质量检测要求，能够提供精确可靠的检测数据。 6.1.2 从事无损检测的人员应经过技术培训并按GB/T 9445 或ISO 9712 进行考核鉴定持证上岗。 6.1.3 取得不同无损检测方法的各项技术等级人员只能从事与该等级相对应的无损检测工作，并负相 应的技术责任。 6.1.4 内附件应至少由制造方质量检验部门检查和验收。 6.1.5 对于涉及人身、设备安全的内附件应做首件鉴定及验收；制造设备、生产工艺等生产条件、制 造能力或材质发生重大变化时，内附件应做首件鉴定及验收。验收合格后方可进行批量生产。 检验项目与方法 6.2 6.2.1 除另有规定外，内附件的常见检验项目和检验方法参考表5 规定。"},"表5":{"t":"表5","c":"表 5 检验项目和方法 序号 检验项目 首件 验收 出厂 检验 检验方法 1 材质 ○ ＊ GB/T 1591、GB/T 700 等 2 焊接材料 ○ ＊ GB/T 5117、GB/T 5293、GB/T 8110、GB/T 10045 等 3 高强度螺栓机械性能 ○ ＊ GB/T 3098.1 等 4 产品焊接试板 ○ ＊ NB/T 47016 5 焊接工艺评定 ○ — NB/T 47014 6 焊缝外观检测 ○ △20 ISO 5817、GB 50576 等 7 焊缝无损检测 ○ ＊ NB/T 47013.3 等 8 孔的位置度 ○ ＊ GB/T 1958 9 机加工外观检测 ○ △20 目测 10 热浸锌层厚度 ○ △10 ISO 1461 11 热喷锌层厚度 ○ △10 ISO 2063-2 12 热喷锌层附着力 ○ △10 ISO 16276-1 13 漆层厚度 ○ △10 ISO 19840 14 漆层附着力 ○ △10 ISO 16276-1、ISO 16276-2 15 热浸锌层外观 ○ ○ 目测 16 热喷锌层外观 ○ ○ 目测 17 涂层外观 ○ ○ 目测 18 内附件外形尺寸 ○ ○ 目测 19 紧固件紧固扭矩 ○ △20 GB/T 33628、GB/T 19568 20 接近机械的固定设施安全 要求的验证 ○ □ GB/T 17888（所有部分） 21 包装 — △10 目测 注：标有“＊”为文件检验（厂家提供的检验文件）；标有“○”为全检；标有“—”为不作规定的 检验项目；标有“△10”为抽检比例10％，“△20”为抽检比例20％；标有“□”为批检。"},"第7章 包装、储存和运输":{"t":"第7章 包装、储存和运输","c":"7 包装、储存和运输 标识 7.1 15 7.1.1 内容 标识应清晰可见，命名中至少应包含设计图样中的内附件名称、编号、制造商信息和出厂日期；编 号应具有追溯性。 7.1.2 方法 对于需要单独标识的内附件，宜采用标签、喷码、钢印等。 对于无法单独标识的内附件，可以采用标签或喷码标识在外包装上。 对于承受疲劳载荷的内附件，如采用钢印标识，应采用低应力或无应力钢印。 包装 7.2 7.2.1 一般要求 涂层完全干燥，具备出厂条件的内附件经检验合格后应妥善包装，防止二次污染。 7.2.2 紧固件包装 随机发运的紧固件宜按使用部位、规格型号分类装箱或装盒。紧固件应清除污垢及金属屑，并采取 必要的防护措施，确保在装卸及运输过程中不被磕碰损坏；整体采用木箱装运，木箱内采用聚乙烯等防 水材料包裹货物表面，防止雨水等进入。 紧固件的包装箱、盒外表应有标志。标志一般采用印刷或标打，也允许栓挂或粘贴。标志不应褪色、 脱落。标志内容如下： a) 使用部位； b) 规格型号； c) 数量。 对于多个类别紧固件包装箱或包装盒共用一个大包装箱或包装盒发运的，在大包装箱或包装盒外部 显著位置粘贴紧固件清单，同时在大包装箱或包装盒内放置紧固件清单。 其他未及之处按GB/T 90.2执行。 7.2.3 内附件包装 随机发运的内附件宜按使用部位分类包装且宜有标志，并采取必要的防护措施，确保在装卸及运输 过程中不被磕碰损坏。标志一般粘贴在内附件表面或外包装表面，并用透明胶带等进行可靠防护和固定。 标志不应褪色、脱落。标志内容如下： a) 名称； b) 图号。 储存 7.3 储存场所应干燥，清洁，防止二次污染。 储存中应采取必要的防护措施，确保在装卸、转运、储存过程中产品涂层、性能不恶化。 运输 7.4 7.4.1 一般要求 运输前应充分考虑内附件尺寸、重量大小、运输方法（铁路、公路、水路）和包装要求等特点，制 定运输方案。运输中应采取必要的防护措施，确保在装卸、运输过程中产品涂层、性能不恶化。且对于 具有部分悬空的内附件，应做好运输途中的固定，防止颠簸造成的损伤；对于具有活动功能的内附件， 应确保活动件处于可靠的固定状态。 7.4.2 大型内附件运输要求 风力发电机组大型内附件的运输要求如下： a) 大型内附件运输时应采取有效措施，保证运输的安全； b) 大型内附件在运输时应提出运输对道路的要求； 16 c) 运输前对运输路线应进行路况勘探，勘探内容包括道路限高、限宽、承载能力、坡度、转弯半 径等； d) 路况勘探结果符合大型内附件运输对道路的要求后方可运输； e) 大型内附件与运输车辆之间应采用专用工装固定牢固； f) 大型内附件在运输期间应采取防雨防尘措施，采用篷布包装时应另加网套包裹进行防护； g) 安装在大型内附件内的电气设备或控制柜在运输期间应防雨、防尘，且宜有防振，防晒保护。"}},"standards":{"GB/T 700":{"t":"","c":"：碳素结构钢牌号、化学成分与力学性能。本文件中用途：4.1.2.1 结构钢质量（Q235 等）"},"GB/T 1591":{"t":"","c":"：低合金高强钢牌号与质量等级（B 级及以上）。本文件中用途：4.1.2.1 焊接用结构钢 B 级及以上；表5 材质检验"},"GB/T 5313":{"t":"","c":"：Z 向钢抗层状撕裂性能。本文件中用途：4.1.2.1 d) 防层状撕裂 Z 向钢"},"GB/T 709":{"t":"","c":"：钢板厚度偏差等级（A/B 级）。本文件中用途：4.1.2.2 静力 A 级、疲劳 B 级"},"GB/T 14977":{"t":"","c":"：钢板表面质量等级（B1/B3 级）。本文件中用途：4.1.2.3 静力 B1 级、疲劳 B3 级"},"YB/T 4427":{"t":"","c":"：型钢表面质量等级（B1/B3 级）。本文件中用途：4.1.2.3 型钢表面质量"},"GB/T 3880（所有部分）":{"t":"","c":"：铝板带材技术要求。本文件中用途：4.1.3.1 铝合金板材"},"GB/T 3190":{"t":"","c":"：变形铝化学成分。本文件中用途：4.1.3.1 花纹板化学成分"},"GB/T 4237":{"t":"","c":"：不锈钢热轧板带。本文件中用途：4.1.4.1 不锈钢钢板"},"GB/T 3280":{"t":"","c":"：不锈钢冷轧板带。本文件中用途：4.1.4.1 不锈钢钢板"},"GB/T 3098.1":{"t":"","c":"：碳钢/合金钢紧固件机械性能等级。本文件中用途：4.1.6 碳钢或合金钢紧固件 6.8 级及以上；表5 高强螺栓检验"},"GB/T 3098.6":{"t":"","c":"：不锈钢紧固件性能。本文件中用途：4.1.6 c) 不锈钢紧固件"},"GB/T 3098.15":{"t":"","c":"：不锈钢螺母性能。本文件中用途：4.1.6 c) 不锈钢螺母"},"GB/T 3098.10":{"t":"","c":"：铝合金等紧固件性能。本文件中用途：4.1.6 b) 铝合金紧固件"},"GB/T 197":{"t":"","c":"：普通螺纹公差带（6H/6g）。本文件中用途：4.2.5.14 螺纹精度等级"},"GB/T 3":{"t":"","c":"：螺纹收尾与倒角尺寸。本文件中用途：4.2.5.14 螺纹收尾/退刀槽"},"GB/T 5117":{"t":"","c":"：碳钢焊条技术要求。本文件中用途：4.1.5 结构钢焊条；表5 焊接材料检验"},"GB/T 5293":{"t":"","c":"：埋弧焊焊材分类。本文件中用途：4.1.5 结构钢焊剂/焊丝"},"GB/T 8110":{"t":"","c":"：气保焊实心焊丝。本文件中用途：4.1.5 结构钢焊丝"},"GB/T 10858":{"t":"","c":"：铝焊丝（SAL 5356、SAL 4043）。本文件中用途：4.1.5 铝合金焊丝选用"},"GB/T 983":{"t":"","c":"：不锈钢焊条技术要求。本文件中用途：4.1.5 不锈钢焊条"},"GB/T 985.1":{"t":"","c":"：常用焊接坡口。本文件中用途：4.2.4.1 焊缝坡口形式"},"GB/T 985.2":{"t":"","c":"：埋弧焊坡口。本文件中用途：4.2.4.1 埋弧焊坡口"},"NB/T 47014":{"t":"","c":"：焊接工艺评定规则。本文件中用途：4.2.4.2 焊前工艺评定；表5 工艺评定检验"},"NB/T 47016":{"t":"","c":"：焊接试板力学性能检验。本文件中用途：表5 产品焊接试板检验"},"NB/T 47013.3":{"t":"","c":"：超声检测（Ⅱ级质量等级）。本文件中用途：4.1.2.1 疲劳件超声探伤；表5 焊缝无损检测"},"GB 50661":{"t":"","c":"：焊接工艺与焊后处理。本文件中用途：4.2.4.3.1 消氢消应力处理"},"GB/T 19804":{"t":"","c":"：焊接件未注公差等级（B/F 级）。本文件中用途：4.2.4.4.1 未注尺寸/形位公差"},"ISO 5817":{"t":"","c":"：焊缝缺陷质量等级（B/C 级）。本文件中用途：4.2.4.4.2/.3 焊缝质量等级"},"GB 50576":{"t":"","c":"：铝合金结构验收（附录A 焊缝外观）。本文件中用途：4.2.4.4.4 铝合金焊缝外观"},"GB/T 33628":{"t":"","c":"：高强螺纹副安装。本文件中用途：5.3.1 高强紧固件安装；表5 紧固扭矩检验"},"GB/T 19568":{"t":"","c":"：风电机组装配安装。本文件中用途：5.3.2 未规定扭矩时；5.5 现场安装"},"ISO 12944（所有部分）":{"t":"","c":"：防腐体系设计（-5/-7 部分）。本文件中用途：4.3.1.2、4.3.3.2、4.3.4.1 防腐体系"},"GB/T 8923.1":{"t":"","c":"：喷射清理等级 Sa2.5。本文件中用途：4.3.2.2 喷射清理等级"},"GB/T 18570.3":{"t":"","c":"：灰尘评定（2 级）。本文件中用途：4.3.2.3 表面清洁度"},"ISO 1461":{"t":"","c":"：镀锌层厚度检验。本文件中用途：4.3.5 镀锌干膜厚度；表5"},"ISO 2063-2":{"t":"","c":"：热喷锌层检验。本文件中用途：4.3.5 热喷锌厚度；表5"},"ISO 19840":{"t":"","c":"：油漆干膜厚度测量。本文件中用途：4.3.5 油漆干膜厚度；表5"},"ISO 16276-1":{"t":"","c":"：拉开法附着力（≥5 MPa）。本文件中用途：4.3.5 附着力检验；表5"},"ISO 16276-2":{"t":"","c":"：划格法附着力（1 级或 0 级）。本文件中用途：4.3.5 拉开法不适用时"},"GB/T 9445":{"t":"","c":"：无损检测人员资格。本文件中用途：6.1.2 无损检测人员持证"},"ISO 9712":{"t":"","c":"：NDT 人员国际认证。本文件中用途：6.1.2 无损检测人员持证"},"GB/T 1958":{"t":"","c":"：几何公差检测方法。本文件中用途：表5 孔的位置度检验"},"GB/T 17888（所有部分）":{"t":"","c":"：楼梯、护栏、直梯等固定设施安全要求。本文件中用途：5.2.2 接近机械的固定设施；表5"},"GB/T 90.2":{"t":"","c":"：紧固件包装标志。本文件中用途：7.2.2 紧固件包装"},"GB 9448":{"t":"","c":"：焊接作业安全。本文件中用途：4.2.4.2 o) 焊接作业安全"}}};
+
+</script>
+<script>
+/* NB/T 11773—2025 互动学习课程 · 逻辑层 */
+(function () {
+  'use strict';
+
+  var CHAPTERS = [];
+  for (var i = 1; i <= 9; i++) {
+    var k = 'CH' + (i < 10 ? '0' + i : i);
+    if (window[k]) CHAPTERS.push(window[k]);
+  }
+
+  var ALL = [];
+  CHAPTERS.forEach(function (c) {
+    c.questions.forEach(function (q) {
+      ALL.push({ ch: c, q: q });
+    });
+  });
+  ALL.forEach(function (it, i) { it.gid = i; it.q._gid = i; });
+
+  /* ---------- 存储 ---------- */
+  var KEY = 'nbt11773_v1';
+  var ST = { ans: {}, mark: {} };
+  try {
+    var raw = localStorage.getItem(KEY);
+    if (raw) ST = JSON.parse(raw);
+  } catch (e) {}
+  if (!ST.ans) ST.ans = {};
+  if (!ST.mark) ST.mark = {};
+  function save() {
+    try { localStorage.setItem(KEY, JSON.stringify(ST)); } catch (e) {}
+  }
+
+  /* ---------- 元素 ---------- */
+  function $(id) { return document.getElementById(id); }
+  var LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
+
+  var view = 'lecture';
+  var curChap = 0;
+  var slideIdx = 0;
+  var playTimer = null;
+  var playing = false;
+  var speakOn = false;
+
+  // 答题状态
+  var pool = [];
+  var qi = 0;
+  var answered = false;      // 当前题是否已提交
+  var chosen = [];
+
+  /* ---------- 引用规范链接化（课程内知识库跳转） ---------- */
+  var STD_RE = /((?:GB(?:\/T|\/Z)?|JB(?:\/T)?|TSG|AQ|GA|YD(?:\/T)?|DL(?:\/T)?|JGJ|QB(?:\/T)?|HG(?:\/T)?|WS(?:\/T)?|SN(?:\/T)?)\s?-?\s?\d{3,5}(?:\.\d+)*)(?:—\d{4})?(?![0-9])/g;
+  function escHtml(s) {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+  /* 纯文本 → 带 data-kb 链接的 HTML（用于解析文本，点击打开课程内知识库） */
+  function linkStandards(txt) {
+    return escHtml(txt).replace(STD_RE, function (m) {
+      return '<a class="std-link" data-kb="' + m + '">' + m + '</a>';
+    });
+  }
+  /* 已渲染的 HTML 节点 → 遍历文本节点加链接 */
+  function linkStdNodes(root) {
+    if (!root || !root.querySelectorAll) return;
+    var w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (node) {
+        var p = node.parentNode;
+        if (p && p.closest && p.closest('a,button,script,style')) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var list = [];
+    while (w.nextNode()) list.push(w.currentNode);
+    list.forEach(function (n) {
+      var txt = n.nodeValue;
+      if (!STD_RE.test(txt)) return;
+      STD_RE.lastIndex = 0;
+      var frag = document.createDocumentFragment(), last = 0, m;
+      while ((m = STD_RE.exec(txt))) {
+        if (m.index > last) frag.appendChild(document.createTextNode(txt.slice(last, m.index)));
+        var a = document.createElement('a');
+        a.className = 'std-link';
+        a.dataset.kb = m[0];
+        a.textContent = m[0];
+        frag.appendChild(a);
+        last = m.index + m[0].length;
+      }
+      if (last < txt.length) frag.appendChild(document.createTextNode(txt.slice(last)));
+      n.parentNode.replaceChild(frag, n);
+    });
+    STD_RE.lastIndex = 0;
+  }
+
+  /* ---------- 知识库（课程内知识点） ---------- */
+  function kbMap(p) {
+    if (!window.KB) return null;
+    if (KB.standards && KB.standards[p]) return p; // 规范号直接命中
+    if (p.includes('封面')) return '封面';
+    if (p.includes('前言')) return '前言';
+    if (p.includes('第1章') || p === '1 范围') return '第1章 范围';
+    if (p.includes('第2章') || p === '2 规范性引用文件') return '第2章 规范性引用文件';
+    if (p.includes('第3章')) return '第3章 术语和定义';
+    if (p.includes('第4章')) return '第4章 技术要求';
+    if (p.includes('第5章')) return '第5章 装配';
+    if (p.includes('第6章')) return '第6章 检验';
+    if (p.includes('第7章')) return '第7章 包装、储存和运输';
+    var fm = p.match(/^(图\d+)/);
+    if (fm) return fm[1];
+    var tm = p.match(/^(表\d+)/);
+    if (tm) return tm[1];
+    var cm = p.match(/^(\d+(?:\.\d+)+)/);
+    if (cm) return cm[1];
+    return null;
+  }
+  function openKb(src, label) {
+    if (!window.KB) { alert('知识库未加载'); return; }
+    var parts = src.split(/[；;，,、+~～]/).map(function (s) { return s.trim(); }).filter(Boolean);
+    var html = '';
+    parts.forEach(function (p) {
+      var key = kbMap(p);
+      var entry = key && (KB.items[key] || KB.special[key] || KB.standards[key]);
+      if (entry) {
+        var head = '<div class="kb-key">' + escHtml(key) + (entry.t ? ' ' + escHtml(entry.t) : '') + '</div>';
+        var text = '<div class="kb-text">' + escHtml(entry.c) + '</div>';
+        html += '<div class="kb-item">' + head + text + '</div>';
+      } else {
+        html += '<div class="kb-item"><div class="kb-key">' + escHtml(p) + '</div><div class="kb-text">（该出处暂无知识库条目）</div></div>';
+      }
+    });
+    $('kbTitle').textContent = label + '：' + src;
+    $('kbBody').innerHTML = html;
+    $('kbModal').classList.remove('hidden');
+  }
+  function closeKb() { $('kbModal').classList.add('hidden'); }
+
+  /* ============ 章节导航 ============ */
+  function buildNav() {
+    var nav = $('chapNav');
+    nav.innerHTML = '';
+    // 移动端下拉框与当前章节保持同步
+    if (typeof mSel !== 'undefined' && mSel) mSel.value = String(CHAPTERS[curChap].id);
+    CHAPTERS.forEach(function (c, i) {
+      var d = document.createElement('div');
+      d.className = 'chap-item' + (i === curChap ? ' active' : '');
+      d.innerHTML = '<span>' + c.title + '</span><span class="cnum">' + c.questions.length + ' 题</span>';
+      d.onclick = function () {
+        curChap = i; slideIdx = 0;
+        stopPlay();
+        buildNav();
+        if (view === 'lecture') renderSlide();
+        else { $('fChapter').value = String(c.id); applyFilter(false); }
+      };
+      nav.appendChild(d);
+    });
+  }
+
+  /* ============ 讲解 ============ */
+  function renderSlide() {
+    var c = CHAPTERS[curChap];
+    var sl = c.slides[slideIdx];
+    $('lecChap').textContent = '第 ' + c.id + ' 章';
+    $('lecTitle').textContent = c.title;
+    var html = '<h3>' + sl.h + '</h3>' + sl.body;
+    if (sl.src) html += '<div class="src">出处：' + sl.src + '</div>';
+    $('lecSlide').innerHTML = html;
+    linkStdNodes($('lecSlide'));
+    $('lecIdx').textContent = (slideIdx + 1) + ' / ' + c.slides.length;
+    $('lecBar').style.width = ((slideIdx + 1) / c.slides.length * 100) + '%';
+    var dots = $('lecDots'); dots.innerHTML = '';
+    c.slides.forEach(function (_, i) {
+      var dd = document.createElement('div');
+      dd.className = 'dot' + (i === slideIdx ? ' on' : '');
+      dd.onclick = function () { slideIdx = i; renderSlide(); };
+      dots.appendChild(dd);
+    });
+    $('lecPrev').disabled = slideIdx === 0;
+    $('lecNext').disabled = slideIdx === c.slides.length - 1;
+    // 窄屏下宽表格会被容器裁切，加提示告知可横向滑动
+    enhanceTables();
+  }
+
+  /* 给超出可视宽度的表格加「可滑动」提示与两侧渐隐 */
+  function enhanceTables() {
+    var slide = $('lecSlide');
+    var tables = slide.querySelectorAll('table');
+    Array.prototype.forEach.call(tables, function (t) {
+      var wrap = t.parentNode;
+      if (wrap && wrap.classList && wrap.classList.contains('tbl-wrap')) return;
+      var box = document.createElement('div');
+      box.className = 'tbl-wrap';
+      t.parentNode.insertBefore(box, t);
+      box.appendChild(t);
+      var tip = document.createElement('div');
+      tip.className = 'tbl-tip hidden';
+      tip.textContent = '← 左右滑动查看完整表格 →';
+      box.parentNode.insertBefore(tip, box);
+      var check = function () {
+        var w = box.querySelector('table');
+        if (!w) return;
+        var over = w.scrollWidth - w.clientWidth > 2;
+        tip.classList.toggle('hidden', !over || w.scrollLeft > 4);
+        box.classList.toggle('scrollable', over);
+        // 滑到最右端时去掉右侧渐隐
+        box.classList.toggle('at-end', w.scrollLeft + w.clientWidth >= w.scrollWidth - 4);
+        box.classList.toggle('at-start', w.scrollLeft <= 4);
+      };
+      t.addEventListener('scroll', check, { passive: true });
+      check();
+    });
+  }
+
+  /* 语音讲解（浏览器 TTS，需用户点击启用） */
+  function slideText() {
+    return ($('lecSlide').textContent || '').replace(/\s+/g, ' ').trim();
+  }
+  function speakCurrent(onEnd) {
+    if (!window.speechSynthesis) { if (onEnd) onEnd(); return; }
+    try { window.speechSynthesis.cancel(); } catch (e) {}
+    var u = new window.SpeechSynthesisUtterance(slideText());
+    u.lang = 'zh-CN';
+    u.rate = 1.05;
+    if (onEnd) u.onend = onEnd;
+    try { window.speechSynthesis.speak(u); } catch (e) { if (onEnd) onEnd(); }
+  }
+  function cancelSpeak() {
+    if (window.speechSynthesis) { try { window.speechSynthesis.cancel(); } catch (e) {} }
+  }
+
+  function stopPlay() {
+    playing = false;
+    if (playTimer) { clearTimeout(playTimer); playTimer = null; }
+    cancelSpeak();
+    $('lecPlay').textContent = '自动播放';
+    $('lecPlay').classList.remove('primary');
+  }
+  function advance() {
+    var c = CHAPTERS[curChap];
+    if (slideIdx >= c.slides.length - 1) { stopPlay(); return; }
+    slideIdx++;
+    renderSlide();
+    runStep();
+  }
+  function runStep() {
+    var c = CHAPTERS[curChap];
+    if (speakOn) {
+      speakCurrent(function () {
+        if (!playing) return;
+        playTimer = setTimeout(function () {
+          playTimer = null;
+          if (!playing) return;
+          if (slideIdx >= c.slides.length - 1) { stopPlay(); return; }
+          advance();
+        }, 900);
+      });
+    } else {
+      playTimer = setTimeout(function () { playTimer = null; advance(); }, 9000);
+    }
+  }
+  function startPlay() {
+    playing = true;
+    $('lecPlay').textContent = '暂停';
+    $('lecPlay').classList.add('primary');
+    runStep();
+  }
+
+  $('lecPrev').onclick = function () {
+    if (slideIdx > 0) {
+      stopPlay(); slideIdx--; renderSlide();
+      if (speakOn) speakCurrent(null);
+    }
+  };
+  $('lecNext').onclick = function () {
+    var c = CHAPTERS[curChap];
+    if (slideIdx < c.slides.length - 1) {
+      stopPlay(); slideIdx++; renderSlide();
+      if (speakOn) speakCurrent(null);
+    }
+  };
+  $('lecPlay').onclick = function () { playing ? stopPlay() : startPlay(); };
+  $('lecSpeak').onclick = function () {
+    speakOn = !speakOn;
+    $('lecSpeak').textContent = speakOn ? '语音讲解 ✓' : '语音讲解';
+    $('lecSpeak').classList.toggle('primary', speakOn);
+    if (speakOn) speakCurrent(null); else cancelSpeak();
+  };
+  $('lecToQuiz').onclick = function () {
+    switchView('quiz');
+    $('fChapter').value = String(CHAPTERS[curChap].id);
+    $('fScope').value = 'all';
+    applyFilter(false);
+  };
+
+  /* ============ 筛选 ============ */
+  function matchScope(it) {
+    var s = $('fScope').value;
+    var rec = ST.ans[it.gid];
+    if (s === 'undo') return !rec;
+    if (s === 'wrong') return rec && !rec.ok;
+    if (s === 'right') return rec && rec.ok;
+    return true;
+  }
+  function applyFilter(keepChapter) {
+    var ch = $('fChapter').value;
+    var ty = $('fType').value;
+    pool = ALL.filter(function (it) {
+      if (ch !== 'all' && it.ch.id !== parseInt(ch, 10)) return false;
+      if (keepChapter && it.ch.id !== CHAPTERS[curChap].id) return false;
+      if (ty !== 'all' && it.q.t !== ty) return false;
+      if (!matchScope(it)) return false;
+      return true;
+    });
+    if ($('fShuffle').checked) pool.sort(function () { return Math.random() - 0.5; });
+    qi = 0;
+    if (!pool.length) { renderEmpty(); return; }
+    renderQ();
+  }
+  function renderEmpty() {
+    $('qChapter').textContent = '无匹配题目';
+    $('qType').textContent = '—';
+    $('qIdx').textContent = '0 / 0';
+    $('qSourceTag').textContent = '—';
+    $('qText').textContent = '当前筛选条件下没有题目，请调整章节、题型或范围。';
+    $('qOptions').innerHTML = '';
+    $('qFeedback').classList.add('hidden');
+    $('quizRange').textContent = '0 题';
+    $('jumpGrid').innerHTML = '';
+    $('qNext').textContent = '下一题 →';
+  }
+
+  /* ============ 渲染题目 ============ */
+  function optsOf(q) {
+    if (q.t === 'judge') return ['正确', '错误'];
+    return q.o;
+  }
+  function renderQ() {
+    var it = pool[qi];
+    var q = it.q;
+    answered = false; chosen = [];
+    var rec = ST.ans[it.gid];
+
+    $('qChapter').textContent = '第' + it.ch.id + '章 ' + it.ch.title;
+    $('qType').textContent = q.t === 'single' ? '单选题' : q.t === 'multi' ? '多选题' : '判断题';
+    $('qIdx').textContent = (qi + 1) + ' / ' + pool.length;
+    $('qSourceTag').textContent = '出处见解析';
+    $('qText').textContent = q.q;
+    $('quizRange').textContent = '共 ' + pool.length + ' 题';
+
+    var wrap = $('qOptions');
+    wrap.innerHTML = '';
+    wrap.className = 'options' + (q.t === 'multi' ? ' opt-multi' : '');
+    optsOf(q).forEach(function (txt, i) {
+      var d = document.createElement('div');
+      d.className = 'opt';
+      d.innerHTML = '<div class="letter">' + LETTERS[i] + '</div><div>' + txt + '</div>';
+      d.onclick = function () { pick(i, d); };
+      wrap.appendChild(d);
+    });
+
+    $('qFeedback').classList.add('hidden');
+    $('qMark').style.display = 'none';
+
+    if (rec) {
+      // 已答过：直接展示历史结果
+      answered = true;
+      chosen = rec.pick.slice();
+      lockAndShow(rec.ok);
+    } else {
+      $('qNext').textContent = (q.t === 'multi') ? '提交答案' : '下一题 →';
+    }
+    renderJump();
+    updateTopStats();
+  }
+
+  function pick(i, el) {
+    if (answered) return;
+    var it = pool[qi], q = it.q;
+    var nodes = $('qOptions').children;
+    if (q.t === 'multi') {
+      var k = chosen.indexOf(i);
+      if (k >= 0) { chosen.splice(k, 1); el.classList.remove('sel'); }
+      else { chosen.push(i); el.classList.add('sel'); }
+      $('qNext').textContent = chosen.length ? '提交答案（已选 ' + chosen.length + ' 项）' : '提交答案';
+      return;
+    }
+    chosen = [i];
+    for (var n = 0; n < nodes.length; n++) nodes[n].classList.remove('sel');
+    el.classList.add('sel');
+    submit();
+  }
+
+  function submit() {
+    var it = pool[qi], q = it.q;
+    if (!chosen.length) return;
+    var ok = chosen.length === q.a.length && q.a.every(function (x) { return chosen.indexOf(x) >= 0; });
+    ST.ans[it.gid] = { ok: ok, pick: chosen.slice() };
+    save();
+    answered = true;
+    lockAndShow(ok);
+    renderJump();
+    updateTopStats();
+  }
+
+  function lockAndShow(ok) {
+    var it = pool[qi], q = it.q;
+    var nodes = $('qOptions').children;
+    for (var n = 0; n < nodes.length; n++) {
+      nodes[n].classList.add('locked');
+      nodes[n].classList.remove('sel');
+      if (q.a.indexOf(n) >= 0) nodes[n].classList.add('right');
+      else if (chosen.indexOf(n) >= 0) nodes[n].classList.add('wrong');
+    }
+    var fb = $('qFeedback');
+    fb.classList.remove('hidden');
+    var head = $('fbHead');
+    head.className = 'fb-head ' + (ok ? 'ok' : 'bad');
+    head.textContent = ok ? '✓ 回答正确' : '✗ 回答错误';
+    $('fbAnswer').textContent = q.a.map(function (x) { return LETTERS[x] + '. ' + optsOf(q)[x]; }).join('　|　');
+    $('fbExplain').innerHTML = linkStandards(q.e);
+    $('fbSource').innerHTML = '<button type="button" class="src-link" data-src="' + escHtml(q.s) + '">出处：' + escHtml(q.s) + ' <span class="src-arrow">▸</span></button>';
+    $('qMark').style.display = 'inline-block';
+    $('qMark').textContent = ST.mark[it.gid] ? '已标记 ★' : '标记错题';
+    $('qNext').textContent = '下一题 →';
+  }
+
+  function renderJump() {
+    var g = $('jumpGrid'); g.innerHTML = '';
+    pool.forEach(function (it, i) {
+      var rec = ST.ans[it.gid];
+      var b = document.createElement('button');
+      b.className = 'jump-btn' + (i === qi ? ' cur' : '') + (rec ? (rec.ok ? ' right' : ' wrong') : '');
+      b.textContent = i + 1;
+      b.onclick = function () { qi = i; renderQ(); window.scrollTo(0, 0); };
+      g.appendChild(b);
+    });
+  }
+
+  /* ============ 顶栏统计 ============ */
+  function updateTopStats() {
+    var done = 0, right = 0;
+    for (var k in ST.ans) { if (ST.ans.hasOwnProperty(k)) { done++; if (ST.ans[k].ok) right++; } }
+    $('sDone').textContent = done;
+    $('sRight').textContent = right;
+    $('sWrong').textContent = done - right;
+    $('sRate').textContent = done ? Math.round(right / done * 100) + '%' : '—';
+    $('totalCount').textContent = ALL.length;
+  }
+
+  /* ============ 按钮 ============ */
+  $('qPrev').onclick = function () { if (qi > 0) { qi--; renderQ(); window.scrollTo(0, 0); } };
+  $('qNext').onclick = function () {
+    var it = pool[qi];
+    if (it && !answered && it.q.t === 'multi') { submit(); return; }
+    if (qi < pool.length - 1) { qi++; renderQ(); window.scrollTo(0, 0); }
+  };
+  $('qMark').onclick = function () {
+    var it = pool[qi];
+    if (ST.mark[it.gid]) delete ST.mark[it.gid]; else ST.mark[it.gid] = 1;
+    save();
+    $('qMark').textContent = ST.mark[it.gid] ? '已标记 ★' : '标记错题';
+  };
+  $('fChapter').onchange = function () { applyFilter(false); };
+  $('fType').onchange = function () { applyFilter(false); };
+  $('fScope').onchange = function () { applyFilter(false); };
+  $('fShuffle').onchange = function () { applyFilter(false); };
+  $('btnReset').onclick = function () {
+    if (confirm('确定清空全部答题记录与标记吗？此操作不可撤销。')) {
+      ST = { ans: {}, mark: {} }; save();
+      applyFilter(false); updateTopStats(); renderStats();
+    }
+  };
+
+  /* ============ 统计视图 ============ */
+  function renderStats() {
+    var done = 0, right = 0;
+    for (var k in ST.ans) { if (ST.ans.hasOwnProperty(k)) { done++; if (ST.ans[k].ok) right++; } }
+    var marks = Object.keys(ST.mark).length;
+    $('statCards').innerHTML =
+      '<div class="scard"><b>' + ALL.length + '</b><span>题库总题量</span></div>' +
+      '<div class="scard"><b>' + done + '</b><span>已作答题数</span></div>' +
+      '<div class="scard"><b>' + right + '</b><span>答对题数</span></div>' +
+      '<div class="scard"><b>' + (done ? Math.round(right / done * 100) + '%' : '—') + '</b><span>总正确率</span></div>' +
+      '<div class="scard"><b>' + marks + '</b><span>手动标记</span></div>' +
+      '<div class="scard"><b>' + Math.round(done / ALL.length * 100) + '%</b><span>完成进度</span></div>';
+
+    var cs = $('chapStats'); cs.innerHTML = '';
+    CHAPTERS.forEach(function (c) {
+      var tot = c.questions.length, d = 0, r = 0;
+      c.questions.forEach(function (q) {
+        var rec = ST.ans[q._gid];
+        if (rec) { d++; if (rec.ok) r++; }
+      });
+      var pct = d ? Math.round(r / d * 100) : 0;
+      var row = document.createElement('div');
+      row.className = 'cs-row';
+      row.innerHTML = '<div class="cs-name">第' + c.id + '章 ' + c.title + '</div>' +
+        '<div class="cs-bar"><i style="width:' + pct + '%"></i></div>' +
+        '<div class="cs-val">' + (d ? r + '/' + d + ' · ' + pct + '%' : '未开始') + '</div>';
+      cs.appendChild(row);
+    });
+
+    var wl = $('wrongList'); wl.innerHTML = '';
+    var bad = ALL.filter(function (it) { var r = ST.ans[it.gid]; return r && !r.ok; });
+    if (!bad.length) {
+      wl.innerHTML = '<div class="empty">还没有错题。做错的题目会自动出现在这里。</div>';
+      return;
+    }
+    bad.forEach(function (it) {
+      var d = document.createElement('div');
+      d.className = 'wrong-item';
+      d.innerHTML = '<b>第' + it.ch.id + '章 · ' + it.q.q.slice(0, 60) + (it.q.q.length > 60 ? '…' : '') + '</b>' +
+        '<div style="margin-top:4px;color:#7b8493">正确：' + it.q.a.map(function (x) { return LETTERS[x]; }).join('') + '　出处：' + it.q.s + '</div>';
+      d.onclick = function () {
+        switchView('quiz');
+        $('fChapter').value = 'all'; $('fType').value = 'all'; $('fScope').value = 'all';
+        applyFilter(false);
+        var pos = pool.indexOf(it);
+        if (pos >= 0) { qi = pos; renderQ(); }
+      };
+      wl.appendChild(d);
+    });
+  }
+
+  /* ============ 视图切换 ============ */
+  function switchView(v) {
+    view = v;
+    ['lecture', 'quiz', 'fill', 'stats'].forEach(function (n) {
+      $('view-' + n).classList.toggle('hidden', n !== v);
+    });
+    document.querySelectorAll('.mode-btn, .mnav-btn[data-view]').forEach(function (b) {
+      b.classList.toggle('active', b.dataset.view === v);
+    });
+    if (v !== 'lecture') stopPlay();
+    if (v === 'lecture') renderSlide();
+    if (v === 'stats') renderStats();
+    if (v === 'fill' && !fpool.length) fApplyFilter();
+    if (v === 'quiz' && !pool.length) {
+      $('fChapter').value = String(CHAPTERS[curChap].id);
+      applyFilter(false);
+    } else if (v === 'quiz' && $('fChapter').value !== 'all'
+               && $('fChapter').value !== String(CHAPTERS[curChap].id)) {
+      // 当前浏览的章节与筛选章节不一致时，跟随当前章节
+      $('fChapter').value = String(CHAPTERS[curChap].id);
+      applyFilter(false);
+    }
+  }
+  document.querySelectorAll('.mode-btn, .mnav-btn[data-view]').forEach(function (b) {
+    if (b.dataset.view) b.onclick = function () { switchView(b.dataset.view); };
+  });
+
+  /* ============ 移动端章节选择 ============ */
+  var mSel = $('mChapter');
+  CHAPTERS.forEach(function (c) {
+    var o = document.createElement('option');
+    o.value = c.id; o.textContent = '第' + c.id + '章 ' + c.title;
+    mSel.appendChild(o);
+  });
+  mSel.onchange = function () {
+    var id = parseInt(mSel.value, 10);
+    CHAPTERS.forEach(function (c, i) { if (c.id === id) curChap = i; });
+    slideIdx = 0;
+    buildNav();
+    if (view === 'lecture') renderSlide();
+    else switchView('lecture');
+  };
+  function syncMobileChapter() {
+    if (mSel.value !== String(CHAPTERS[curChap].id)) {
+      mSel.value = String(CHAPTERS[curChap].id);
+    }
+  }
+
+  /* ============ 进度导入 / 导出（跨设备） ============ */
+  var BACKUP_KEY = 'nbt11773_v1';
+  function countProgress() {
+    var done = 0, right = 0;
+    for (var k in ST.ans) {
+      if (ST.ans.hasOwnProperty(k)) { done++; if (ST.ans[k].ok) right++; }
+    }
+    return { done: done, right: right };
+  }
+  function openSync() {
+    $('syncModal').classList.remove('hidden');
+    $('syncStatus').textContent = '';
+    $('syncStatus').className = 'modal-status';
+    var p = countProgress();
+    $('syncSum').textContent = '当前设备进度：已答 ' + p.done + ' 题，答对 ' + p.right + ' 题。';
+  }
+  function closeSync() { $('syncModal').classList.add('hidden'); }
+
+  /* 知识库弹窗事件（出处/规范号点击 → 课程内知识点） */
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest ? e.target.closest('.src-link, .std-link') : null;
+    if (!el) return;
+    e.preventDefault();
+    var src = el.dataset.kb || el.dataset.src || el.textContent.trim();
+    openKb(src, el.classList.contains('std-link') ? '引用规范' : '出处');
+  });
+  $('kbClose').onclick = closeKb;
+  $('kbMask').onclick = closeKb;
+
+  $('btnSync2').onclick = openSync;
+  $('mSync').onclick = openSync;
+  $('syncClose').onclick = closeSync;
+  $('syncMask').onclick = closeSync;
+
+  $('btnExport').onclick = function () {
+    try {
+      var data = { app: 'NB/T 11773—2025 学习课程', ver: 1, at: Date.now(), progress: ST };
+      var blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      var d = new Date();
+      var stamp = d.getFullYear() + ('0' + (d.getMonth() + 1)).slice(-2) + ('0' + d.getDate()).slice(-2);
+      a.href = url;
+      a.download = '内附件技术规范-学习进度-' + stamp + '.json';
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      setTimeout(function () { URL.revokeObjectURL(url); }, 2000);
+      var p = countProgress();
+      $('syncStatus').className = 'modal-status ok';
+      $('syncStatus').textContent = '已导出 ' + p.done + ' 条答题记录，文件已下载。把它发到新设备即可导入。';
+    } catch (err) {
+      $('syncStatus').className = 'modal-status err';
+      $('syncStatus').textContent = '导出失败：' + err.message;
+    }
+  };
+
+  $('btnImport').onclick = function () { $('fileInput').click(); };
+  $('fileInput').onchange = function (e) {
+    var f = e.target.files && e.target.files[0];
+    if (!f) return;
+    var rd = new FileReader();
+    rd.onload = function () {
+      try {
+        var obj = JSON.parse(rd.result);
+        var p = obj && obj.progress ? obj.progress : obj;
+        if (!p || typeof p !== 'object' || !p.ans) throw new Error('文件格式不正确');
+        var merge = Object.keys(ST.ans).length > 0 &&
+                    !confirm('本机已有答题记录。\n\n点「确定」= 合并两边的进度（推荐）\n点「取消」= 用导入的记录覆盖本机');
+        if (merge) {
+          for (var k in p.ans) { if (p.ans.hasOwnProperty(k)) ST.ans[k] = p.ans[k]; }
+          if (p.mark) { for (var m in p.mark) { if (p.mark.hasOwnProperty(m)) ST.mark[m] = p.mark[m]; } }
+        } else {
+          ST.ans = p.ans || {};
+          ST.mark = p.mark || {};
+        }
+        save();
+        updateTopStats();
+        if (view === 'stats') renderStats();
+        if (view === 'quiz') renderQuestion();
+        var c = countProgress();
+        $('syncStatus').className = 'modal-status ok';
+        $('syncStatus').textContent = '导入成功！当前已答 ' + c.done + ' 题，答对 ' + c.right + ' 题。';
+        $('syncSum').textContent = '进度已写入本机浏览器，可继续学习。';
+      } catch (err2) {
+        $('syncStatus').className = 'modal-status err';
+        $('syncStatus').textContent = '导入失败：' + err2.message;
+      }
+      e.target.value = '';
+    };
+    rd.readAsText(f);
+  };
+
+  /* ============ PWA：离线可用 + 添加到桌面 ============ */
+  var deferredPrompt = null;
+  window.addEventListener('beforeinstallprompt', function (ev) {
+    ev.preventDefault();
+    deferredPrompt = ev;
+    var ua = navigator.userAgent;
+    var isIOS = /iPad|iPhone|iPod/.test(ua);
+    if (isIOS && !/Safari/.test(ua)) return;
+    $('installGuide').textContent = isIOS
+      ? 'Safari 底部「分享」→「添加到主屏幕」'
+      : '添加后断网也能继续学习';
+    $('installDo').textContent = isIOS ? '知道了' : '添加';
+    if (sessionStorage.getItem('nbt11773_install_no') !== '1') {
+      $('installTip').classList.remove('hidden');
+    }
+  });
+  $('installNo').onclick = function () {
+    $('installTip').classList.add('hidden');
+    try { sessionStorage.setItem('nbt11773_install_no', '1'); } catch (e) {}
+  };
+  $('installDo').onclick = function () {
+    $('installTip').classList.add('hidden');
+    try { sessionStorage.setItem('nbt11773_install_no', '1'); } catch (e) {}
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then(function () { deferredPrompt = null; });
+    }
+  };
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('sw.js').catch(function () {});
+    });
+  }
+
+  /* ============ 填空题（巩固模式） ============ */
+  var FILL = window.FILL || null;
+  var FPOOL = [];
+  if (FILL && FILL.questions) {
+    FILL.questions.forEach(function (q, i) { FPOOL.push({ ch: FILL, q: q, gid: 'F' + i }); });
+  }
+  var FKEY = 'nbt11773_fill_v1';
+  var STF = { ans: {}, mark: {} };
+  try { var rf = localStorage.getItem(FKEY); if (rf) STF = JSON.parse(rf); } catch (e) {}
+  if (!STF.ans) STF.ans = {};
+  if (!STF.mark) STF.mark = {};
+  function fsave() { try { localStorage.setItem(FKEY, JSON.stringify(STF)); } catch (e) {} }
+
+  var fpool = [];
+  var fq = 0;
+  var fanswered = false;
+
+  function normIn(s) {
+    return ('' + s)
+      // 去掉不可见字符（零宽空格/BOM/软连字符等，复制粘贴或输入法常带入，trim 去不掉）
+      .replace(/[\u200B-\u200D\uFEFF\u2060\u180E\u00AD\u00A0]/g, '')
+      .replace(/[\uFF01-\uFF5E]/g, function (c) { return String.fromCharCode(c.charCodeAt(0) - 0xFEE0); })
+      .replace(/\u3000/g, ' ')
+      .trim()
+      .replace(/\s+/g, ' ')
+      .toUpperCase();
+  }
+  function fMatch(acc, val) {
+    return acc.some(function (a) { return normIn(a) === normIn(val); });
+  }
+  function fStats() {
+    var done = 0, right = 0;
+    for (var k in STF.ans) { if (STF.ans.hasOwnProperty(k)) { done++; if (STF.ans[k].ok) right++; } }
+    return { done: done, right: right, rate: done ? Math.round(right / done * 100) : null };
+  }
+  function fRenderStats() {
+    var st = fStats();
+    $('ffStats').textContent = '填空题库共 ' + FPOOL.length + ' 题 · 已答 ' + st.done +
+      ' · 答对 ' + st.right + (st.rate !== null ? ' · 正确率 ' + st.rate + '%' : '');
+  }
+  function fApplyFilter() {
+    var ch = $('ffChapter').value;
+    var sc = $('ffScope').value;
+    fpool = FPOOL.filter(function (it) {
+      if (ch !== 'all' && it.q.ch !== parseInt(ch, 10)) return false;
+      var rec = STF.ans[it.gid];
+      if (sc === 'undo') return !rec;
+      if (sc === 'wrong') return rec && !rec.ok;
+      if (sc === 'right') return rec && rec.ok;
+      return true;
+    });
+    if ($('ffShuffle').checked) fpool.sort(function () { return Math.random() - 0.5; });
+    fq = 0;
+    if (!fpool.length) { fRenderEmpty(); return; }
+    fRenderQ();
+  }
+  function fRenderEmpty() {
+    $('fqChapter').textContent = '无匹配题目';
+    $('fqType').textContent = '—';
+    $('fqIdx').textContent = '0 / 0';
+    $('fqSourceTag').textContent = '—';
+    $('fqText').textContent = '当前筛选条件下没有填空题，请调整章节或范围。';
+    $('fqOptions').innerHTML = '';
+    $('fqFeedback').classList.add('hidden');
+    $('ffRange').textContent = '0 题';
+    $('fjumpGrid').innerHTML = '';
+    $('fqNext').textContent = '下一题 →';
+    fRenderStats();
+  }
+  function fRenderQ() {
+    var it = fpool[fq];
+    var q = it.q;
+    fanswered = false;
+    var rec = STF.ans[it.gid];
+
+    $('fqChapter').textContent = '第' + q.ch + '章';
+    $('fqType').textContent = '填空题';
+    $('fqIdx').textContent = (fq + 1) + ' / ' + fpool.length;
+    $('fqSourceTag').textContent = '出处见解析';
+    $('fqText').textContent = q.q;
+    $('ffRange').textContent = '共 ' + fpool.length + ' 题';
+
+    var wrap = $('fqOptions');
+    wrap.innerHTML = '';
+    wrap.className = 'options fill-opts';
+    q.a.forEach(function (_, i) {
+      var d = document.createElement('div');
+      d.className = 'fill-row';
+      d.innerHTML = '<span class="fill-no">第 ' + (i + 1) + ' 空</span>' +
+        '<input class="fill-input" type="text" autocomplete="off" placeholder="在此输入答案">';
+      wrap.appendChild(d);
+    });
+
+    $('fqFeedback').classList.add('hidden');
+    $('fqMark').style.display = 'none';
+
+    if (rec) {
+      fanswered = true;
+      fShowResult(rec.ok, rec.pick);
+    } else {
+      $('fqNext').textContent = '提交答案';
+    }
+    fRenderJump();
+    fRenderStats();
+  }
+  function fSubmit() {
+    var it = fpool[fq];
+    var q = it.q;
+    var inputs = document.querySelectorAll('#fqOptions .fill-input');
+    var vals = [];
+    for (var i = 0; i < inputs.length; i++) vals.push(inputs[i].value.trim());
+    var empty = vals.filter(function (v) { return v === ''; }).length;
+    if (empty) {
+      alert('还有 ' + empty + ' 个空未填写，请填完再提交。');
+      return;
+    }
+    var ok = q.a.length === vals.length && q.a.every(function (acc, i) { return fMatch(acc, vals[i]); });
+    STF.ans[it.gid] = { ok: ok, pick: vals };
+    fsave();
+    fanswered = true;
+    fShowResult(ok, vals);
+    fRenderJump();
+    fRenderStats();
+  }
+  function fShowResult(ok, pick) {
+    var it = fpool[fq];
+    var q = it.q;
+    var fb = $('fqFeedback');
+    fb.classList.remove('hidden');
+    var head = $('ffbHead');
+    head.className = 'fb-head ' + (ok ? 'ok' : 'bad');
+    head.textContent = ok ? '✓ 回答正确' : '✗ 回答错误';
+    $('ffbAnswer').textContent = q.a.map(function (acc, i) {
+      return '第' + (i + 1) + '空：' + acc.join(' 或 ');
+    }).join('　|　');
+    $('ffbExplain').innerHTML = linkStandards(q.e);
+    $('ffbSource').innerHTML = '<button type="button" class="src-link" data-src="' + escHtml(q.s) + '">出处：' + escHtml(q.s) + ' <span class="src-arrow">▸</span></button>';
+    var inputs = document.querySelectorAll('#fqOptions .fill-input');
+    for (var i = 0; i < inputs.length; i++) {
+      inputs[i].disabled = true;
+      var okk = fMatch(q.a[i], pick[i]);
+      inputs[i].classList.add(okk ? 'right' : 'wrong');
+      if (!okk) { inputs[i].value = q.a[i][0]; inputs[i].classList.add('show-ans'); }
+    }
+    $('fqMark').style.display = 'inline-block';
+    $('fqMark').textContent = STF.mark[it.gid] ? '已标记 ★' : '标记错题';
+    $('fqNext').textContent = '下一题 →';
+  }
+  function fRenderJump() {
+    var g = $('fjumpGrid'); g.innerHTML = '';
+    fpool.forEach(function (it, i) {
+      var rec = STF.ans[it.gid];
+      var b = document.createElement('button');
+      b.className = 'jump-btn' + (i === fq ? ' cur' : '') + (rec ? (rec.ok ? ' right' : ' wrong') : '');
+      b.textContent = i + 1;
+      b.onclick = function () { fq = i; fRenderQ(); window.scrollTo(0, 0); };
+      g.appendChild(b);
+    });
+  }
+  if ($('ffChapter')) {
+    var fsel = $('ffChapter');
+    CHAPTERS.forEach(function (c) {
+      var o = document.createElement('option');
+      o.value = c.id; o.textContent = '第' + c.id + '章';
+      fsel.appendChild(o);
+    });
+    $('fqPrev').onclick = function () { if (fq > 0) { fq--; fRenderQ(); window.scrollTo(0, 0); } };
+    $('fqNext').onclick = function () {
+      if (!fanswered) { fSubmit(); return; }
+      if (fq < fpool.length - 1) { fq++; fRenderQ(); window.scrollTo(0, 0); }
+    };
+    $('fqMark').onclick = function () {
+      var it = fpool[fq];
+      if (STF.mark[it.gid]) delete STF.mark[it.gid]; else STF.mark[it.gid] = 1;
+      fsave();
+      $('fqMark').textContent = STF.mark[it.gid] ? '已标记 ★' : '标记错题';
+    };
+    $('ffChapter').onchange = fApplyFilter;
+    $('ffScope').onchange = fApplyFilter;
+    $('ffShuffle').onchange = fApplyFilter;
+    fApplyFilter();
+  }
+
+  /* ============ 初始化 ============ */
+  var sel = $('fChapter');
+  CHAPTERS.forEach(function (c) {
+    var o = document.createElement('option');
+    o.value = c.id; o.textContent = '第' + c.id + '章 ' + c.title;
+    sel.appendChild(o);
+  });
+  buildNav();
+  renderSlide();
+  applyFilter(true);
+  updateTopStats();
+  $('totalCount').textContent = ALL.length;
+
+  document.addEventListener('keydown', function (e) {
+    if (view === 'quiz') {
+      if (e.key >= '1' && e.key <= '6') {
+        var i = parseInt(e.key, 10) - 1;
+        var nodes = $('qOptions').children;
+        if (nodes[i] && !answered) nodes[i].click();
+      }
+      if (e.key === 'Enter') $('qNext').click();
+    }
+    if (view === 'fill' && e.key === 'Enter') $('fqNext').click();
+  });
+})();
+
+</script>
+</body>
+</html>

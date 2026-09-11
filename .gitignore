@@ -1,0 +1,9 @@
+# 临时/测试文件
+_shots/
+_*.js
+_*.py
+
+# 系统文件
+Thumbs.db
+desktop.ini
+.DS_Store
